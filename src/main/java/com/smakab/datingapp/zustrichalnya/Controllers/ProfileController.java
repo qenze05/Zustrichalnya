@@ -32,7 +32,10 @@ public class ProfileController implements Initializable {
             openMenu("ProfileMainView");
         } else if (source.equals(personalityB)) {
             openMenu("PersonalityView");
-        } // дописати
+        } else if (source.equals(hobbiesB)) {
+            openMenu("HobbiesView");
+        }
+        // дописати
     }
 
     private void openMenu(String menu) {
