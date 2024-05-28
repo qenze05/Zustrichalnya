@@ -1,10 +1,11 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class SearchTemplate {
 
     private String name;
-    private String type;
+    private int type;
     private String description;
     private ArrayList<String> greenFlags;
     private ArrayList<String> redFlags;
@@ -15,6 +16,10 @@ public class SearchTemplate {
     private int minAge;
     private int maxAge;
     private int geoType;
+
+    private String city;
+
+    private String region;
     private int desiredDistance;
     private int allowedDistance;
     private int geolocationImportance;
@@ -87,7 +92,7 @@ public class SearchTemplate {
     private HashMap<String, Integer> subculturesFilter;
     private HashMap<Hobby, Integer> hobbiesFilter;
     private HashMap<RomanticPreference, Integer> romanticPreferencesFilter;
-    private HashMap<String, Integer> religionFilter;
+    private HashMap<Religion, Integer> religionFilter;
     private HashMap<String, Integer> socialMovementsFilter;
     private HashMap<String, Integer> languageFilter;
     private double leftRightCoord;
@@ -100,11 +105,11 @@ public class SearchTemplate {
         this.name = name;
     }
 
-    public String getType() {
+    public int getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(int type) {
         this.type = type;
     }
 
@@ -783,4 +788,830 @@ public class SearchTemplate {
     private double libAuthCoord;
     private double desiredRadius;
     private double allowedRadius;
+
+    double connectivity(Person person){
+        double result = 0;
+        switch (this.type){
+            case 1:
+                if(!person.isOpenForOneDay()) return Double.MIN_VALUE;
+                break;
+            case 2:
+                if(!person.isOpenForFriendship()) return Double.MIN_VALUE;
+                break;
+            case 3:
+                if(!person.isOpenForRomance()) return Double.MIN_VALUE;
+                break;
+            case 4:
+                if(!person.isOpenForPartnership()) return Double.MIN_VALUE;
+                break;
+            case 5:
+                if(!person.isOpenForFamily()) return Double.MIN_VALUE;
+                break;
+        }
+        if (person.getAge() < minAge || person.getAge() > maxAge) return Double.MIN_VALUE;
+        double geoQuantifier = 1;
+        if (person.getGeopostion() == null) {
+            if (geoType == 0) {
+                if (!this.city.equals(person.getCity())) return Double.MIN_VALUE;
+            } else if (geoType == 1) {
+                if (!this.city.equals(person.getCity())) {
+                    if (!this.region.equals(person.getRegion())) return Double.MIN_VALUE;
+                    else geoQuantifier = 0.5;
+                }
+            } else if (geoType == 2) {
+                if (!this.city.equals(person.getCity())) {
+                    if (!this.region.equals(person.getRegion())) geoQuantifier = 0.5;
+                    else geoQuantifier = 0.75;
+                }
+            }
+        }
+            // Фільтр за геолокацією прописати, якщо буде геолокація
+
+            double geoImportanceQuantifier = 1;
+            if(geolocationImportance == 1){
+                if (person.getGeopostion() == null){
+                    geoImportanceQuantifier = 0.5;
+                }
+            }
+            else if(geolocationImportance == 2){
+                if (person.getGeopostion() == null){
+                    return Double.MIN_VALUE;
+                }
+            }
+
+            double genderQuantifier = 1;
+            if(person.getGender().equals("Чоловік")){
+                if(maleDesire == 1){
+                    genderQuantifier = 0.5;
+                }
+                else if(maleDesire == 2){
+                    return Double.MIN_VALUE;
+                }
+            }
+            else if(person.getGender().equals("Жінка")){
+                if(femaleDesire == 1){
+                    genderQuantifier = 0.5;
+                }
+                else if(femaleDesire == 2){
+                    return Double.MIN_VALUE;
+                }
+            }
+            else{
+                if(otherDesire == 1){
+                    genderQuantifier = 0.5;
+                }
+                else if(otherDesire == 2){
+                    return Double.MIN_VALUE;
+                }
+            }
+
+            // Наявність реального фото прописати після додавання фото
+
+            boolean introvertExtravertIn = true;
+            if(person.getIntrovertExtravert() < minIntrovertExtravert || person.getIntrovertExtravert() > maxIntrovertExtravert){
+                introvertExtravertIn = false;
+            }
+            switch (introvertExtravertImportance){
+                case 0:
+                    break;
+                case 1:
+                    if(introvertExtravertIn) result += 0.5;
+                    break;
+                case 2:
+                    if(introvertExtravertIn) result += 1;
+                    break;
+                case 3:
+                    if(introvertExtravertIn) result += 1;
+                    else result -= 1;
+                    break;
+                case 4:
+                    if(introvertExtravertIn) result += 2;
+                    else result -= 2;
+                    break;
+                case 5:
+                    if(introvertExtravertIn) result += 2;
+                    else return Double.MIN_VALUE;
+                    break;
+            }
+
+            boolean brainHeartIn = true;
+            if(person.getBrainHeart() < minBrainHeart || person.getBrainHeart() > maxBrainHeart){
+                brainHeartIn = false;
+            }
+            switch (brainHeartImportance){
+                case 0:
+                    break;
+                case 1:
+                    if(brainHeartIn) result += 0.5;
+                    break;
+                case 2:
+                    if(brainHeartIn) result += 1;
+                    break;
+                case 3:
+                    if(brainHeartIn) result += 1;
+                    else result -= 1;
+                    break;
+                case 4:
+                    if(brainHeartIn) result += 2;
+                    else result -= 2;
+                    break;
+                case 5:
+                    if(brainHeartIn) result += 2;
+                    else return Double.MIN_VALUE;
+                    break;
+            }
+
+            boolean darkLightIn = true;
+            if(person.getDarkLight() < minDarkLight || person.getDarkLight() > maxDarkLight){
+                darkLightIn = false;
+            }
+            switch (darkLightImportance){
+                case 0:
+                    break;
+                case 1:
+                    if(darkLightIn) result += 0.5;
+                    break;
+                case 2:
+                    if(darkLightIn) result += 1;
+                    break;
+                case 3:
+                    if(darkLightIn) result += 1;
+                    else result -= 1;
+                    break;
+                case 4:
+                    if(darkLightIn) result += 2;
+                    else result -= 2;
+                    break;
+                case 5:
+                    if(darkLightIn) result += 2;
+                    else return Double.MIN_VALUE;
+                    break;
+            }
+
+            boolean conservatorInnovatorIn = true;
+            if(person.getConservatorInnovator() < minConservatorInnovator || person.getConservatorInnovator() > maxConservatorInnovator){
+                conservatorInnovatorIn = false;
+            }
+            switch (conservatorInnovatorImportance){
+                case 0:
+                    break;
+                case 1:
+                    if(conservatorInnovatorIn) result += 0.5;
+                    break;
+                case 2:
+                    if(conservatorInnovatorIn) result += 1;
+                    break;
+                case 3:
+                    if(conservatorInnovatorIn) result += 1;
+                    else result -= 1;
+                    break;
+                case 4:
+                    if(conservatorInnovatorIn) result += 2;
+                    else result -= 2;
+                    break;
+                case 5:
+                    if(conservatorInnovatorIn) result += 2;
+                    else return Double.MIN_VALUE;
+                    break;
+            }
+
+            boolean pessimistOptimistIn = true;
+            if(person.getPessimistOptimist() < minPessimistOptimist || person.getPessimistOptimist() > maxPessimistOptimist){
+                pessimistOptimistIn = false;
+            }
+            switch (pessimistOptimistImportance){
+                case 0:
+                    break;
+                case 1:
+                    if(pessimistOptimistIn) result += 0.5;
+                    break;
+                case 2:
+                    if(pessimistOptimistIn) result += 1;
+                    break;
+                case 3:
+                    if(pessimistOptimistIn) result += 1;
+                    else result -= 1;
+                    break;
+                case 4:
+                    if(pessimistOptimistIn) result += 2;
+                    else result -= 2;
+                    break;
+                case 5:
+                    if(pessimistOptimistIn) result += 2;
+                    else return Double.MIN_VALUE;
+                    break;
+            }
+
+            boolean pragmaticAvanturisticIn = true;
+            if(person.getPragmaticAvanturistic() < minPragmaticAvanturistic || person.getPragmaticAvanturistic() > maxPragmaticAvanturistic){
+                pragmaticAvanturisticIn = false;
+            }
+            switch (pragmaticAvanturisticImportance){
+                case 0:
+                    break;
+                case 1:
+                    if(pragmaticAvanturisticIn) result += 0.5;
+                    break;
+                case 2:
+                    if(pragmaticAvanturisticIn) result += 1;
+                    break;
+                case 3:
+                    if(pragmaticAvanturisticIn) result += 1;
+                    else result -= 1;
+                    break;
+                case 4:
+                    if(pragmaticAvanturisticIn) result += 2;
+                    else result -= 2;
+                    break;
+                case 5:
+                    if(pragmaticAvanturisticIn) result += 2;
+                    else return Double.MIN_VALUE;
+                    break;
+            }
+
+
+        boolean plannerImproviserIn = true;
+        if(person.getPlannerImproviser() < minPlannerImproviser || person.getPlannerImproviser() > maxPlannerImproviser){
+            plannerImproviserIn = false;
+        }
+        switch (plannerImproviserImportance){
+            case 0:
+                break;
+            case 1:
+                if(plannerImproviserIn) result += 0.5;
+                break;
+            case 2:
+                if(plannerImproviserIn) result += 1;
+                break;
+            case 3:
+                if(plannerImproviserIn) result += 1;
+                else result -= 1;
+                break;
+            case 4:
+                if(plannerImproviserIn) result += 2;
+                else result -= 2;
+                break;
+            case 5:
+                if(plannerImproviserIn) result += 2;
+                else return Double.MIN_VALUE;
+                break;
+        }
+
+        boolean homesitterTravellerIn = true;
+        if(person.getHomesitterTraveller() < minHomesitterTraveller || person.getHomesitterTraveller() > maxHomesitterTraveller){
+            homesitterTravellerIn = false;
+        }
+        switch (homesitterTravellerImportance){
+            case 0:
+                break;
+            case 1:
+                if(homesitterTravellerIn) result += 0.5;
+                break;
+            case 2:
+                if(homesitterTravellerIn) result += 1;
+                break;
+            case 3:
+                if(homesitterTravellerIn) result += 1;
+                else result -= 1;
+                break;
+            case 4:
+                if(homesitterTravellerIn) result += 2;
+                else result -= 2;
+                break;
+            case 5:
+                if(homesitterTravellerIn) result += 2;
+                else return Double.MIN_VALUE;
+                break;
+        }
+
+        boolean practicalCreativeIn = true;
+        if(person.getPracticalCreative() < minPracticalCreative || person.getPracticalCreative() > maxPracticalCreative){
+            practicalCreativeIn = false;
+        }
+        switch (practicalCreativeImportance){
+            case 0:
+                break;
+            case 1:
+                if(practicalCreativeIn) result += 0.5;
+                break;
+            case 2:
+                if(practicalCreativeIn) result += 1;
+                break;
+            case 3:
+                if(practicalCreativeIn) result += 1;
+                else result -= 1;
+                break;
+            case 4:
+                if(practicalCreativeIn) result += 2;
+                else result -= 2;
+                break;
+            case 5:
+                if(practicalCreativeIn) result += 2;
+                else return Double.MIN_VALUE;
+                break;
+        }
+
+        boolean calmEmotionalIn = true;
+        if(person.getCalmEmotional() < minCalmEmotional|| person.getCalmEmotional() > maxCalmEmotional){
+            calmEmotionalIn = false;
+        }
+        switch (calmEmotionalImportance){
+            case 0:
+                break;
+            case 1:
+                if(calmEmotionalIn) result += 0.5;
+                break;
+            case 2:
+                if(calmEmotionalIn) result += 1;
+                break;
+            case 3:
+                if(calmEmotionalIn) result += 1;
+                else result -= 1;
+                break;
+            case 4:
+                if(calmEmotionalIn) result += 2;
+                else result -= 2;
+                break;
+            case 5:
+                if(calmEmotionalIn) result += 2;
+                else return Double.MIN_VALUE;
+                break;
+        }
+
+        boolean docilePersistentIn = true;
+        if(person.getDocilePersistent() < minDocilePersistent|| person.getDocilePersistent() > maxDocilePersistent){
+            docilePersistentIn = false;
+        }
+        switch (docilePersistentImportance){
+            case 0:
+                break;
+            case 1:
+                if(docilePersistentIn) result += 0.5;
+                break;
+            case 2:
+                if(docilePersistentIn) result += 1;
+                break;
+            case 3:
+                if(docilePersistentIn) result += 1;
+                else result -= 1;
+                break;
+            case 4:
+                if(docilePersistentIn) result += 2;
+                else result -= 2;
+                break;
+            case 5:
+                if(docilePersistentIn) result += 2;
+                else return Double.MIN_VALUE;
+                break;
+        }
+
+        boolean egoistAltruistIn = true;
+        if(person.getEgoistAltruist() < minEgoistAltruist|| person.getEgoistAltruist() > maxEgoistAltruist){
+            egoistAltruistIn = false;
+        }
+        switch (egoistAltruistImportance){
+            case 0:
+                break;
+            case 1:
+                if(egoistAltruistIn) result += 0.5;
+                break;
+            case 2:
+                if(egoistAltruistIn) result += 1;
+                break;
+            case 3:
+                if(egoistAltruistIn) result += 1;
+                else result -= 1;
+                break;
+            case 4:
+                if(egoistAltruistIn) result += 2;
+                else result -= 2;
+                break;
+            case 5:
+                if(egoistAltruistIn) result += 2;
+                else return Double.MIN_VALUE;
+                break;
+        }
+
+        boolean benefitseekerMoralistIn = true;
+        if(person.getBenefitseekerMoralist() < minBenefitseekerMoralist|| person.getBenefitseekerMoralist() > maxBenefitseekerMoralist){
+            benefitseekerMoralistIn = false;
+        }
+        switch (benefitseekerMoralistImportance){
+            case 0:
+                break;
+            case 1:
+                if(benefitseekerMoralistIn) result += 0.5;
+                break;
+            case 2:
+                if(benefitseekerMoralistIn) result += 1;
+                break;
+            case 3:
+                if(benefitseekerMoralistIn) result += 1;
+                else result -= 1;
+                break;
+            case 4:
+                if(benefitseekerMoralistIn) result += 2;
+                else result -= 2;
+                break;
+            case 5:
+                if(benefitseekerMoralistIn) result += 2;
+                else return Double.MIN_VALUE;
+                break;
+        }
+
+        boolean downtoearthAmbitiousIn = true;
+        if(person.getDowntoearthAmbitious() < minDowntoearthAmbitious|| person.getDowntoearthAmbitious() > maxDowntoearthAmbitious){
+            downtoearthAmbitiousIn = false;
+        }
+        switch (downtoearthAmbitiousImportance){
+            case 0:
+                break;
+            case 1:
+                if(downtoearthAmbitiousIn) result += 0.5;
+                break;
+            case 2:
+                if(downtoearthAmbitiousIn) result += 1;
+                break;
+            case 3:
+                if(downtoearthAmbitiousIn) result += 1;
+                else result -= 1;
+                break;
+            case 4:
+                if(downtoearthAmbitiousIn) result += 2;
+                else result -= 2;
+                break;
+            case 5:
+                if(downtoearthAmbitiousIn) result += 2;
+                else return Double.MIN_VALUE;
+                break;
+        }
+
+        boolean followerLeaderIn = true;
+        if(person.getFollowerLeader() < minFollowerLeader|| person.getFollowerLeader() > maxFollowerLeader){
+            followerLeaderIn = false;
+        }
+        switch (followerLeaderImportance){
+            case 0:
+                break;
+            case 1:
+                if(followerLeaderIn) result += 0.5;
+                break;
+            case 2:
+                if(followerLeaderIn) result += 1;
+                break;
+            case 3:
+                if(followerLeaderIn) result += 1;
+                else result -= 1;
+                break;
+            case 4:
+                if(followerLeaderIn) result += 2;
+                else result -= 2;
+                break;
+            case 5:
+                if(followerLeaderIn) result += 2;
+                else return Double.MIN_VALUE;
+                break;
+        }
+
+        boolean modestUninhibitedIn = true;
+        if(person.getModestUninhibited() < minModestUninhibited|| person.getModestUninhibited() > maxModestUninhibited){
+            modestUninhibitedIn = false;
+        }
+        switch (modestUninhibitedImportance){
+            case 0:
+                break;
+            case 1:
+                if(modestUninhibitedIn) result += 0.5;
+                break;
+            case 2:
+                if(modestUninhibitedIn) result += 1;
+                break;
+            case 3:
+                if(modestUninhibitedIn) result += 1;
+                else result -= 1;
+                break;
+            case 4:
+                if(modestUninhibitedIn) result += 2;
+                else result -= 2;
+                break;
+            case 5:
+                if(modestUninhibitedIn) result += 2;
+                else return Double.MIN_VALUE;
+                break;
+        }
+
+        boolean toughTenderIn = true;
+        if(person.getToughTender() < minToughTender|| person.getToughTender() > maxToughTender){
+            toughTenderIn = false;
+        }
+        switch (toughTenderImportance){
+            case 0:
+                break;
+            case 1:
+                if(toughTenderIn) result += 0.5;
+                break;
+            case 2:
+                if(toughTenderIn) result += 1;
+                break;
+            case 3:
+                if(toughTenderIn) result += 1;
+                else result -= 1;
+                break;
+            case 4:
+                if(toughTenderIn) result += 2;
+                else result -= 2;
+                break;
+            case 5:
+                if(toughTenderIn) result += 2;
+                else return Double.MIN_VALUE;
+                break;
+        }
+
+        boolean distrustfulTrustingIn = true;
+        if(person.getDistrustfulTrusting() < minDistrustfulTrusting|| person.getDistrustfulTrusting() > maxDistrustfulTrusting){
+            distrustfulTrustingIn = false;
+        }
+        switch (distrustfulTrustingImportance){
+            case 0:
+                break;
+            case 1:
+                if(distrustfulTrustingIn) result += 0.5;
+                break;
+            case 2:
+                if(distrustfulTrustingIn) result += 1;
+                break;
+            case 3:
+                if(distrustfulTrustingIn) result += 1;
+                else result -= 1;
+                break;
+            case 4:
+                if(distrustfulTrustingIn) result += 2;
+                else result -= 2;
+                break;
+            case 5:
+                if(distrustfulTrustingIn) result += 2;
+                else return Double.MIN_VALUE;
+                break;
+        }
+
+        boolean seriousChillIn = true;
+        if(person.getSeriousChill() < minSeriousChill|| person.getSeriousChill() > maxSeriousChill){
+            seriousChillIn = false;
+        }
+        switch (seriousChillImportance){
+            case 0:
+                break;
+            case 1:
+                if(seriousChillIn) result += 0.5;
+                break;
+            case 2:
+                if(seriousChillIn) result += 1;
+                break;
+            case 3:
+                if(seriousChillIn) result += 1;
+                else result -= 1;
+                break;
+            case 4:
+                if(seriousChillIn) result += 2;
+                else result -= 2;
+                break;
+            case 5:
+                if(seriousChillIn) result += 2;
+                else return Double.MIN_VALUE;
+                break;
+        }
+
+        boolean straightforwardIndirectIn = true;
+        if(person.getStraightforwardIndirect() < minStraightforwardIndirect|| person.getStraightforwardIndirect() > maxStraightforwardIndirect){
+            straightforwardIndirectIn = false;
+        }
+        switch (straightforwardIndirectImportance){
+            case 0:
+                break;
+            case 1:
+                if(straightforwardIndirectIn) result += 0.5;
+                break;
+            case 2:
+                if(straightforwardIndirectIn) result += 1;
+                break;
+            case 3:
+                if(straightforwardIndirectIn) result += 1;
+                else result -= 1;
+                break;
+            case 4:
+                if(straightforwardIndirectIn) result += 2;
+                else result -= 2;
+                break;
+            case 5:
+                if(straightforwardIndirectIn) result += 2;
+                else return Double.MIN_VALUE;
+                break;
+        }
+
+        for(Map.Entry<String, Integer> entry : personalityTypeFilter.entrySet()) {
+            int importance = entry.getValue();
+            boolean present = false;
+            if(person.getPersonalityType().equals(entry.getKey())) present = true;
+            switch (importance) {
+                case 0:
+                    break;
+                case 1:
+                    if(present) result += 0.5;
+                    break;
+                case 2:
+                    if(present) result += 1;
+                    break;
+                case 3:
+                    if(present) result += 1;
+                    else result -= 1;
+                    break;
+                case 4:
+                    if(present) result += 2;
+                    else result -= 2;
+                    break;
+                case 5:
+                    if(present) result += 2;
+                    else return Double.MIN_VALUE;
+                    break;
+            }
+        }
+
+        for(Map.Entry<String, Integer> entry : subculturesFilter.entrySet()) {
+            int importance = entry.getValue();
+            boolean present = false;
+            if(person.getSubcultures().contains(entry.getKey())) present = true;
+            switch (importance) {
+                case 0:
+                    break;
+                case 1:
+                    if(present) result += 0.5;
+                    break;
+                case 2:
+                    if(present) result += 1;
+                    break;
+                case 3:
+                    if(present) result += 1;
+                    else result -= 1;
+                    break;
+                case 4:
+                    if(present) result += 2;
+                    else result -= 2;
+                    break;
+                case 5:
+                    if(present) result += 2;
+                    else return Double.MIN_VALUE;
+                    break;
+            }
+        }
+
+        for(Map.Entry<Hobby, Integer> entry : hobbiesFilter.entrySet()) {
+            int importance = entry.getValue();
+            boolean present = false;
+            if(person.getHobbies().keySet().contains(entry.getKey())) present = true;
+            switch (importance) {
+                case 0:
+                    break;
+                case 1:
+                    if(present) result += 0.5;
+                    break;
+                case 2:
+                    if(present) result += 1;
+                    break;
+                case 3:
+                    if(present) result += 1;
+                    else result -= 1;
+                    break;
+                case 4:
+                    if(present) result += 2;
+                    else result -= 2;
+                    break;
+                case 5:
+                    if(present) result += 2;
+                    else return Double.MIN_VALUE;
+                    break;
+            }
+        }
+
+        for(Map.Entry<RomanticPreference, Integer> entry : romanticPreferencesFilter.entrySet()) {
+            int importance = entry.getValue();
+            boolean present = false;
+            if(person.getRomanticPreferences().keySet().contains(entry.getKey())) present = true;
+            switch (importance) {
+                case 0:
+                    break;
+                case 1:
+                    if(present) result += 0.5;
+                    break;
+                case 2:
+                    if(present) result += 1;
+                    break;
+                case 3:
+                    if(present) result += 1;
+                    else result -= 1;
+                    break;
+                case 4:
+                    if(present) result += 2;
+                    else result -= 2;
+                    break;
+                case 5:
+                    if(present) result += 2;
+                    else return Double.MIN_VALUE;
+                    break;
+            }
+        }
+
+        for(Map.Entry<Religion, Integer> entry : religionFilter.entrySet()) {
+            int importance = entry.getValue();
+            boolean present = false;
+            if(person.getRegion().equals(entry.getKey())) present = true;
+            switch (importance) {
+                case 0:
+                    break;
+                case 1:
+                    if(present) result += 0.5;
+                    break;
+                case 2:
+                    if(present) result += 1;
+                    break;
+                case 3:
+                    if(present) result += 1;
+                    else result -= 1;
+                    break;
+                case 4:
+                    if(present) result += 2;
+                    else result -= 2;
+                    break;
+                case 5:
+                    if(present) result += 2;
+                    else return Double.MIN_VALUE;
+                    break;
+            }
+        }
+
+        for(Map.Entry<String, Integer> entry : socialMovementsFilter.entrySet()) {
+            int importance = entry.getValue();
+            boolean present = false;
+            if(person.getSocialMovements().contains(entry.getKey())) present = true;
+            switch (importance) {
+                case 0:
+                    break;
+                case 1:
+                    if(present) result += 0.5;
+                    break;
+                case 2:
+                    if(present) result += 1;
+                    break;
+                case 3:
+                    if(present) result += 1;
+                    else result -= 1;
+                    break;
+                case 4:
+                    if(present) result += 2;
+                    else result -= 2;
+                    break;
+                case 5:
+                    if(present) result += 2;
+                    else return Double.MIN_VALUE;
+                    break;
+            }
+        }
+
+        for(Map.Entry<String, Integer> entry : languageFilter.entrySet()) {
+            int importance = entry.getValue();
+            boolean present = false;
+            if(person.getLanguage().equals(entry.getKey())) present = true;
+            switch (importance) {
+                case 0:
+                    break;
+                case 1:
+                    if(present) result += 0.5;
+                    break;
+                case 2:
+                    if(present) result += 1;
+                    break;
+                case 3:
+                    if(present) result += 1;
+                    else result -= 1;
+                    break;
+                case 4:
+                    if(present) result += 2;
+                    else result -= 2;
+                    break;
+                case 5:
+                    if(present) result += 2;
+                    else return Double.MIN_VALUE;
+                    break;
+            }
+        }
+
+        result *= genderQuantifier * geoImportanceQuantifier * geoQuantifier;
+
+        if(result <=0) return Double.MIN_VALUE;
+
+        return result;
+    }
+
+
+
+    }
 }
