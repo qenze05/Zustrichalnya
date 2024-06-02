@@ -4,12 +4,77 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0e0dc30-7e3a-4317-829c-2d387ecd65c6" name="Changes" comment="initial">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Chat/ChatView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Chat/DialogView.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Profile/Content/HobbiesView.fxml" afterDir="false" />
+    <list default="true" id="a0e0dc30-7e3a-4317-829c-2d387ecd65c6" name="Changes" comment="UI update + some functionality&#10;Added profile and templates FXMLs&#10;Added functional controllers and models for profile views&#10;Added blank classes for templates menu">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Profile/Content/HobbiesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Profile/Content/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Profile/Content/PersonalityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Profile/Content/PreferencesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Profile/Content/ProfileContentClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Profile/Content/ViewsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/GeneralInfoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/HobbiesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/PersonalityController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/PreferencesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/TemplateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/TemplatesListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/ViewsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/SearchController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Interfaces/PersonDataUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Interfaces/ProfileDataDelegate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Profile/GeneralInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Profile/Hobbies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Profile/Personality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Profile/Preferences.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Profile/Views.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Search/GeneralInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Search/Hobbies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Search/Personality.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Search/Preferences.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Search/Template.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Search/TemplatesList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Search/Views.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Utils/EditableLabel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Utils/FXObjConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Views/ProfileView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Profile/Content/PreferencesView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Profile/Content/ViewsView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search/Content/NewOffersView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search/Content/SearchMainView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search/Content/Template/GeneralInfo.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search/Content/Template/HobbiesView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search/Content/Template/MainView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search/Content/Template/PersonalityView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search/Content/Template/PreferencesView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search/Content/Template/ViewsView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/SignIn/LoginView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/SignIn/RegistrationView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/SignIn/SignInView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/archive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/arrow_left.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/arrow_right.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/heart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/message.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/x.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/backend/Hobby.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Hobby.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/backend/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/backend/Religion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Religion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/backend/RomanticPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/RomanticPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/backend/SearchTemplate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/SearchTemplate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Profile/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/ApplicationLauncher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Profile/Content/HobbiesView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Profile/Content/HobbiesView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Profile/Content/PersonalityView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Profile/Content/PersonalityView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Profile/Content/ProfileMainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Profile/Content/ProfileMainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Profile/ProfileView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Profile/ProfileView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search/SearchView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search/SearchView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/hello-view.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +84,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="JavaFXApplication" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -46,9 +113,12 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.ApplicationLauncher.executor&quot;: &quot;Run&quot;,
     &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -56,21 +126,22 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.JavaFX&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search/Content/Template" />
+      <recent name="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Login" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Settings" />
       <recent name="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search" />
-      <recent name="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Profile" />
-      <recent name="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Menus" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.smakab.datingapp.zustrichalnya.HelloApplication" />
+    <configuration name="ApplicationLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.smakab.datingapp.zustrichalnya.ApplicationLauncher" />
       <module name="Zustrichalnya" />
       <extension name="coverage">
         <pattern>
@@ -84,7 +155,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.ApplicationLauncher" />
       </list>
     </recent_temporary>
   </component>
@@ -106,7 +177,8 @@
       <workItem from="1716712319123" duration="511000" />
       <workItem from="1716713078512" duration="795000" />
       <workItem from="1716753376574" duration="8869000" />
-      <workItem from="1716798447961" duration="2780000" />
+      <workItem from="1716798447961" duration="47745000" />
+      <workItem from="1717330158548" duration="20458000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -116,15 +188,37 @@
       <option name="project" value="LOCAL" />
       <updated>1716764023137</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="some new views">
+      <option name="closed" value="true" />
+      <created>1716805329562</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716805329562</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial" />
+    <MESSAGE value="some new views" />
+    <MESSAGE value="UI update + some functionality&#10;Added profile and templates FXMLs&#10;Added functional controllers and models for profile views&#10;Added blank classes for templates menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI update + some functionality&#10;Added profile and templates FXMLs&#10;Added functional controllers and models for profile views&#10;Added blank classes for templates menu" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

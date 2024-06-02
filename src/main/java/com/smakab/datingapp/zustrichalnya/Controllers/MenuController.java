@@ -1,5 +1,7 @@
 package com.smakab.datingapp.zustrichalnya.Controllers;
 
+import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
+import com.smakab.datingapp.zustrichalnya.Models.Person;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -12,7 +14,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class MenuController implements Initializable {
+public class MenuController implements Initializable{
     public AnchorPane container;
     public Button profileB, searchB, chatB, settingsB, logoutB;
 
@@ -22,7 +24,6 @@ public class MenuController implements Initializable {
 
     }
 
-
     public void switchMenu(ActionEvent actionEvent) {
         Object source = actionEvent.getSource();
 
@@ -30,7 +31,7 @@ public class MenuController implements Initializable {
             openMenu("Profile/ProfileView");
         } else if (source.equals(searchB)) {
             openMenu("Search/SearchView");
-        } // дописати
+        }// TODO: дописати інші меню
     }
 
     private void openMenu(String menu) {

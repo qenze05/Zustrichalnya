@@ -1,21 +1,23 @@
-import java.awt.*;
+package com.smakab.datingapp.zustrichalnya.Models;
+
+import javafx.scene.image.Image;
+import org.javatuples.Pair;
+import org.javatuples.Triplet;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 
-public class Person {
+//TODO: знести оцей треш і написати нормально
+public class Person implements Cloneable {
 
     private String surname;
-
     private String name;
     private String patronymic;
     private String nickname;
     private int nameVisibilityMode = Integer.MIN_VALUE;
 
-
-    private HashMap<Image, Boolean> photos;
-
-
+    private ArrayList<Pair<Image, Boolean>> photos = new ArrayList<>();
 
     private Date birthdate;
     private int age;
@@ -78,13 +80,17 @@ public class Person {
     private String romanticPreferenceDescription;
 
 
-
     private Religion religion;
 
     private ArrayList<String> socialMovements;
     private String language;
     private double leftRight;
     private double libAuth;
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
 
     public String getSurname() {
         return surname;
@@ -118,11 +124,11 @@ public class Person {
         this.nickname = nickname;
     }
 
-    public HashMap<Image, Boolean> getPhotos() {
+    public ArrayList<Pair<Image, Boolean>> getPhotos() {
         return photos;
     }
 
-    public void setPhotos(HashMap<Image, Boolean> photos) {
+    public void setPhotos(ArrayList<Pair<Image, Boolean>> photos) {
         this.photos = photos;
     }
 

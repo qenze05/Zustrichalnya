@@ -7,12 +7,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class ApplicationLauncher extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/smakab/datingapp/zustrichalnya/Views/MainView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(ApplicationLauncher.class.getResource(
+                "/com/smakab/datingapp/zustrichalnya/Views/MainView.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1920, 1080);
-        stage.setTitle("Hello!");
+        stage.setTitle("Зустрічальня");
         stage.setScene(scene);
         stage.show();
     }

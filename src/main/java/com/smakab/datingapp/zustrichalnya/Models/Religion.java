@@ -1,3 +1,5 @@
+package com.smakab.datingapp.zustrichalnya.Models;
+
 public class Religion {
 
     String name;

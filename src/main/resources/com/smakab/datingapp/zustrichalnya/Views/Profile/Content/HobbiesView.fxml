@@ -9,28 +9,27 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import org.controlsfx.control.CheckTreeView?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
-    <children>
-        <ScrollPane hbarPolicy="NEVER">
-            <HBox.margin>
-                <Insets left="10.0" top="20.0" />
-            </HBox.margin>
-            <content>
-                <VBox prefWidth="800.0" spacing="10.0">
-                    <children>
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content.HobbiesController">
+   <children>
+      <ScrollPane hbarPolicy="NEVER">
+         <HBox.margin>
+            <Insets left="10.0" top="20.0" />
+         </HBox.margin>
+         <content>
+            <VBox prefWidth="800.0" spacing="10.0">
+               <children>
                   <HBox alignment="CENTER_LEFT">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin>
                      <children>
-                              <Label text="Я належу до субкультур:">
-                                  <font>
-                                      <Font size="25.0" />
-                                  </font>
-                              </Label>
-                        <Button mnemonicParsing="false" text="+">
+                        <Label text="Я належу до субкультур:">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#addSubculture" text="+">
                            <HBox.margin>
                               <Insets left="20.0" />
                            </HBox.margin>
@@ -40,280 +39,73 @@
                         </Button>
                      </children>
                   </HBox>
-                  <FlowPane hgap="5.0" maxWidth="1.7976931348623157E308" vgap="5.0">
+                  <FlowPane fx:id="subculturesContainer" hgap="5.0" maxWidth="1.7976931348623157E308" vgap="5.0">
                      <children>
-                        <HBox alignment="CENTER" prefHeight="40.0" style="-fx-background-color: gray;">
-                           <children>
-                              <Label text="Sample">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                              <Button mnemonicParsing="false" text="X">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                              </Button>
-                           </children>
-                           <FlowPane.margin>
-                              <Insets />
-                           </FlowPane.margin>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="40.0" style="-fx-background-color: gray;">
-                           <children>
-                              <Label text="Sample">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                              <Button mnemonicParsing="false" text="X">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                              </Button>
-                           </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                           <FlowPane.margin>
-                              <Insets />
-                           </FlowPane.margin>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="40.0" style="-fx-background-color: gray;">
-                           <children>
-                              <Label text="Sample">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                              <Button mnemonicParsing="false" text="X">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                              </Button>
-                           </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                           <FlowPane.margin>
-                              <Insets />
-                           </FlowPane.margin>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="40.0" style="-fx-background-color: gray;">
-                           <children>
-                              <Label text="Sample">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                              <Button mnemonicParsing="false" text="X">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                              </Button>
-                           </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                           <FlowPane.margin>
-                              <Insets />
-                           </FlowPane.margin>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="40.0" style="-fx-background-color: gray;">
-                           <children>
-                              <Label text="Sample">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                              <Button mnemonicParsing="false" text="X">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                              </Button>
-                           </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                           <FlowPane.margin>
-                              <Insets />
-                           </FlowPane.margin>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="40.0" style="-fx-background-color: gray;">
-                           <children>
-                              <Label text="Sample">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                              <Button mnemonicParsing="false" text="X">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                              </Button>
-                           </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                           <FlowPane.margin>
-                              <Insets />
-                           </FlowPane.margin>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="40.0" style="-fx-background-color: gray;">
-                           <children>
-                              <Label text="Sample">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                              <Button mnemonicParsing="false" text="X">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                              </Button>
-                           </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                           <FlowPane.margin>
-                              <Insets />
-                           </FlowPane.margin>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="40.0" style="-fx-background-color: gray;">
-                           <children>
-                              <Label text="Sample">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                              <Button mnemonicParsing="false" text="X">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                              </Button>
-                           </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                           <FlowPane.margin>
-                              <Insets />
-                           </FlowPane.margin>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="40.0" style="-fx-background-color: gray;">
-                           <children>
-                              <Label text="Sample">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                              <Button mnemonicParsing="false" text="X">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                              </Button>
-                           </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                           <FlowPane.margin>
-                              <Insets />
-                           </FlowPane.margin>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="40.0" style="-fx-background-color: gray;">
-                           <children>
-                              <Label text="Sample">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                              <Button mnemonicParsing="false" text="X">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                              </Button>
-                           </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                           <FlowPane.margin>
-                              <Insets />
-                           </FlowPane.margin>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="40.0" style="-fx-background-color: gray;">
-                           <children>
-                              <Label text="Sample">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                              <Button mnemonicParsing="false" text="X">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                              </Button>
-                           </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                           <FlowPane.margin>
-                              <Insets />
-                           </FlowPane.margin>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="40.0" style="-fx-background-color: gray;">
-                           <children>
-                              <Label text="Sample">
-                                 <font>
-                                    <Font size="20.0" />
-                                 </font>
-                              </Label>
-                              <Button mnemonicParsing="false" text="X">
-                                 <HBox.margin>
-                                    <Insets left="10.0" />
-                                 </HBox.margin>
-                              </Button>
-                           </children>
-                           <padding>
-                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                           </padding>
-                           <FlowPane.margin>
-                              <Insets />
-                           </FlowPane.margin>
-                        </HBox>
+<!--                        <HBox fx:id="boxSample" alignment="CENTER" prefHeight="40.0" style="-fx-background-color: white;">-->
+<!--                           <children>-->
+<!--&lt;!&ndash;                              <Label text="Sample">&ndash;&gt;-->
+<!--&lt;!&ndash;                                 <font>&ndash;&gt;-->
+<!--&lt;!&ndash;                                    <Font size="20.0" />&ndash;&gt;-->
+<!--&lt;!&ndash;                                 </font>&ndash;&gt;-->
+<!--&lt;!&ndash;                              </Label>&ndash;&gt;-->
+<!--                              <Button mnemonicParsing="false" text="X">-->
+<!--                                 <HBox.margin>-->
+<!--                                    <Insets left="10.0" />-->
+<!--                                 </HBox.margin>-->
+<!--                              </Button>-->
+<!--                           </children>-->
+<!--                           <FlowPane.margin>-->
+<!--                              <Insets />-->
+<!--                           </FlowPane.margin>-->
+<!--                           <padding>-->
+<!--                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />-->
+<!--                           </padding>-->
+<!--                        </HBox>-->
                      </children>
                   </FlowPane>
-                  <Label text="Мої хобі:">
-                     <font>
-                        <Font size="25.0" />
-                     </font>
+                  <HBox alignment="CENTER_LEFT" spacing="20.0">
                      <VBox.margin>
                         <Insets top="50.0" />
                      </VBox.margin>
-                  </Label>
-                        <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
-                            <children>
-                                <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Футбол">
-                                    <font>
-                                        <Font size="20.0" />
-                                    </font>
-                                    <HBox.margin>
-                                        <Insets />
-                                    </HBox.margin>
-                                </Label>
-                                <Slider blockIncrement="1.0" majorTickUnit="1.0" max="10.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" snapToTicks="true" />
-                        <Button mnemonicParsing="false" text="X">
-                           <HBox.margin>
-                              <Insets left="20.0" />
-                           </HBox.margin>
+                     <children>
+                        <Label text="Мої хобі:">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Button mnemonicParsing="false" onAction="#addHobby" text="+">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
                         </Button>
-                            </children>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="hobbiesContainer">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                           <children>
+<!--                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Sample">-->
+<!--                                 <font>-->
+<!--                                    <Font size="20.0" />-->
+<!--                                 </font>-->
+<!--                                 <HBox.margin>-->
+<!--                                    <Insets />-->
+<!--                                 </HBox.margin>-->
+<!--                              </Label>-->
+<!--                              <Slider blockIncrement="1.0" majorTickUnit="1.0" max="10.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" snapToTicks="true" />-->
+<!--                              <Button mnemonicParsing="false" text="X">-->
+<!--                                 <HBox.margin>-->
+<!--                                    <Insets left="20.0" />-->
+<!--                                 </HBox.margin>-->
+<!--                              </Button>-->
+                           </children>
                         </HBox>
-                  <CheckTreeView />
-                    </children>
-                </VBox>
-            </content>
-        </ScrollPane>
-    </children>
+                     </children>
+                  </VBox>
+<!--                  <CheckTreeView />-->
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
 </HBox>
