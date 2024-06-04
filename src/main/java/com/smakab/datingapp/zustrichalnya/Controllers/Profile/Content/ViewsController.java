@@ -4,6 +4,8 @@ import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.Views;
 import com.smakab.datingapp.zustrichalnya.Utils.EditableLabel;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -23,7 +25,6 @@ public class ViewsController extends ProfileContentClass {
     public Views model;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        this.model = new Views();
     }
 
     @Override
@@ -32,15 +33,23 @@ public class ViewsController extends ProfileContentClass {
     }
 
     @Override
-    public void setPerson(Person person) {
-        try{
-            this.person = (Person) person.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
+    public void setModel(Person person) {
+        this.model = person.getViews();
+        loadModelData();
     }
 
-    public HBox createMovement() {
+    @Override
+    public void loadModelData() {
+        religionField.textProperty().set(model.getReligion());
+        religionField.textProperty().addListener((observableValue, oldV, newV) -> model.setReligion(newV));
+
+        langField.textProperty().set(model.getLanguage());
+        langField.textProperty().addListener((observableValue, oldV, newV) -> model.setLanguage(newV));
+
+        model.getMovements().forEach(name -> movementsContainer.getChildren().addLast(createMovement(name)));
+    }
+
+    public HBox createMovement(String name) {
 
         HBox container = new HBox();
         container.setPadding(new Insets(5, 5, 5, 5));
@@ -48,7 +57,7 @@ public class ViewsController extends ProfileContentClass {
         container.styleProperty().set("-fx-background-color: white;");
         container.alignmentProperty().set(Pos.CENTER);
 
-        EditableLabel label = new EditableLabel("###");
+        EditableLabel label = new EditableLabel(name);
         label.setFont(new Font(20));
         label.textProperty().addListener((observableValue, s, t1) -> {
             if(!t1.isEmpty()) {
@@ -71,6 +80,6 @@ public class ViewsController extends ProfileContentClass {
     }
 
     public void addMovement(ActionEvent actionEvent) {
-        movementsContainer.getChildren().addLast(createMovement());
+        movementsContainer.getChildren().addLast(createMovement("###"));
     }
 }

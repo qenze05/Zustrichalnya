@@ -4,9 +4,6 @@ import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.Preferences;
 import com.smakab.datingapp.zustrichalnya.Utils.EditableLabel;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -26,7 +23,7 @@ public class PreferencesController extends ProfileContentClass {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        this.model = new Preferences();
+
     }
 
     @Override
@@ -35,23 +32,25 @@ public class PreferencesController extends ProfileContentClass {
     }
 
     @Override
-    public void setPerson(Person person) {
-        try{
-            this.person = (Person) person.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
+    public void setModel(Person person) {
+        this.model = person.getPreferences();
+        loadModelData();
     }
 
-    public void addPreference(ActionEvent actionEvent) {
-        prefContainer.getChildren().addLast(createPreference());
+    @Override
+    public void loadModelData() {
+        model.getPreferences().forEach((name, value) -> prefContainer.getChildren().addLast(createPreference(name, value)));
     }
 
-    public HBox createPreference() {
+    public void addPreference() {
+        prefContainer.getChildren().addLast(createPreference("###", 5));
+    }
+
+    public HBox createPreference(String name, int value) {
 
         HBox container = new HBox();
-        EditableLabel label = new EditableLabel("###");
-        Slider slider = new Slider(0, 10, 5);
+        EditableLabel label = new EditableLabel(name);
+        Slider slider = new Slider(0, 10, value);
 
         container.spacingProperty().set(20);
         container.alignmentProperty().set(Pos.CENTER_LEFT);

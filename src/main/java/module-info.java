@@ -34,8 +34,12 @@ module com.smakab.datingapp.zustrichalnya {
     opens com.smakab.datingapp.zustrichalnya.Models to javafx.fxml;
     exports com.smakab.datingapp.zustrichalnya.Models;
 
+    opens com.smakab.datingapp.zustrichalnya.Views to javafx.fxml;
+    exports com.smakab.datingapp.zustrichalnya.Views;
+
     opens com.smakab.datingapp.zustrichalnya.Models.Profile to javafx.fxml;
     exports com.smakab.datingapp.zustrichalnya.Models.Profile;
+
     exports com.smakab.datingapp.zustrichalnya.Controllers.Search;
     opens com.smakab.datingapp.zustrichalnya.Controllers.Search to javafx.fxml;
 

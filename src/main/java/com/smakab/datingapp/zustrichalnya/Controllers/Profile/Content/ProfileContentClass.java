@@ -14,5 +14,6 @@ public abstract class ProfileContentClass implements PersonDataUser, Initializab
 
     public abstract void initialize(URL url, ResourceBundle resourceBundle);
     public abstract void setDelegate(ProfileDataDelegate delegate);
-    public abstract void setPerson(Person person);
+    public abstract void setModel(Person person);
+    public abstract void loadModelData();
 }

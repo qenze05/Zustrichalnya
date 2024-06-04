@@ -101,289 +101,6 @@
          </HBox.margin>
       </VBox>
       <VBox prefWidth="800.0" spacing="10.0">
-<!--         <children>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Прізвище">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <TextField fx:id="surnameField" prefHeight="30.0" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Імʼя">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <TextField fx:id="nameField" prefHeight="30.0" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="По-батькові">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <TextField fx:id="patronymicField" prefHeight="30.0" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Нікнейм">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <TextField fx:id="nickname" prefHeight="30.0" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Що відображатиметься в анкетах?">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <ChoiceBox fx:id="visibilityCB" prefHeight="30.0" prefWidth="150.0" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Дата народження">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <DatePicker fx:id="birthDatePicker" prefHeight="30.0" prefWidth="200.0" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Показувати дату?">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <CheckBox fx:id="isBirthDateShownCB" mnemonicParsing="false" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Область">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <TextField fx:id="region" prefHeight="30.0" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Місто">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <TextField fx:id="city" prefHeight="30.0" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Геолокація">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Стать">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <ChoiceBox fx:id="sexCB" prefHeight="30.0" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Гендер">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <TextField fx:id="genderField" prefHeight="30.0" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Орієнтація">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <TextField fx:id="sexOrientationField" prefHeight="30.0" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Зайнятість">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <ChoiceBox fx:id="hasWorkCB" prefHeight="30.0" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Альма-матер">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <TextField fx:id="university" prefHeight="30.0" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Професія">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <TextField fx:id="workField" prefHeight="30.0" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <Label text="Відкритість до заявок:">-->
-<!--               <font>-->
-<!--                  <Font size="25.0" />-->
-<!--               </font>-->
-<!--               <VBox.margin>-->
-<!--                  <Insets top="20.0" />-->
-<!--               </VBox.margin>-->
-<!--            </Label>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="На один день">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <CheckBox mnemonicParsing="false" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Дружба">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <CheckBox mnemonicParsing="false" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Короткочасні романтичні стосунки">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <CheckBox mnemonicParsing="false" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Партнерство">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <CheckBox mnemonicParsing="false" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--            <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">-->
-<!--               <children>-->
-<!--                  <Label text="Сімʼя">-->
-<!--                     <font>-->
-<!--                        <Font size="20.0" />-->
-<!--                     </font>-->
-<!--                     <HBox.margin>-->
-<!--                        <Insets />-->
-<!--                     </HBox.margin>-->
-<!--                  </Label>-->
-<!--                  <CheckBox mnemonicParsing="false" />-->
-<!--               </children>-->
-<!--            </HBox>-->
-<!--         </children>-->
          <HBox.margin>
             <Insets left="10.0" top="20.0" />
          </HBox.margin>
@@ -394,6 +111,29 @@
               </content>
             </ScrollPane>
          </children>
+      </VBox>
+      <VBox prefWidth="300.0" spacing="25.0" HBox.hgrow="ALWAYS">
+         <children>
+            <Button fx:id="saveButton" onAction="#saveForm" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Зберегти">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="resetButton" onAction="#clearForm" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Очистити">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="25.0" />
+         </padding>
       </VBox>
    </children>
 </HBox>

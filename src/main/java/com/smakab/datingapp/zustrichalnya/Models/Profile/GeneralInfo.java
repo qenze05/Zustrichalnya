@@ -3,10 +3,15 @@ package com.smakab.datingapp.zustrichalnya.Models.Profile;
 import javafx.beans.property.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.image.Image;
+import org.javatuples.Pair;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class GeneralInfo {
+    private ArrayList<Pair<Image, Boolean>> photos = new ArrayList<>();
+    private String description;
     private StringProperty surname = new SimpleStringProperty("");
     private StringProperty name = new SimpleStringProperty("");
     private StringProperty patronymic = new SimpleStringProperty("");
@@ -25,6 +30,22 @@ public class GeneralInfo {
     private StringProperty profession = new SimpleStringProperty("");
     private ListProperty<String> requestTypes = new SimpleListProperty<>(FXCollections.observableArrayList("Friends"));
 
+
+    public ArrayList<Pair<Image, Boolean>> getPhotos() {
+        return photos;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setPhotos(ArrayList<Pair<Image, Boolean>> photos) {
+        this.photos = photos;
+    }
 
     public ObservableList<String> getSexAll() {
         return sexAll.get();

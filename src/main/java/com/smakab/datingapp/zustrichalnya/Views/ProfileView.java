@@ -10,6 +10,7 @@ import com.dlsc.formsfx.view.renderer.FormRenderer;
 import com.dlsc.formsfx.view.util.ViewMixin;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.GeneralInfo;
 import javafx.beans.property.SimpleListProperty;
+import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 
 import java.time.LocalDate;
@@ -23,8 +24,12 @@ public class ProfileView implements ViewMixin {
     private GeneralInfo generalInfo;
     private Form generalInfoForm;
     private FormRenderer generalInfoFormRenderer;
-    public ProfileView(GeneralInfo generalInfo) {
+    private Button save, reset;
+    public ProfileView(GeneralInfo generalInfo, Button save, Button reset) {
         this.generalInfo = generalInfo;
+        this.save = save;
+        this.reset = reset;
+
         initGeneralInfoForm();
         init();
     }
@@ -92,6 +97,9 @@ public class ProfileView implements ViewMixin {
         return generalInfoFormRenderer;
     }
 
+    public Form getGeneralInfoForm() {
+        return generalInfoForm;
+    }
 
     @Override
     public List<String> getStylesheets() {
@@ -106,8 +114,8 @@ public class ProfileView implements ViewMixin {
     @Override
     public void setupBindings() {
         generalInfoFormRenderer.setFillWidth(true);
-        System.out.println(getGeneralInfoFormRenderer().widthProperty().get());
-
+        save.disableProperty().bind(getGeneralInfoForm().persistableProperty().not());
+        reset.disableProperty().bind(getGeneralInfoForm().changedProperty().not());
     }
 
     @Override

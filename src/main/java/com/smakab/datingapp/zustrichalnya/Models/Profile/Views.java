@@ -4,9 +4,29 @@ import java.util.TreeSet;
 
 public class Views {
     private TreeSet<String> movements;
+    private String religion;
+    private String language;
 
     public Views() {
         this.movements = new TreeSet<>();
+        this.religion = "";
+        this.language = "";
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public String getReligion() {
+        return religion;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public void setReligion(String religion) {
+        this.religion = religion;
     }
 
     public TreeSet<String> getMovements() {

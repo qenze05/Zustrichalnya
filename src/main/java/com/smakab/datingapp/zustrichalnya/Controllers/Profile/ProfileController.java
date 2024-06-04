@@ -1,7 +1,6 @@
 package com.smakab.datingapp.zustrichalnya.Controllers.Profile;
 
 import com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content.ProfileContentClass;
-import com.smakab.datingapp.zustrichalnya.Interfaces.PersonDataUser;
 import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
 import javafx.event.ActionEvent;
@@ -11,7 +10,6 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -74,7 +72,7 @@ public class ProfileController implements Initializable, ProfileDataDelegate {
     }
 
     private void configureContentView(ProfileContentClass controller) {
-        controller.setPerson(this.person);
+        controller.setModel(this.person);
         controller.setDelegate(this);
     }
 

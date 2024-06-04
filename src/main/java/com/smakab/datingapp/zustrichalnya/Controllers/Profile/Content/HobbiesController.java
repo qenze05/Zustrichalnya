@@ -4,9 +4,6 @@ import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.Hobbies;
 import com.smakab.datingapp.zustrichalnya.Utils.EditableLabel;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -26,10 +23,10 @@ public class HobbiesController extends ProfileContentClass {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        this.model = new Hobbies();
+
     }
 
-    public HBox createSubculture() {
+    public HBox createSubculture(String name) {
 
         HBox container = new HBox();
         container.setPadding(new Insets(5, 5, 5, 5));
@@ -37,7 +34,7 @@ public class HobbiesController extends ProfileContentClass {
         container.styleProperty().set("-fx-background-color: white;");
         container.alignmentProperty().set(Pos.CENTER);
 
-        EditableLabel label = new EditableLabel("###");
+        EditableLabel label = new EditableLabel(name);
         label.setFont(new Font(20));
         label.textProperty().addListener((observableValue, s, t1) -> {
             if(!t1.isEmpty()) {
@@ -64,27 +61,31 @@ public class HobbiesController extends ProfileContentClass {
     }
 
     @Override
-    public void setPerson(Person person) {
-        try{
-            this.person = (Person) person.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
+    public void setModel(Person person) {
+        this.model = person.getHobbies();
+        loadModelData();
     }
 
-    public void addHobby(ActionEvent actionEvent) {
-        hobbiesContainer.getChildren().addLast(createHobby());
+    @Override
+    public void loadModelData() {
+        System.out.println(model.getHobbies().size());
+        model.getSubcultures().forEach(name -> subculturesContainer.getChildren().addLast(createSubculture(name)));
+        model.getHobbies().forEach((name, value) -> hobbiesContainer.getChildren().addLast(createHobby(name, value)));
     }
 
-    public void addSubculture(ActionEvent actionEvent) {
-        subculturesContainer.getChildren().addLast(createSubculture());
+    public void addHobby() {
+        hobbiesContainer.getChildren().addLast(createHobby("###", 5));
     }
 
-    public HBox createHobby() {
+    public void addSubculture() {
+        subculturesContainer.getChildren().addLast(createSubculture("###"));
+    }
+
+    public HBox createHobby(String name, Integer value) {
 
         HBox container = new HBox();
-        EditableLabel label = new EditableLabel("###");
-        Slider slider = new Slider(0, 10, 5);
+        EditableLabel label = new EditableLabel(name);
+        Slider slider = new Slider(0, 10, value);
 
         container.spacingProperty().set(20);
         container.alignmentProperty().set(Pos.CENTER_LEFT);
@@ -97,12 +98,7 @@ public class HobbiesController extends ProfileContentClass {
         slider.minorTickCountProperty().set(1);
         slider.prefWidthProperty().set(300);
         slider.prefHeightProperty().set(50);
-        slider.valueProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(ObservableValue<? extends Number> observableValue, Number number, Number t1) {
-                model.editHobby(label.getText(), t1.intValue());
-            }
-        });
+        slider.valueProperty().addListener((observableValue, number, t1) -> model.editHobby(label.getText(), t1.intValue()));
 
 
         label.setFont(new Font(20));
@@ -123,6 +119,7 @@ public class HobbiesController extends ProfileContentClass {
         container.getChildren().add(label);
         container.getChildren().add(slider);
         container.getChildren().add(delete);
+
 
         return container;
     }

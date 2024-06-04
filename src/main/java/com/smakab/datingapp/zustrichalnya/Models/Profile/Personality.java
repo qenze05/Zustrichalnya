@@ -9,6 +9,7 @@ public class Personality {
 
     public Personality() {
         sliders = new HashMap<>();
+        personality = "";
     }
 
     public String getPersonality() {

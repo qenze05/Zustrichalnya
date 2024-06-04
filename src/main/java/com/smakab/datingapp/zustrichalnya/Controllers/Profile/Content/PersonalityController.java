@@ -18,13 +18,11 @@ import java.util.ResourceBundle;
 
 public class PersonalityController extends ProfileContentClass {
     public VBox slidersContainer;
-    public ChoiceBox personalitiesCB;
+    public ChoiceBox<String> personalitiesCB;
     private Personality model;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        model = new Personality();
-        initSliders();
-        initCB();
+
     }
 
     public void initSliders() {
@@ -34,7 +32,11 @@ public class PersonalityController extends ProfileContentClass {
             Slider slider = (Slider) child.getChildren().get(1);
             Label label = (Label) child.getChildren().get(2);
 
-            model.updateSlider(label.getText(), (int) slider.getValue());
+            if(model.getSliders().containsKey(label.getText())) {
+                slider.valueProperty().set(model.getSliders().get(label.getText()));
+            } else {
+                model.updateSlider(label.getText(), (int) slider.getValue());
+            }
             setListener(slider, label.getText());
         }
     }
@@ -46,9 +48,13 @@ public class PersonalityController extends ProfileContentClass {
                 "Віртуоз (ISTP)", "Авантюрист (ISFP)", "Підприємець (ESTP)", "Шоумен (ESFP)");
         personalitiesCB.setItems(list);
 
+        if(!model.getPersonality().isEmpty()) {
+            personalitiesCB.valueProperty().set(model.getPersonality());
+        }
+
         personalitiesCB.valueProperty().addListener(
                 (observableValue, oldValue, newValue)
-                        -> model.setPersonality(newValue.toString()));
+                        -> model.setPersonality(newValue));
 
     }
     public void setListener(Slider slider, String label) {
@@ -63,11 +69,14 @@ public class PersonalityController extends ProfileContentClass {
     }
 
     @Override
-    public void setPerson(Person person) {
-        try {
-            this.person = (Person) person.clone();
-        } catch (CloneNotSupportedException e) {
-            e.printStackTrace();
-        }
+    public void setModel(Person person) {
+        this.model = person.getPersonality();
+        loadModelData();
+    }
+
+    @Override
+    public void loadModelData() {
+        initSliders();
+        initCB();
     }
 }
