@@ -6,31 +6,31 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Profile.ProfileController" dividerPositions="0.13" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<SplitPane fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Profile.ProfileController" dividerPositions="0.136" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../../../../../../styles.css" styleClass="background">
   <items>
-      <VBox prefHeight="200.0" prefWidth="100.0">
+      <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@../../../../../../styles.css" styleClass="left-side">
          <children>
-            <Button fx:id="mainB" onAction="#switchMenu" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Основне">
+            <Button fx:id="mainB" onAction="#switchMenu" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Основне" stylesheets="@../../../../../../styles.css" styleClass="menu-button">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="personalityB" onAction="#switchMenu" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Риси характеру">
+            <Button fx:id="personalityB" onAction="#switchMenu" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Риси характеру" stylesheets="@../../../../../../styles.css" styleClass="menu-button">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="hobbiesB" onAction="#switchMenu" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Хобі">
+            <Button fx:id="hobbiesB" onAction="#switchMenu" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Хобі" stylesheets="@../../../../../../styles.css" styleClass="menu-button">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="prefB" onAction="#switchMenu" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Романтичні вподобання">
+            <Button fx:id="prefB" onAction="#switchMenu" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Романтичні вподобання" stylesheets="@../../../../../../styles.css" styleClass="menu-button">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="viewsB" onAction="#switchMenu" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Погляди">
+            <Button fx:id="viewsB" onAction="#switchMenu" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Погляди" stylesheets="@../../../../../../styles.css" styleClass="menu-button">
                <font>
                   <Font size="20.0" />
                </font>

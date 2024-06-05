@@ -69,16 +69,16 @@ public class HobbiesController extends ProfileContentClass {
     @Override
     public void loadModelData() {
         System.out.println(model.getHobbies().size());
-        model.getSubcultures().forEach(name -> subculturesContainer.getChildren().addLast(createSubculture(name)));
-        model.getHobbies().forEach((name, value) -> hobbiesContainer.getChildren().addLast(createHobby(name, value)));
+        model.getSubcultures().forEach(name -> subculturesContainer.getChildren().add(createSubculture(name)));
+        model.getHobbies().forEach((name, value) -> hobbiesContainer.getChildren().add(createHobby(name, value)));
     }
 
     public void addHobby() {
-        hobbiesContainer.getChildren().addLast(createHobby("###", 5));
+        hobbiesContainer.getChildren().add(createHobby("###", 5));
     }
 
     public void addSubculture() {
-        subculturesContainer.getChildren().addLast(createSubculture("###"));
+        subculturesContainer.getChildren().add(createSubculture("###"));
     }
 
     public HBox createHobby(String name, Integer value) {

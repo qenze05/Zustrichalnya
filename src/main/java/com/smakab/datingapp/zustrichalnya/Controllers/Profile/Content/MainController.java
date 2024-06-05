@@ -56,7 +56,7 @@ public class MainController extends ProfileContentClass {
 
         //TODO: зробити плейсхолдер якщо фото немає
         if(!model.getPhotos().isEmpty()) {
-            imageView.setImage(model.getPhotos().getFirst().getValue0());
+            imageView.setImage(model.getPhotos().get(0).getValue0());
         }
 
         descriptionArea.textProperty().set(model.getDescription());

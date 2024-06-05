@@ -29,7 +29,7 @@
                <children>
                   <VBox alignment="TOP_CENTER">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#prevImage" prefHeight="30.0" text="←" />
+                        <Button mnemonicParsing="false" onAction="#prevImage" prefHeight="30.0" text="←" stylesheets="@../../../../../../../styles.css" styleClass="photo-button"/>
                         <Label text="Назад" textAlignment="CENTER" />
                      </children>
                      <HBox.margin>
@@ -41,7 +41,7 @@
                         <Insets />
                      </HBox.margin>
                      <children>
-                        <CheckBox fx:id="isPhotoRealCB" alignment="CENTER" mnemonicParsing="false" onAction="#setIsPhotoReal" prefHeight="40.0" prefWidth="30.0">
+                        <CheckBox fx:id="isPhotoRealCB" alignment="CENTER" mnemonicParsing="false" onAction="#setIsPhotoReal" prefHeight="40.0" prefWidth="30.0" stylesheets="@../../../../../../../styles.css" styleClass="photo-check-box">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -54,7 +54,7 @@
                         <Insets top="7.0" />
                      </HBox.margin>
                      <children>
-                        <Button mnemonicParsing="false" onAction="#loadPhoto" prefHeight="30.0" text="⤒" />
+                        <Button mnemonicParsing="false" onAction="#loadPhoto" prefHeight="30.0" text="⤒" stylesheets="@../../../../../../../styles.css" styleClass="photo-button" />
                         <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Завантажити фото" textAlignment="CENTER" wrapText="true" />
                      </children>
                   </VBox>
@@ -63,7 +63,7 @@
                         <Insets right="5.0" top="7.0" />
                      </HBox.margin>
                      <children>
-                        <Button mnemonicParsing="false" onAction="#deleteImage" prefHeight="30.0" text="🗑️" />
+                        <Button mnemonicParsing="false" onAction="#deleteImage" prefHeight="30.0" text="🗑️" stylesheets="@../../../../../../../styles.css" styleClass="photo-delete-button"/>
                         <Label text="Видалити" textAlignment="CENTER" />
                      </children>
                   </VBox>
@@ -72,7 +72,7 @@
                         <Insets right="5.0" top="7.0" />
                      </HBox.margin>
                      <children>
-                        <Button mnemonicParsing="false" onAction="#nextImage" prefHeight="30.0" text="→" />
+                        <Button mnemonicParsing="false" onAction="#nextImage" prefHeight="30.0" text="→" stylesheets="@../../../../../../../styles.css" styleClass="photo-button" />
                         <Label text="Вперед" />
                      </children>
                   </VBox>
@@ -88,7 +88,7 @@
                         <Insets left="25.0" />
                      </VBox.margin>
                   </Label>
-                  <TextArea fx:id="descriptionArea" maxWidth="-Infinity" prefHeight="200.0" prefWidth="350.0" promptText="Опис">
+                  <TextArea fx:id="descriptionArea" maxWidth="-Infinity" prefHeight="200.0" prefWidth="350.0" promptText="Опис" stylesheets="@../../../../../../../styles.css" styleClass="text-area-style">
                      <VBox.margin>
                         <Insets left="25.0" />
                      </VBox.margin>
@@ -105,16 +105,16 @@
             <Insets left="10.0" top="20.0" />
          </HBox.margin>
          <children>
-            <ScrollPane fx:id="formContainer" fitToWidth="true" hmax="0.0" maxWidth="1.7976931348623157E308" minWidth="800.0" vbarPolicy="NEVER">
+            <ScrollPane fx:id="formContainer" fitToWidth="true" hmax="0.0" maxWidth="1.7976931348623157E308" minWidth="800.0" vbarPolicy="NEVER" stylesheets="@../../../../../../../styles.css" styleClass="form-style">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" stylesheets="@../../../../../../../styles.css" styleClass="form-style"/>
               </content>
             </ScrollPane>
          </children>
       </VBox>
       <VBox prefWidth="300.0" spacing="25.0" HBox.hgrow="ALWAYS">
          <children>
-            <Button fx:id="saveButton" onAction="#saveForm" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Зберегти">
+            <Button fx:id="saveButton" onAction="#saveForm" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Зберегти" stylesheets="@../../../../../../../styles.css" styleClass="photo-button">
                <VBox.margin>
                   <Insets left="50.0" right="50.0" />
                </VBox.margin>
@@ -122,7 +122,7 @@
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="resetButton" onAction="#clearForm" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Очистити">
+            <Button fx:id="resetButton" onAction="#clearForm" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="50.0" text="Очистити" stylesheets="@../../../../../../../styles.css" styleClass="photo-delete-button">
                <VBox.margin>
                   <Insets left="50.0" right="50.0" />
                </VBox.margin>

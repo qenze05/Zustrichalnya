@@ -39,11 +39,11 @@ public class PreferencesController extends ProfileContentClass {
 
     @Override
     public void loadModelData() {
-        model.getPreferences().forEach((name, value) -> prefContainer.getChildren().addLast(createPreference(name, value)));
+        model.getPreferences().forEach((name, value) -> prefContainer.getChildren().add(createPreference(name, value)));
     }
 
     public void addPreference() {
-        prefContainer.getChildren().addLast(createPreference("###", 5));
+        prefContainer.getChildren().add(createPreference("###", 5));
     }
 
     public HBox createPreference(String name, int value) {

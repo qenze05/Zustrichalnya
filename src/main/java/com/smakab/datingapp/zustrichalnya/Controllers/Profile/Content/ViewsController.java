@@ -46,7 +46,7 @@ public class ViewsController extends ProfileContentClass {
         langField.textProperty().set(model.getLanguage());
         langField.textProperty().addListener((observableValue, oldV, newV) -> model.setLanguage(newV));
 
-        model.getMovements().forEach(name -> movementsContainer.getChildren().addLast(createMovement(name)));
+        model.getMovements().forEach(name -> movementsContainer.getChildren().add(createMovement(name)));
     }
 
     public HBox createMovement(String name) {
@@ -80,6 +80,6 @@ public class ViewsController extends ProfileContentClass {
     }
 
     public void addMovement(ActionEvent actionEvent) {
-        movementsContainer.getChildren().addLast(createMovement("###"));
+        movementsContainer.getChildren().add(createMovement("###"));
     }
 }

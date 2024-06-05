@@ -11,12 +11,12 @@
 
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content.PersonalityController">
     <children>
-      <ScrollPane hbarPolicy="NEVER" hmax="0.0">
-         <HBox.margin>
-            <Insets left="10.0" top="20.0" />
+      <ScrollPane hbarPolicy="NEVER" hmax="0.0"  stylesheets="@../../../../../../../styles.css" styleClass="form-style">
+         <HBox.margin >
+            <Insets left="10.0" top="0.0" />
          </HBox.margin>
          <content>
-              <VBox prefWidth="800.0" spacing="10.0">
+              <VBox prefWidth="1590.0" spacing="10.0" stylesheets="@../../../../../../../styles.css" styleClass="background">
                   <children>
                       <Label text="Будь-ласка, охарактеризуйте себе:">
                           <font>
@@ -26,7 +26,7 @@
                               <Insets top="20.0" />
                           </VBox.margin>
                       </Label>
-                  <Label text="За потреби скористайтесь *перелік сайтів*">
+                  <Label text="За потреби скористайтесь https://bigfive-test.com/uk">
                      <font>
                         <Font size="20.0" />
                      </font>
@@ -35,7 +35,7 @@
                      <children>
                             <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                                <children>
-                                    <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Інтроверт">
+                                    <Label alignment="CENTER" prefWidth="150.0" text="Інтроверт" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                         <font>
                                             <Font size="20.0" />
                                         </font>
@@ -43,8 +43,8 @@
                                             <Insets />
                                         </HBox.margin>
                                     </Label>
-                                    <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                                    <Label text="Екстраверт">
+                                    <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true"/>
+                                    <Label text="Екстраверт" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -53,7 +53,7 @@
                             </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Мозок" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Мозок" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -62,7 +62,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Серце">
+                              <Label text="Серце" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -71,7 +71,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Темний" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Темний" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -80,7 +80,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Світлий">
+                              <Label text="Світлий" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -89,7 +89,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Консерватор" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Консерватор" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -98,7 +98,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Новатор">
+                              <Label text="Новатор" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -107,7 +107,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Песиміст" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Песиміст" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -116,7 +116,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Оптиміст">
+                              <Label text="Оптиміст" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -125,7 +125,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Прагмат" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Прагмат" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -134,7 +134,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Авантюрист">
+                              <Label text="Авантюрист" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -143,7 +143,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Планувальник" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Планувальник" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -152,7 +152,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Імпровізатор">
+                              <Label text="Імпровізатор" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -161,7 +161,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Домосида" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Домосида" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -170,7 +170,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Подорожувальник">
+                              <Label text="Подорожун" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -179,7 +179,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Практичний" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Практичний" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -188,7 +188,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Творчий">
+                              <Label text="Творчий" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -197,7 +197,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Спокійний" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Спокійний" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -206,7 +206,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Емоційний">
+                              <Label text="Емоційний" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -215,7 +215,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Покладистий" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Покладистий" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -224,7 +224,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Наполегливий">
+                              <Label text="Наполегливий" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -233,7 +233,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Егоїст" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Егоїст" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -242,7 +242,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Альтруїст">
+                              <Label text="Альтруїст" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -251,7 +251,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Приземлений" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Приземлений" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -260,7 +260,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Амбітний">
+                              <Label text="Амбітний" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -269,7 +269,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Підлеглий" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Підлеглий" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -278,7 +278,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Лідер">
+                              <Label text="Лідер" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -287,7 +287,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Скромний" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Скромний" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -296,7 +296,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Розкутий">
+                              <Label text="Розкутий" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -305,7 +305,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Грубий" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Грубий" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -314,7 +314,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Ніжний">
+                              <Label text="Ніжний" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -323,7 +323,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Недовірливий" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Недовірливий" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -332,7 +332,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Довірливий">
+                              <Label text="Довірливий" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -341,7 +341,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Серйозний" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Серйозний" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -350,7 +350,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Розслаблений">
+                              <Label text="Розслаблений" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -359,7 +359,7 @@
                         </HBox>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                            <children>
-                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Прямолінійний" textAlignment="RIGHT">
+                              <Label alignment="CENTER" prefWidth="150.0" text="Прямолінійний" textAlignment="RIGHT" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
@@ -368,7 +368,7 @@
                                  </HBox.margin>
                               </Label>
                               <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
-                              <Label text="Непрямолінійний">
+                              <Label text="Непрямолінійний" alignment="CENTER" prefWidth="150.0" stylesheets="@../../../../../../../styles.css" styleClass="label-personality">
                                  <font>
                                     <Font size="20.0" />
                                  </font>
