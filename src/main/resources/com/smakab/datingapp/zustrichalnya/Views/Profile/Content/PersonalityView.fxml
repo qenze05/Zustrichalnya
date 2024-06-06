@@ -13,10 +13,10 @@
     <children>
       <ScrollPane hbarPolicy="NEVER" hmax="0.0"  stylesheets="@../../../../../../../styles.css" styleClass="form-style">
          <HBox.margin >
-            <Insets left="10.0" top="0.0" />
+            <Insets left="0" top="0.0" />
          </HBox.margin>
          <content>
-              <VBox prefWidth="1590.0" spacing="10.0" stylesheets="@../../../../../../../styles.css" styleClass="background">
+              <VBox prefWidth="1590.0" spacing="10.0" stylesheets="@../../../../../../../styles.css" styleClass="background-padding">
                   <children>
                       <Label text="Будь-ласка, охарактеризуйте себе:">
                           <font>

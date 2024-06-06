@@ -14,10 +14,10 @@
    <children>
       <ScrollPane hbarPolicy="NEVER">
          <HBox.margin>
-            <Insets left="10.0" top="20.0" />
+            <Insets left="0" top="0" />
          </HBox.margin>
          <content>
-            <VBox prefWidth="800.0" spacing="10.0">
+            <VBox prefWidth="1590.0" minHeight="1500.0" spacing="10.0" stylesheets="@../../../../../../../styles.css" styleClass="background-padding">
                <children>
                   <HBox alignment="CENTER_LEFT">
                      <VBox.margin>
@@ -29,7 +29,7 @@
                               <Font size="25.0" />
                            </font>
                         </Label>
-                        <Button mnemonicParsing="false" onAction="#addSubculture" text="+">
+                        <Button mnemonicParsing="false" onAction="#addSubculture" text="+" stylesheets="@../../../../../../../styles.css" styleClass="add-button">
                            <HBox.margin>
                               <Insets left="20.0" />
                            </HBox.margin>
@@ -73,7 +73,7 @@
                               <Font size="25.0" />
                            </font>
                         </Label>
-                        <Button mnemonicParsing="false" onAction="#addHobby" text="+">
+                        <Button mnemonicParsing="false" onAction="#addHobby" text="+"  stylesheets="@../../../../../../../styles.css" styleClass="add-button">
                            <font>
                               <Font size="20.0" />
                            </font>

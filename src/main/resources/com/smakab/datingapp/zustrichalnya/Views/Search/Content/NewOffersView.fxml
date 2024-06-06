@@ -14,10 +14,10 @@
     <children>
         <ScrollPane hbarPolicy="NEVER">
             <HBox.margin>
-                <Insets left="10.0" top="20.0" />
+                <Insets left="0.0" top="0.0" />
             </HBox.margin>
             <content>
-                <VBox prefWidth="800.0" spacing="10.0">
+                <VBox prefWidth="1590.0" spacing="10.0" stylesheets="@../../../../../../../styles.css" styleClass="background-padding">
                     <children>
                         <Label text="Мої романтичні вподобання:">
                             <font>

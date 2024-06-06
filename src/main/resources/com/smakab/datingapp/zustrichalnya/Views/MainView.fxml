@@ -24,7 +24,7 @@
                  </ImageView>
              </graphic>
              </Label>
-          <Button fx:id="profileB" onAction="#switchMenu" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" text="Профіль 🙎🏻‍♂️" HBox.hgrow="ALWAYS" stylesheets="@../../../../../styles.css" styleClass="menu-button">
+          <Button fx:id="profileB" onAction="#switchMenu" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Профіль 🙎🏻‍♂️" HBox.hgrow="ALWAYS" stylesheets="@../../../../../styles.css" styleClass="menu-button">
                <font>
                   <Font size="20.0" />
                </font>
@@ -32,7 +32,7 @@
                   <Insets left="10.0" right="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="searchB" onAction="#switchMenu" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" text="Пошук 🔎" HBox.hgrow="ALWAYS" stylesheets="@../../../../../styles.css" styleClass="menu-button">
+            <Button fx:id="searchB" onAction="#switchMenu" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Пошук 🔎" HBox.hgrow="ALWAYS" stylesheets="@../../../../../styles.css" styleClass="menu-button">
                <font>
                   <Font size="20.0" />
                </font>
@@ -40,7 +40,7 @@
                   <Insets right="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="chatB" onAction="#switchMenu" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" text="Чат 💬" HBox.hgrow="ALWAYS" stylesheets="@../../../../../styles.css" styleClass="menu-button">
+            <Button fx:id="chatB" onAction="#switchMenu" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Чат 💬" HBox.hgrow="ALWAYS" stylesheets="@../../../../../styles.css" styleClass="menu-button">
                <font>
                   <Font size="20.0" />
                </font>
@@ -48,7 +48,7 @@
                   <Insets right="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="settingsB" onAction="#switchMenu" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" text="Налаштування 🛠️️" HBox.hgrow="ALWAYS" stylesheets="@../../../../../styles.css" styleClass="menu-button">
+            <Button fx:id="settingsB" onAction="#switchMenu" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Налаштування 🛠️️" HBox.hgrow="ALWAYS" stylesheets="@../../../../../styles.css" styleClass="menu-button">
                <font>
                   <Font size="20.0" />
                </font>
@@ -56,7 +56,7 @@
                   <Insets right="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="logoutB" onAction="#switchMenu" mnemonicParsing="false" prefHeight="40.0" prefWidth="300.0" text="Вихід 🚪" HBox.hgrow="ALWAYS" stylesheets="@../../../../../styles.css" styleClass="menu-button">
+            <Button fx:id="logoutB" onAction="#switchMenu" mnemonicParsing="false" prefHeight="60.0" prefWidth="300.0" text="Вихід 🚪" HBox.hgrow="ALWAYS" stylesheets="@../../../../../styles.css" styleClass="menu-button">
                <font>
                   <Font size="20.0" />
                </font>

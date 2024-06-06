@@ -99,12 +99,12 @@
                                             <children>
                                                 <HBox alignment="CENTER">
                                                     <children>
-                                                        <Label prefWidth="160.0" text="Зелені прапорці">
+                                                        <Label prefWidth="180.0" text="Зелені прапорці" stylesheets="@../../../../../../../../styles.css" styleClass="label-greenflag">
                                                             <font>
                                                                 <Font size="20.0" />
                                                             </font>
                                                         </Label>
-                                                        <Button mnemonicParsing="false" text="+">
+                                                        <Button mnemonicParsing="false" text="+" stylesheets="@../../../../../../../../styles.css" styleClass="add-button">
                                                             <HBox.margin>
                                                                 <Insets left="20.0" />
                                                             </HBox.margin>
@@ -145,12 +145,12 @@
                                             <children>
                                                 <HBox alignment="CENTER">
                                                     <children>
-                                                        <Label prefWidth="160.0" text="Червоні прапорці">
+                                                        <Label prefWidth="180.0" text="Червоні прапорці" stylesheets="@../../../../../../../../styles.css" styleClass="label-redflag">
                                                             <font>
                                                                 <Font size="20.0" />
                                                             </font>
                                                         </Label>
-                                                        <Button mnemonicParsing="false" text="+">
+                                                        <Button mnemonicParsing="false" text="+" stylesheets="@../../../../../../../../styles.css" styleClass="delete-button">
                                                             <HBox.margin>
                                                                 <Insets left="20.0" />
                                                             </HBox.margin>
