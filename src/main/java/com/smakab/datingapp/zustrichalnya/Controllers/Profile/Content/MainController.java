@@ -3,7 +3,7 @@ package com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content;
 import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.GeneralInfo;
-import com.smakab.datingapp.zustrichalnya.Views.ProfileView;
+import com.smakab.datingapp.zustrichalnya.Views.Profile.MainView;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.control.*;
@@ -25,7 +25,7 @@ public class MainController extends ProfileContentClass {
     public CheckBox isPhotoRealCB;
     public TextArea descriptionArea;
     public ScrollPane formContainer;
-    public ProfileView view;
+    public MainView view;
     public GeneralInfo model;
     public Button saveButton;
     public Button resetButton;
@@ -45,13 +45,12 @@ public class MainController extends ProfileContentClass {
     @Override
     public void setModel(Person person) {
         this.model = person.getGeneralInfo();
-        loadModelData();
     }
 
     @Override
     public void loadModelData() {
 
-        view = new ProfileView(model, saveButton, resetButton);
+        view = new MainView(model, saveButton, resetButton);
         formContainer.setContent(view.getGeneralInfoFormRenderer());
 
         //TODO: зробити плейсхолдер якщо фото немає

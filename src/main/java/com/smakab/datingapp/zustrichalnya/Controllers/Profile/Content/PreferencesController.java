@@ -34,7 +34,6 @@ public class PreferencesController extends ProfileContentClass {
     @Override
     public void setModel(Person person) {
         this.model = person.getPreferences();
-        loadModelData();
     }
 
     @Override

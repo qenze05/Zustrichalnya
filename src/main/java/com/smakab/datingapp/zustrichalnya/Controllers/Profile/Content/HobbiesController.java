@@ -63,7 +63,6 @@ public class HobbiesController extends ProfileContentClass {
     @Override
     public void setModel(Person person) {
         this.model = person.getHobbies();
-        loadModelData();
     }
 
     @Override

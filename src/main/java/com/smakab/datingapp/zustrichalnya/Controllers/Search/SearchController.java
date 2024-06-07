@@ -1,5 +1,9 @@
 package com.smakab.datingapp.zustrichalnya.Controllers.Search;
 
+import com.smakab.datingapp.zustrichalnya.Controllers.Search.Content.TemplateContentClass;
+import com.smakab.datingapp.zustrichalnya.Controllers.Search.Content.TemplatesListController;
+import com.smakab.datingapp.zustrichalnya.Interfaces.TemplateDataDelegate;
+import com.smakab.datingapp.zustrichalnya.Models.Search.Template;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,28 +14,41 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.ResourceBundle;
+import java.util.UUID;
 
-public class SearchController implements Initializable {
+public class SearchController implements Initializable, TemplateDataDelegate {
 
     @FXML
     public Button mainB, selectedTemplateB, generalInfoB, personalityB, hobbiesB, prefB, viewsB, newOffersB;
     public AnchorPane container;
+    public TemplatesListController mainVC;
+    public HashMap<UUID, Template> templates;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadMainView();
+    }
 
+    public void bindButtons() {
+        selectedTemplateB.disableProperty().bind(mainVC.isTemplateSelectedProperty().not());
+        generalInfoB.disableProperty().bind(mainVC.isTemplateSelectedProperty().not());
+        personalityB.disableProperty().bind(mainVC.isTemplateSelectedProperty().not());
+        hobbiesB.disableProperty().bind(mainVC.isTemplateSelectedProperty().not());
+        prefB.disableProperty().bind(mainVC.isTemplateSelectedProperty().not());
+        viewsB.disableProperty().bind(mainVC.isTemplateSelectedProperty().not());
     }
 
     public void switchMenu(ActionEvent actionEvent) {
         Object source = actionEvent.getSource();
 
         if(source.equals(mainB)) {
-            loadView("SearchMainView");
+            loadMainView();
         } else if (source.equals(selectedTemplateB)) {
             loadView("Template/MainView");
         } else if (source.equals(generalInfoB)) {
-            loadView("Template/GeneralInfo");
+            loadView("Template/DetailsView");
         } else if (source.equals(personalityB)) {
             loadView("Template/PersonalityView");
         } else if (source.equals(hobbiesB)) {
@@ -45,10 +62,21 @@ public class SearchController implements Initializable {
         }
     }
 
-    public void loadView(String menu) {
-
+    public void loadMainView() {
         try {
-            Parent view = FXMLLoader.load(getClass().getResource("/com/smakab/datingapp/zustrichalnya/Views/Search/Content/"+menu+".fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/smakab/datingapp/zustrichalnya/Views/Search/Content/SearchMainView.fxml"));
+            Parent view = loader.load();
+
+            //TODO: implement loading from db instead of saving templates locally
+            if(mainVC == null) {
+                mainVC = loader.getController();
+            } else {
+                templates = mainVC.getTemplates();
+                mainVC = loader.getController();
+                mainVC.setTemplates(templates);
+            }
+            mainVC.loadTemplates();
+
 
             AnchorPane.setTopAnchor(view, 0.0);
             AnchorPane.setRightAnchor(view, 0.0);
@@ -56,8 +84,40 @@ public class SearchController implements Initializable {
             AnchorPane.setLeftAnchor(view, 0.0);
 
             container.getChildren().setAll(view);
+
+
+            bindButtons();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public void loadView(String menu) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/smakab/datingapp/zustrichalnya/Views/Search/Content/"+menu+".fxml"));
+            Parent view = loader.load();
+
+            AnchorPane.setTopAnchor(view, 0.0);
+            AnchorPane.setRightAnchor(view, 0.0);
+            AnchorPane.setBottomAnchor(view, 0.0);
+            AnchorPane.setLeftAnchor(view, 0.0);
+
+            configureContentView(loader.getController());
+
+            container.getChildren().setAll(view);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void configureContentView(TemplateContentClass controller) {
+        controller.setModel(this.mainVC.getSelectedTemplate());
+        controller.loadModelData();
+
+        controller.setDelegate(this);
+    }
+
+    @Override
+    public void didUpdateData(Template data) {
+
     }
 }

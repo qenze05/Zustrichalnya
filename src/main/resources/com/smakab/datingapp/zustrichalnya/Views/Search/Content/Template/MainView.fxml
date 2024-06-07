@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 <?import org.controlsfx.control.CheckListView?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<HBox fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Search.Content.TemplateController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
     <children>
         <VBox prefWidth="800.0" spacing="5.0">
             <HBox.margin>
@@ -24,75 +24,8 @@
             <children>
                 <ScrollPane hbarPolicy="NEVER" hmax="0.0">
                     <content>
-                        <VBox prefWidth="750.0" spacing="10.0">
+                        <VBox fx:id="infoContainer" prefWidth="750.0" spacing="10.0">
                             <children>
-                                <HBox alignment="CENTER_LEFT" spacing="15.0">
-                                    <VBox.margin>
-                                        <Insets />
-                                    </VBox.margin>
-                                    <children>
-                                        <Label prefWidth="100.0" text="Назва:">
-                                            <font>
-                                                <Font size="20.0" />
-                                            </font>
-                                        </Label>
-                                        <TextField prefWidth="500.0" HBox.hgrow="ALWAYS">
-                                            <font>
-                                                <Font size="20.0" />
-                                            </font>
-                                        </TextField>
-                                    </children>
-                                    <padding>
-                                        <Insets top="50.0" />
-                                    </padding>
-                                </HBox>
-                                <HBox alignment="CENTER_LEFT" spacing="15.0">
-                                    <children>
-                                        <Label prefWidth="100.0" text="Мета:">
-                                            <font>
-                                                <Font size="20.0" />
-                                            </font>
-                                        </Label>
-                                        <TextField prefWidth="500.0" HBox.hgrow="ALWAYS">
-                                            <font>
-                                                <Font size="20.0" />
-                                            </font>
-                                        </TextField>
-                                    </children>
-                                    <padding>
-                                        <Insets top="10.0" />
-                                    </padding>
-                                </HBox>
-                                <VBox spacing="10.0">
-                                    <children>
-                                        <Label prefWidth="100.0" text="Тип:">
-                                            <font>
-                                                <Font size="20.0" />
-                                            </font>
-                                        </Label>
-                                        <CheckListView />
-                                    </children>
-                                    <padding>
-                                        <Insets top="50.0" />
-                                    </padding>
-                                </VBox>
-                                <HBox spacing="15.0">
-                                    <children>
-                                        <Label prefWidth="100.0" text="Опис">
-                                            <font>
-                                                <Font size="20.0" />
-                                            </font>
-                                        </Label>
-                                        <TextArea prefHeight="150.0" prefWidth="500.0" promptText="Тут має бути текст" HBox.hgrow="ALWAYS">
-                                            <font>
-                                                <Font size="20.0" />
-                                            </font>
-                                        </TextArea>
-                                    </children>
-                                    <padding>
-                                        <Insets top="10.0" />
-                                    </padding>
-                                </HBox>
                                 <HBox alignment="CENTER">
                                     <children>
                                         <VBox HBox.hgrow="ALWAYS">
@@ -104,7 +37,7 @@
                                                                 <Font size="20.0" />
                                                             </font>
                                                         </Label>
-                                                        <Button mnemonicParsing="false" text="+" stylesheets="@../../../../../../../../styles.css" styleClass="add-button">
+                                                        <Button onAction="#addGreenFlag" mnemonicParsing="false" text="+" stylesheets="@../../../../../../../../styles.css" styleClass="add-button">
                                                             <HBox.margin>
                                                                 <Insets left="20.0" />
                                                             </HBox.margin>
@@ -114,25 +47,25 @@
                                                         </Button>
                                                     </children>
                                                 </HBox>
-                                                <FlowPane hgap="10.0" prefWidth="200.0" vgap="20.0">
+                                                <FlowPane fx:id="greenFlagsContainer" hgap="10.0" prefWidth="200.0" vgap="20.0">
                                                     <children>
-                                                        <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="40.0" style="-fx-background-color: gray;">
-                                                            <children>
-                                                                <Label prefWidth="100.0" text="Sample">
-                                                                    <font>
-                                                                        <Font size="20.0" />
-                                                                    </font>
-                                                                </Label>
-                                                                <Button mnemonicParsing="false" text="X">
-                                                                    <HBox.margin>
-                                                                        <Insets left="10.0" />
-                                                                    </HBox.margin>
-                                                                </Button>
-                                                            </children>
-                                                            <padding>
-                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                            </padding>
-                                                        </HBox>
+<!--                                                        <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="40.0" style="-fx-background-color: gray;">-->
+<!--                                                            <children>-->
+<!--                                                                <Label prefWidth="100.0" text="Sample">-->
+<!--                                                                    <font>-->
+<!--                                                                        <Font size="20.0" />-->
+<!--                                                                    </font>-->
+<!--                                                                </Label>-->
+<!--                                                                <Button mnemonicParsing="false" text="X">-->
+<!--                                                                    <HBox.margin>-->
+<!--                                                                        <Insets left="10.0" />-->
+<!--                                                                    </HBox.margin>-->
+<!--                                                                </Button>-->
+<!--                                                            </children>-->
+<!--                                                            <padding>-->
+<!--                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />-->
+<!--                                                            </padding>-->
+<!--                                                        </HBox>-->
                                                     </children>
                                                     <padding>
                                                         <Insets left="5.0" right="5.0" top="10.0" />
@@ -150,7 +83,7 @@
                                                                 <Font size="20.0" />
                                                             </font>
                                                         </Label>
-                                                        <Button mnemonicParsing="false" text="+" stylesheets="@../../../../../../../../styles.css" styleClass="delete-button">
+                                                        <Button onAction="#addRegFlag" mnemonicParsing="false" text="+" stylesheets="@../../../../../../../../styles.css" styleClass="delete-button">
                                                             <HBox.margin>
                                                                 <Insets left="20.0" />
                                                             </HBox.margin>
@@ -160,25 +93,25 @@
                                                         </Button>
                                                     </children>
                                                 </HBox>
-                                                <FlowPane hgap="10.0" prefWidth="200.0" vgap="20.0">
+                                                <FlowPane fx:id="redFlagsContainer" hgap="10.0" prefWidth="200.0" vgap="20.0">
                                                     <children>
-                                                        <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="40.0" style="-fx-background-color: gray;">
-                                                            <children>
-                                                                <Label prefWidth="100.0" text="Sample">
-                                                                    <font>
-                                                                        <Font size="20.0" />
-                                                                    </font>
-                                                                </Label>
-                                                                <Button mnemonicParsing="false" text="X">
-                                                                    <HBox.margin>
-                                                                        <Insets left="10.0" />
-                                                                    </HBox.margin>
-                                                                </Button>
-                                                            </children>
-                                                            <padding>
-                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-                                                            </padding>
-                                                        </HBox>
+<!--                                                        <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="40.0" style="-fx-background-color: gray;">-->
+<!--                                                            <children>-->
+<!--                                                                <Label prefWidth="100.0" text="Sample">-->
+<!--                                                                    <font>-->
+<!--                                                                        <Font size="20.0" />-->
+<!--                                                                    </font>-->
+<!--                                                                </Label>-->
+<!--                                                                <Button mnemonicParsing="false" text="X">-->
+<!--                                                                    <HBox.margin>-->
+<!--                                                                        <Insets left="10.0" />-->
+<!--                                                                    </HBox.margin>-->
+<!--                                                                </Button>-->
+<!--                                                            </children>-->
+<!--                                                            <padding>-->
+<!--                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />-->
+<!--                                                            </padding>-->
+<!--                                                        </HBox>-->
                                                     </children>
                                                     <padding>
                                                         <Insets left="5.0" right="5.0" top="10.0" />
@@ -201,12 +134,12 @@
                 <Separator prefWidth="200.0" />
                 <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="100.0" prefWidth="780.0" spacing="150.0">
                     <children>
-                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="225.0" text="Застосувати зміни">
+                        <Button fx:id="saveB" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="225.0" text="Застосувати зміни">
                             <font>
                                 <Font size="20.0" />
                             </font>
                         </Button>
-                        <Button alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="225.0" text="Очистити шаблон">
+                        <Button fx:id="removeB" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="225.0" text="Очистити шаблон">
                             <font>
                                 <Font size="20.0" />
                             </font>
@@ -241,11 +174,7 @@
                     <children>
                         <HBox>
                             <children>
-                                <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true">
-                                    <image>
-                                        <Image url="@../../../../../../../../../../../../../../Downloads/photo_2024-04-01%2010.36.20.jpeg" />
-                                    </image>
-                                </ImageView>
+                                <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true"/>
                                 <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="?">
                                     <HBox.margin>
                                         <Insets left="10.0" top="10.0" />

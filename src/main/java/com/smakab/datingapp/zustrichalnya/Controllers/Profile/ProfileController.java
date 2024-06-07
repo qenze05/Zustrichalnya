@@ -62,7 +62,7 @@ public class ProfileController implements Initializable, ProfileDataDelegate {
             AnchorPane.setBottomAnchor(view, 0.0);
             AnchorPane.setLeftAnchor(view, 0.0);
 
-           configureContentView(loader.getController());
+            configureContentView(loader.getController());
 
             container.getChildren().setAll(view);
 
@@ -73,6 +73,8 @@ public class ProfileController implements Initializable, ProfileDataDelegate {
 
     private void configureContentView(ProfileContentClass controller) {
         controller.setModel(this.person);
+        controller.loadModelData();
+
         controller.setDelegate(this);
     }
 

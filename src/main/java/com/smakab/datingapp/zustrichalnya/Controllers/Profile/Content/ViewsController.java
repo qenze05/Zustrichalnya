@@ -35,7 +35,6 @@ public class ViewsController extends ProfileContentClass {
     @Override
     public void setModel(Person person) {
         this.model = person.getViews();
-        loadModelData();
     }
 
     @Override

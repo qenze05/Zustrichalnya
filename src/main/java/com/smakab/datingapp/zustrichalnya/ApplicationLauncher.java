@@ -12,7 +12,7 @@ public class ApplicationLauncher extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(ApplicationLauncher.class.getResource(
                 "/com/smakab/datingapp/zustrichalnya/Views/MainView.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1400, 750);
+        Scene scene = new Scene(fxmlLoader.load(), 1920, 1080);
         stage.setTitle("Зустрічальня");
         stage.setScene(scene);
         stage.show();

@@ -1,31 +1,25 @@
-package com.smakab.datingapp.zustrichalnya.Views;
+package com.smakab.datingapp.zustrichalnya.Views.Profile;
 
 import com.dlsc.formsfx.model.structure.Field;
 import com.dlsc.formsfx.model.structure.Form;
 import com.dlsc.formsfx.model.structure.Group;
-import com.dlsc.formsfx.model.validators.CustomValidator;
 import com.dlsc.formsfx.view.controls.SimpleCheckBoxControl;
 import com.dlsc.formsfx.view.controls.SimpleRadioButtonControl;
 import com.dlsc.formsfx.view.renderer.FormRenderer;
 import com.dlsc.formsfx.view.util.ViewMixin;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.GeneralInfo;
-import javafx.beans.property.SimpleListProperty;
 import javafx.scene.control.Button;
-import javafx.scene.control.ScrollPane;
 
-import java.time.LocalDate;
-import java.util.Arrays;
 import java.util.List;
-import java.util.function.Predicate;
 
-public class ProfileView implements ViewMixin {
+public class MainView implements ViewMixin {
 
     private static String reqField = "Це поле є обовʼязковим.";
     private GeneralInfo generalInfo;
     private Form generalInfoForm;
     private FormRenderer generalInfoFormRenderer;
     private Button save, reset;
-    public ProfileView(GeneralInfo generalInfo, Button save, Button reset) {
+    public MainView(GeneralInfo generalInfo, Button save, Button reset) {
         this.generalInfo = generalInfo;
         this.save = save;
         this.reset = reset;

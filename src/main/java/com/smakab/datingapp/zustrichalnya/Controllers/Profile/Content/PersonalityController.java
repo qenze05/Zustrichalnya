@@ -71,7 +71,6 @@ public class PersonalityController extends ProfileContentClass {
     @Override
     public void setModel(Person person) {
         this.model = person.getPersonality();
-        loadModelData();
     }
 
     @Override

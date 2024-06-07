@@ -25,6 +25,12 @@ module com.smakab.datingapp.zustrichalnya {
     opens com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content to javafx.fxml;
     exports com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content;
 
+    opens com.smakab.datingapp.zustrichalnya.Controllers.Search to javafx.fxml;
+    exports com.smakab.datingapp.zustrichalnya.Controllers.Search;
+
+    opens com.smakab.datingapp.zustrichalnya.Controllers.Search.Content to javafx.fxml;
+    exports com.smakab.datingapp.zustrichalnya.Controllers.Search.Content;
+
     opens com.smakab.datingapp.zustrichalnya.Interfaces to javafx.fxml;
     exports com.smakab.datingapp.zustrichalnya.Interfaces;
 
@@ -34,18 +40,17 @@ module com.smakab.datingapp.zustrichalnya {
     opens com.smakab.datingapp.zustrichalnya.Models to javafx.fxml;
     exports com.smakab.datingapp.zustrichalnya.Models;
 
-    opens com.smakab.datingapp.zustrichalnya.Views to javafx.fxml;
-    exports com.smakab.datingapp.zustrichalnya.Views;
-
     opens com.smakab.datingapp.zustrichalnya.Models.Profile to javafx.fxml;
     exports com.smakab.datingapp.zustrichalnya.Models.Profile;
 
-    exports com.smakab.datingapp.zustrichalnya.Controllers.Search;
-    opens com.smakab.datingapp.zustrichalnya.Controllers.Search to javafx.fxml;
+    opens com.smakab.datingapp.zustrichalnya.Models.Search to javafx.fxml;
+    exports com.smakab.datingapp.zustrichalnya.Models.Search;
 
-//    opens com.smakab.datingapp.zustrichalnya.Views to javafx.fxml;
-//    exports com.smakab.datingapp.zustrichalnya.Views;
 
-//    opens com.smakab.datingapp.zustrichalnya.Models to javafx.fxml;
-//    exports com.smakab.datingapp.zustrichalnya.Models;
+    exports com.smakab.datingapp.zustrichalnya.Views.Profile;
+    opens com.smakab.datingapp.zustrichalnya.Views.Profile to javafx.fxml;
+
+    exports com.smakab.datingapp.zustrichalnya.Views.Template;
+    opens com.smakab.datingapp.zustrichalnya.Views.Template to javafx.fxml;
+
 }
