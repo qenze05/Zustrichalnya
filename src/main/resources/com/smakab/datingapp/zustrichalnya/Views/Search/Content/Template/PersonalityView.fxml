@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
@@ -9,9 +8,8 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import org.controlsfx.control.RangeSlider?>
 
-<HBox fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Search.Content.PersonalityController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Search.Content.PersonalityController">
    <children>
       <VBox maxWidth="1.7976931348623157E308" prefWidth="1600.0" spacing="5.0">
          <HBox.margin>
@@ -39,50 +37,354 @@
                                           <Font size="30.0" />
                                        </font>
                                     </Label>
-                                    <Button mnemonicParsing="false" text="+">
-                                       <font>
-                                          <Font size="20.0" />
-                                       </font>
-                                    </Button>
+<!--                                    <Button mnemonicParsing="false" text="+">-->
+<!--                                       <font>-->
+<!--                                          <Font size="20.0" />-->
+<!--                                       </font>-->
+<!--                                    </Button>-->
                                  </children>
                                  <VBox.margin>
                                     <Insets bottom="10.0" />
                                  </VBox.margin>
                               </HBox>
-                              <HBox alignment="CENTER_LEFT" spacing="50.0">
+                              <VBox fx:id="slidersContainer">
                                  <children>
-                                    <HBox alignment="CENTER" prefWidth="750.0" spacing="10.0">
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                                        <children>
-                                          <Label text="Риса -">
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Інтроверт">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
                                           </Label>
-                                          <RangeSlider blockIncrement="1.0" highValue="10.0" lowValue="0.0" majorTickUnit="1.0" max="10.0" minWidth="400.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" showTickMarks="true" snapToTicks="true">
-                                             <padding>
-                                                <Insets left="20.0" />
-                                             </padding>
-                                          </RangeSlider>
-                                          <Label text="Риса +">
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Екстраверт">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
                                           </Label>
                                        </children>
                                     </HBox>
-                                    <HBox alignment="CENTER" prefWidth="750.0" spacing="10.0">
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                                        <children>
-                                          <Label text="Неважливо">
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Мозок" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Серце">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="10.0" minWidth="400.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
-                                             <padding>
-                                                <Insets left="20.0" />
-                                             </padding>
-                                          </Slider>
-                                          <Label text="Важливо">
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Темний" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Світлий">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Консерватор" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Новатор">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Песиміст" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Оптиміст">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Прагмат" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Авантюрист">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Планувальник" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Імпровізатор">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Домосида" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Подорожун">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Практичний" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Творчий">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Спокійний" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Емоційний">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Покладистий" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Наполегливий">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Егоїст" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Альтруїст">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Приземлений" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Амбітний">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Підлеглий" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Лідер">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Скромний" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Розкутий">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Грубий" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Ніжний">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Недовірливий" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Довірливий">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Серйозний" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Розслаблений">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Прямолінійний" textAlignment="RIGHT">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Непрямолінійний">
                                              <font>
                                                 <Font size="20.0" />
                                              </font>
@@ -90,7 +392,7 @@
                                        </children>
                                     </HBox>
                                  </children>
-                              </HBox>
+                              </VBox>
                            </children>
                         </VBox>
                         <VBox spacing="10.0">
@@ -102,11 +404,11 @@
                                           <Font size="30.0" />
                                        </font>
                                     </Label>
-                                    <Button mnemonicParsing="false" text="+">
-                                       <font>
-                                          <Font size="20.0" />
-                                       </font>
-                                    </Button>
+<!--                                    <Button mnemonicParsing="false" text="+">-->
+<!--                                       <font>-->
+<!--                                          <Font size="20.0" />-->
+<!--                                       </font>-->
+<!--                                    </Button>-->
                                  </children>
                               </HBox>
                            </children>
@@ -114,11 +416,11 @@
                               <Insets top="50.0" />
                            </padding>
                         </VBox>
-                        <VBox>
+                        <VBox fx:id="personalitiesContainer">
                            <children>
                               <HBox alignment="CENTER_LEFT" spacing="20.0">
                                  <children>
-                                    <Label text="Посередник">
+                                    <Label prefWidth="250.0" text="Архітектор (INTJ)">
                                        <font>
                                           <Font size="25.0" />
                                        </font>
@@ -127,14 +429,6 @@
                                        </HBox.margin>
                                     </Label>
                                     <Separator orientation="VERTICAL" prefHeight="40.0" />
-                                    <Button mnemonicParsing="false" text="X">
-                                       <font>
-                                          <Font size="15.0" />
-                                       </font>
-                                       <HBox.margin>
-                                          <Insets />
-                                       </HBox.margin>
-                                    </Button>
                                     <HBox alignment="CENTER_LEFT" spacing="10.0">
                                        <children>
                                           <Label text="Небажано">
@@ -142,7 +436,487 @@
                                                 <Font size="20.0" />
                                              </font>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="10.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Slider>
+                                          <Label text="Бажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label prefWidth="250.0" text="Логік (INTP)">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" prefHeight="40.0" />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Небажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Slider>
+                                          <Label text="Бажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label prefWidth="250.0" text="Командир (ENTJ)">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" prefHeight="40.0" />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Небажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Slider>
+                                          <Label text="Бажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label prefWidth="250.0" text="Полеміст (ENTP)">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" prefHeight="40.0" />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Небажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Slider>
+                                          <Label text="Бажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label prefWidth="250.0" text="Адвокат (INFJ)">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" prefHeight="40.0" />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Небажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Slider>
+                                          <Label text="Бажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label prefWidth="250.0" text="Посередник (INFP)">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" prefHeight="40.0" />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Небажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Slider>
+                                          <Label text="Бажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label prefWidth="250.0" text="Протагоніст (ENFJ)">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" prefHeight="40.0" />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Небажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Slider>
+                                          <Label text="Бажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label prefWidth="250.0" text="Активіст (ENFP)">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" prefHeight="40.0" />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Небажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Slider>
+                                          <Label text="Бажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label prefWidth="250.0" text="Логіст (ISTJ)">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" prefHeight="40.0" />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Небажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Slider>
+                                          <Label text="Бажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label prefWidth="250.0" text="Захисник (ISFJ)">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" prefHeight="40.0" />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Небажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Slider>
+                                          <Label text="Бажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label prefWidth="250.0" text="Керівник (ESTJ)">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" prefHeight="40.0" />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Небажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Slider>
+                                          <Label text="Бажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label prefWidth="250.0" text="Консул (ESFJ)">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" prefHeight="40.0" />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Небажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Slider>
+                                          <Label text="Бажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label prefWidth="250.0" text="Віртуоз (ISTP)">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" prefHeight="40.0" />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Небажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Slider>
+                                          <Label text="Бажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label prefWidth="250.0" text="Авантюрист (ISFP)">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" prefHeight="40.0" />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Небажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Slider>
+                                          <Label text="Бажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label prefWidth="250.0" text="Підприємець (ESTP)">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" prefHeight="40.0" />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Небажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                             <padding>
+                                                <Insets left="20.0" />
+                                             </padding>
+                                          </Slider>
+                                          <Label text="Бажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label prefWidth="250.0" text="Шоумен (ESFP)">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Separator orientation="VERTICAL" prefHeight="40.0" />
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                       <children>
+                                          <Label text="Небажано">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
                                              <padding>
                                                 <Insets left="20.0" />
                                              </padding>

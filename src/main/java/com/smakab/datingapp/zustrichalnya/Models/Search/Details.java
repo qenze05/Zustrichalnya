@@ -6,7 +6,7 @@ import java.util.TreeMap;
 
 public class Details {
 
-    private int realPhoto = 5;
+    private int realPhoto = 0;
 
     private Pair<Integer, Integer> age = new Pair<>(18, 120);
     private String geoLocation = "Всюди";

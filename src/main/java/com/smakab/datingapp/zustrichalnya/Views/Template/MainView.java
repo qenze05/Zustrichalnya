@@ -20,7 +20,6 @@ import javafx.scene.text.Font;
 import java.util.HashSet;
 import java.util.List;
 import java.util.TreeSet;
-
 public class MainView implements ViewMixin {
 
     private GeneralInfo model;
@@ -72,6 +71,13 @@ public class MainView implements ViewMixin {
     @Override
     public List<String> getStylesheets() {
         return null;
+    }
+
+    @Override
+    public void initializeSelf() {
+//        getStylesheets().add(getClass().getResource("style.css").toExternalForm());
+//        generalInfoFormRenderer.getStyleClass().add("form-style");
+//        generalInfoFormRenderer.styleProperty().set("-fx-background-color: transparent;");
     }
 
     @Override

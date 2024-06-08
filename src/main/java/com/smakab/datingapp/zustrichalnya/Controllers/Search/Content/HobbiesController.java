@@ -67,6 +67,9 @@ public class HobbiesController extends TemplateContentClass{
 
         slider.setShowTickLabels(true);
         slider.setSnapToTicks(true);
+        slider.minProperty().set(-5);
+        slider.maxProperty().set(5);
+        slider.valueProperty().set(0);
         slider.majorTickUnitProperty().set(1);
         slider.minorTickCountProperty().set(1);
         slider.prefWidthProperty().set(300);
@@ -110,6 +113,9 @@ public class HobbiesController extends TemplateContentClass{
 
         slider.setShowTickLabels(true);
         slider.setSnapToTicks(true);
+        slider.minProperty().set(-5);
+        slider.maxProperty().set(5);
+        slider.valueProperty().set(0);
         slider.majorTickUnitProperty().set(1);
         slider.minorTickCountProperty().set(1);
         slider.prefWidthProperty().set(300);
