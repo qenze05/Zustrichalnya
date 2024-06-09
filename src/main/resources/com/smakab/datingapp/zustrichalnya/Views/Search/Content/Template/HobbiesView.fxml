@@ -35,7 +35,7 @@
                                           <Font size="30.0" />
                                        </font>
                                     </Label>
-                                    <Button onAction="#addSubculture" mnemonicParsing="false" text="+">
+                                    <Button onAction="#addSubculture" mnemonicParsing="false" text="+" stylesheets="@../../../../../../../../styles.css" styleClass="add-button">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -103,7 +103,7 @@
                                           <Font size="30.0" />
                                        </font>
                                     </Label>
-                                    <Button onAction="#addHobby" mnemonicParsing="false" text="+">
+                                    <Button onAction="#addHobby" mnemonicParsing="false" text="+" stylesheets="@../../../../../../../../styles.css" styleClass="add-button">
                                        <font>
                                           <Font size="20.0" />
                                        </font>

@@ -82,6 +82,7 @@ public class DetailsController extends TemplateContentClass{
         container.alignmentProperty().set(Pos.CENTER_LEFT);
         container.prefWidthProperty().set(600);
         container.paddingProperty().set(new Insets(0, 0, 0, 20));
+        container.getStylesheets().add("styles.css");
 
         separator.prefHeightProperty().set(40);
 
@@ -105,14 +106,18 @@ public class DetailsController extends TemplateContentClass{
                 label.textProperty().set(label.backup);
             }
         });
+        label.getStyleClass().add("label-personality");
 
         Button delete = new Button("X");
         delete.setOnAction(event -> {
             model.removeGender(label.getText());
             gendersContainer.getChildren().remove(container);
         });
+        delete.getStyleClass().add("delete-button");
 
         label1.fontProperty().set(new Font(20));
+        label1.getStyleClass().add("label-personality");
+        label2.getStyleClass().add("label-personality");
         label2.fontProperty().set(new Font(20));
 
         container.getChildren().addAll(label, separator, delete, label1, slider, label2);

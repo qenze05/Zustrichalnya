@@ -39,20 +39,20 @@ public class TemplateController extends TemplateContentClass {
     @Override
     public void loadModelData() {
         infoContainer.getChildren().addFirst(view.getGeneralInfoFormRenderer());
-        model.getGeneralInfo().getGreenFlags().forEach(name -> greenFlagsContainer.getChildren().add(view.createFlag(name, model.getGeneralInfo().getGreenFlags(), greenFlagsContainer)));
-        model.getGeneralInfo().getRedFlags().forEach(name -> redFlagsContainer.getChildren().add(view.createFlag(name, model.getGeneralInfo().getRedFlags(), redFlagsContainer)));
+        model.getGeneralInfo().getGreenFlags().forEach(name -> greenFlagsContainer.getChildren().add(view.createFlag(name, model.getGeneralInfo().getGreenFlags(), greenFlagsContainer, "green")));
+        model.getGeneralInfo().getRedFlags().forEach(name -> redFlagsContainer.getChildren().add(view.createFlag(name, model.getGeneralInfo().getRedFlags(), redFlagsContainer, "red")));
 
     }
 
-    public void addFlag(FlowPane container, TreeSet<String> set) {
-        container.getChildren().add(view.createFlag("###", set, container));
+    public void addFlag(FlowPane container, TreeSet<String> set, String style) {
+        container.getChildren().add(view.createFlag("###", set, container, style));
     }
 
     public void addGreenFlag() {
-        addFlag(greenFlagsContainer, model.getGeneralInfo().getGreenFlags());
+        addFlag(greenFlagsContainer, model.getGeneralInfo().getGreenFlags(), "green");
     }
 
     public void addRegFlag() {
-        addFlag(redFlagsContainer, model.getGeneralInfo().getRedFlags());
+        addFlag(redFlagsContainer, model.getGeneralInfo().getRedFlags(), "red");
     }
 }

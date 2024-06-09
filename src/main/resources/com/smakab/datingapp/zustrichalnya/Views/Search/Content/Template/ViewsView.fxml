@@ -35,7 +35,7 @@
                                           <Font size="30.0" />
                                        </font>
                                     </Label>
-                                    <Button onAction="#addReligion" mnemonicParsing="false" text="+">
+                                    <Button onAction="#addReligion" mnemonicParsing="false" text="+" stylesheets="@../../../../../../../../styles.css" styleClass="add-button">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -103,7 +103,7 @@
                                           <Font size="30.0" />
                                        </font>
                                     </Label>
-                                    <Button onAction="#addLanguage" mnemonicParsing="false" text="+">
+                                    <Button onAction="#addLanguage" mnemonicParsing="false" text="+" stylesheets="@../../../../../../../../styles.css" styleClass="add-button">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -171,7 +171,7 @@
                                           <Font size="30.0" />
                                        </font>
                                     </Label>
-                                    <Button onAction="#addMovement" mnemonicParsing="false" text="+">
+                                    <Button onAction="#addMovement" mnemonicParsing="false" text="+" stylesheets="@../../../../../../../../styles.css" styleClass="add-button">
                                        <font>
                                           <Font size="20.0" />
                                        </font>

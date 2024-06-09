@@ -31,7 +31,8 @@ public class HobbiesController extends ProfileContentClass {
         HBox container = new HBox();
         container.setPadding(new Insets(5, 5, 5, 5));
         container.spacingProperty().set(10);
-        container.styleProperty().set("-fx-background-color: white;");
+        container.getStylesheets().add("styles.css");
+        container.getStyleClass().add("label-personality");
         container.alignmentProperty().set(Pos.CENTER);
 
         EditableLabel label = new EditableLabel(name);
@@ -49,6 +50,7 @@ public class HobbiesController extends ProfileContentClass {
             model.removeSubCulture(label.getText());
             subculturesContainer.getChildren().remove(container);
         });
+        delete.getStyleClass().add("delete-button");
 
         container.getChildren().add(label);
         container.getChildren().add(delete);
@@ -90,6 +92,7 @@ public class HobbiesController extends ProfileContentClass {
         container.alignmentProperty().set(Pos.CENTER_LEFT);
         container.prefWidthProperty().set(600);
         container.paddingProperty().set(new Insets(0, 0, 0, 20));
+        container.getStylesheets().add("styles.css");
 
         slider.setShowTickLabels(true);
         slider.setSnapToTicks(true);
@@ -101,6 +104,7 @@ public class HobbiesController extends ProfileContentClass {
 
 
         label.setFont(new Font(20));
+        label.getStyleClass().add("label-personality");
         label.textProperty().addListener((observableValue, s, t1) -> {
             if(!t1.isEmpty()) {
                 model.renameHobby(label.backup, t1, (int) slider.getValue());
@@ -114,6 +118,7 @@ public class HobbiesController extends ProfileContentClass {
             model.removeHobby(label.getText());
             hobbiesContainer.getChildren().remove(container);
         });
+        delete.getStyleClass().add("delete-button");
 
         container.getChildren().add(label);
         container.getChildren().add(slider);

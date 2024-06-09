@@ -134,12 +134,12 @@
                 <Separator prefWidth="200.0" />
                 <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="100.0" prefWidth="780.0" spacing="150.0">
                     <children>
-                        <Button fx:id="saveB" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="225.0" text="Застосувати зміни">
+                        <Button fx:id="saveB" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="225.0" text="Застосувати зміни" stylesheets="@../../../../../../../../styles.css" styleClass="photo-button">
                             <font>
                                 <Font size="20.0" />
                             </font>
                         </Button>
-                        <Button fx:id="removeB" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="225.0" text="Очистити шаблон">
+                        <Button fx:id="removeB" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="225.0" text="Очистити шаблон" stylesheets="@../../../../../../../../styles.css" styleClass="photo-delete-button">
                             <font>
                                 <Font size="20.0" />
                             </font>

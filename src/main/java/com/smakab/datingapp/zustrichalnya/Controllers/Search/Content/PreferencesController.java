@@ -59,7 +59,7 @@ public class PreferencesController extends TemplateContentClass {
         container.alignmentProperty().set(Pos.CENTER_LEFT);
         container.prefWidthProperty().set(600);
         container.paddingProperty().set(new Insets(0, 0, 0, 20));
-
+        container.getStylesheets().add("styles.css");
 
         slider.setShowTickLabels(true);
         slider.setSnapToTicks(true);
@@ -81,12 +81,14 @@ public class PreferencesController extends TemplateContentClass {
                 label.textProperty().set(label.backup);
             }
         });
+        label.getStyleClass().add("label-personality");
 
         Button delete = new Button("X");
         delete.setOnAction(event -> {
             model.removePreference(label.getText());
             prefContainer.getChildren().remove(container);
         });
+        delete.getStyleClass().add("delete-button");
 
 
         container.getChildren().addAll(label, slider, delete);

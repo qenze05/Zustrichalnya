@@ -100,12 +100,13 @@ public class MainView implements ViewMixin {
 
     }
 
-    public HBox createFlag(String name, TreeSet<String> set, FlowPane flagContainer) {
+    public HBox createFlag(String name, TreeSet<String> set, FlowPane flagContainer, String style) {
 
         HBox container = new HBox();
         container.setPadding(new Insets(5, 5, 5, 5));
         container.spacingProperty().set(10);
-        container.styleProperty().set("-fx-background-color: white;");
+        container.getStylesheets().add("styles.css");
+        container.getStyleClass().add("label-"+style+"flag");
         container.alignmentProperty().set(Pos.CENTER);
 
         EditableLabel label = new EditableLabel(name);
@@ -123,6 +124,7 @@ public class MainView implements ViewMixin {
             model.removeFlag(label.getText(), set);
             flagContainer.getChildren().remove(container);
         });
+        delete.getStyleClass().add("delete-button");
 
         container.getChildren().add(label);
         container.getChildren().add(delete);

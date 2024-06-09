@@ -53,7 +53,8 @@ public class ViewsController extends ProfileContentClass {
         HBox container = new HBox();
         container.setPadding(new Insets(5, 5, 5, 5));
         container.spacingProperty().set(10);
-        container.styleProperty().set("-fx-background-color: white;");
+        container.getStylesheets().add("styles.css");
+        container.getStyleClass().add("label-personality");
         container.alignmentProperty().set(Pos.CENTER);
 
         EditableLabel label = new EditableLabel(name);
@@ -71,6 +72,7 @@ public class ViewsController extends ProfileContentClass {
             model.removeMovement(label.getText());
             movementsContainer.getChildren().remove(container);
         });
+        delete.getStyleClass().add("delete-button");
 
         container.getChildren().add(label);
         container.getChildren().add(delete);

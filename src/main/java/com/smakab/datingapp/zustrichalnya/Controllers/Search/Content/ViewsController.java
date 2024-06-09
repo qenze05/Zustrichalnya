@@ -67,7 +67,7 @@ public class ViewsController extends TemplateContentClass {
         container.alignmentProperty().set(Pos.CENTER_LEFT);
         container.prefWidthProperty().set(600);
         container.paddingProperty().set(new Insets(0, 0, 0, 20));
-
+        container.getStylesheets().add("styles.css");
 
         slider.setShowTickLabels(true);
         slider.setSnapToTicks(true);
@@ -89,12 +89,14 @@ public class ViewsController extends TemplateContentClass {
                 label.textProperty().set(label.backup);
             }
         });
+        label.getStyleClass().add("label-personality");
 
         Button delete = new Button("X");
         delete.setOnAction(event -> {
             model.removeLanguage(label.getText());
             languagesContainer.getChildren().remove(container);
         });
+        delete.getStyleClass().add("delete-button");
 
 
         container.getChildren().addAll(label, slider, delete);
@@ -113,7 +115,7 @@ public class ViewsController extends TemplateContentClass {
         container.alignmentProperty().set(Pos.CENTER_LEFT);
         container.prefWidthProperty().set(600);
         container.paddingProperty().set(new Insets(0, 0, 0, 20));
-
+        container.getStylesheets().add("styles.css");
 
         slider.setShowTickLabels(true);
         slider.setSnapToTicks(true);
@@ -135,13 +137,14 @@ public class ViewsController extends TemplateContentClass {
                 label.textProperty().set(label.backup);
             }
         });
+        label.getStyleClass().add("label-personality");
 
         Button delete = new Button("X");
         delete.setOnAction(event -> {
             model.removeReligion(label.getText());
             religionsContainer.getChildren().remove(container);
         });
-
+        delete.getStyleClass().add("delete-button");
 
         container.getChildren().addAll(label, slider, delete);
 
@@ -159,7 +162,7 @@ public class ViewsController extends TemplateContentClass {
         container.alignmentProperty().set(Pos.CENTER_LEFT);
         container.prefWidthProperty().set(600);
         container.paddingProperty().set(new Insets(0, 0, 0, 20));
-
+        container.getStylesheets().add("styles.css");
 
         slider.setShowTickLabels(true);
         slider.setSnapToTicks(true);
@@ -181,13 +184,14 @@ public class ViewsController extends TemplateContentClass {
                 label.textProperty().set(label.backup);
             }
         });
+        label.getStyleClass().add("label-personality");
 
         Button delete = new Button("X");
         delete.setOnAction(event -> {
             model.removeMovement(label.getText());
             movementsContainer.getChildren().remove(container);
         });
-
+        delete.getStyleClass().add("delete-button");
 
         container.getChildren().addAll(label, slider, delete);
 

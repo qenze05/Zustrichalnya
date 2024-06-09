@@ -163,7 +163,7 @@
                                           <Font size="30.0" />
                                        </font>
                                     </Label>
-                                    <Button onAction="#addGender" mnemonicParsing="false" text="+">
+                                    <Button onAction="#addGender" mnemonicParsing="false" text="+" stylesheets="@../../../../../../../../styles.css" styleClass="add-button">
                                        <font>
                                           <Font size="20.0" />
                                        </font>

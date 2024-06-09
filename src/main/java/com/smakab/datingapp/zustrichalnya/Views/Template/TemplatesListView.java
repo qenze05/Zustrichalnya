@@ -15,9 +15,11 @@ import java.util.UUID;
 
 public class TemplatesListView {
     public TemplatesListController controller;
+
     public TemplatesListView(TemplatesListController controller) {
         this.controller = controller;
     }
+
 
     public VBox createTemplate(String name, String desc, UUID uuid) {
         VBox container = new VBox();
@@ -27,6 +29,8 @@ public class TemplatesListView {
         Label description = new Label(desc);
         Button propositions = new Button("0");
 
+        container.getStylesheets().add("styles.css");
+        container.getStyleClass().add("search-template");
         container.alignmentProperty().set(Pos.TOP_CENTER);
         container.prefWidthProperty().set(350);
         container.prefHeightProperty().set(400);
@@ -37,7 +41,7 @@ public class TemplatesListView {
         subContainer.alignmentProperty().set(Pos.CENTER);
         subContainer.paddingProperty().set(new Insets(0, 0, 0, 5));
         subContainer.spacingProperty().set(5);
-        subContainer.styleProperty().set("-fx-border-color: blue;");
+        subContainer.getStyleClass().add("search-template-inner");
 
         header.prefWidthProperty().set(300);
         header.fontProperty().set(new Font(25));
@@ -48,10 +52,12 @@ public class TemplatesListView {
         description.prefHeightProperty().set(300);
         description.prefWidthProperty().set(300);
         description.fontProperty().set(new Font(20));
+        description.wrapTextProperty().set(true);
 
         propositions.fontProperty().set(new Font(20));
         propositions.prefWidthProperty().set(60);
         propositions.prefHeightProperty().set(60);
+        propositions.getStyleClass().add("requests-button");
 
         subContainer.getChildren().addAll(header, separator, description);
         container.getChildren().addAll(subContainer, propositions);
