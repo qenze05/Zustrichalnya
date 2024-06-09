@@ -31,7 +31,9 @@ public class MenuController implements Initializable{
             openMenu("Profile/ProfileView");
         } else if (source.equals(searchB)) {
             openMenu("Search/SearchView");
-        }// TODO: дописати інші меню
+        }else if (source.equals(chatB)) {
+            openMenu("Chat/ChatView");
+        }
     }
 
     private void openMenu(String menu) {

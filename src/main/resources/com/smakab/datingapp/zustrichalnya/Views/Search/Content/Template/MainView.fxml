@@ -5,24 +5,21 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import org.controlsfx.control.CheckListView?>
 
-<HBox fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Search.Content.TemplateController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" styleClass="background" stylesheets="@../../../../../../../../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Search.Content.TemplateController">
     <children>
         <VBox prefWidth="800.0" spacing="5.0">
             <HBox.margin>
                 <Insets top="20.0" />
             </HBox.margin>
             <children>
-                <ScrollPane hbarPolicy="NEVER" hmax="0.0">
+                <ScrollPane hbarPolicy="NEVER" hmax="0.0" styleClass="form-style">
                     <content>
                         <VBox fx:id="infoContainer" prefWidth="750.0" spacing="10.0">
                             <children>
@@ -32,12 +29,12 @@
                                             <children>
                                                 <HBox alignment="CENTER">
                                                     <children>
-                                                        <Label prefWidth="180.0" text="Зелені прапорці" stylesheets="@../../../../../../../../styles.css" styleClass="label-greenflag">
+                                                        <Label prefWidth="180.0" styleClass="label-greenflag" stylesheets="@../../../../../../../../styles.css" text="Зелені прапорці">
                                                             <font>
                                                                 <Font size="20.0" />
                                                             </font>
                                                         </Label>
-                                                        <Button onAction="#addGreenFlag" mnemonicParsing="false" text="+" stylesheets="@../../../../../../../../styles.css" styleClass="add-button">
+                                                        <Button mnemonicParsing="false" onAction="#addGreenFlag" styleClass="add-button" stylesheets="@../../../../../../../../styles.css" text="+">
                                                             <HBox.margin>
                                                                 <Insets left="20.0" />
                                                             </HBox.margin>
@@ -78,12 +75,12 @@
                                             <children>
                                                 <HBox alignment="CENTER">
                                                     <children>
-                                                        <Label prefWidth="180.0" text="Червоні прапорці" stylesheets="@../../../../../../../../styles.css" styleClass="label-redflag">
+                                                        <Label prefWidth="180.0" styleClass="label-redflag" stylesheets="@../../../../../../../../styles.css" text="Червоні прапорці">
                                                             <font>
                                                                 <Font size="20.0" />
                                                             </font>
                                                         </Label>
-                                                        <Button onAction="#addRegFlag" mnemonicParsing="false" text="+" stylesheets="@../../../../../../../../styles.css" styleClass="delete-button">
+                                                        <Button mnemonicParsing="false" onAction="#addRegFlag" styleClass="delete-button" stylesheets="@../../../../../../../../styles.css" text="+">
                                                             <HBox.margin>
                                                                 <Insets left="20.0" />
                                                             </HBox.margin>
@@ -134,12 +131,12 @@
                 <Separator prefWidth="200.0" />
                 <HBox alignment="CENTER" maxWidth="-Infinity" prefHeight="100.0" prefWidth="780.0" spacing="150.0">
                     <children>
-                        <Button fx:id="saveB" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="225.0" text="Застосувати зміни" stylesheets="@../../../../../../../../styles.css" styleClass="photo-button">
+                        <Button fx:id="saveB" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="225.0" styleClass="photo-button" stylesheets="@../../../../../../../../styles.css" text="Застосувати зміни">
                             <font>
                                 <Font size="20.0" />
                             </font>
                         </Button>
-                        <Button fx:id="removeB" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="225.0" text="Очистити шаблон" stylesheets="@../../../../../../../../styles.css" styleClass="photo-delete-button">
+                        <Button fx:id="removeB" alignment="CENTER" mnemonicParsing="false" prefHeight="50.0" prefWidth="225.0" styleClass="photo-delete-button" stylesheets="@../../../../../../../../styles.css" text="Очистити шаблон">
                             <font>
                                 <Font size="20.0" />
                             </font>
@@ -151,31 +148,34 @@
                 </HBox>
             </children>
         </VBox>
-        <VBox prefWidth="800.0" spacing="5.0">
+        <VBox prefWidth="800.0" spacing="5.0" stylesheets="@../../../../../../../../styles.css">
             <HBox.margin>
                 <Insets top="20.0" />
             </HBox.margin>
             <children>
-                <HBox alignment="CENTER" prefHeight="100.0" spacing="45.0">
+                <HBox alignment="CENTER" prefHeight="100.0" styleClass="label-personality">
                     <children>
-                        <Label text="Нові пропозиції:">
+                        <Label styleClass="label-name" text="Нові пропозиції:">
                             <font>
                                 <Font size="30.0" />
                             </font>
                         </Label>
-                        <Label text="5">
+                        <Label styleClass="delete-button" text="5">
                             <font>
                                 <Font size="30.0" />
                             </font>
                         </Label>
                     </children>
                 </HBox>
-                <VBox prefWidth="800.0" spacing="20.0">
+                <VBox prefWidth="800.0" spacing="20.0" styleClass="search-template" stylesheets="@../../../../../../../../styles.css">
                     <children>
                         <HBox>
                             <children>
-                                <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true"/>
-                                <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" text="?">
+                                <ImageView fitHeight="550.0" fitWidth="550.0" pickOnBounds="true">
+                           <HBox.margin>
+                              <Insets left="125.0" />
+                           </HBox.margin></ImageView>
+                                <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" styleClass="requests-button" text="?">
                                     <HBox.margin>
                                         <Insets left="10.0" top="10.0" />
                                     </HBox.margin>
@@ -184,11 +184,8 @@
                                     </font>
                                 </Button>
                             </children>
-                            <padding>
-                                <Insets left="100.0" />
-                            </padding>
                         </HBox>
-                        <VBox spacing="15.0">
+                        <VBox spacing="15.0" styleClass="search-template-inner">
                             <children>
                                 <HBox spacing="10.0">
                                     <children>
@@ -224,7 +221,7 @@
                         </VBox>
                         <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" spacing="15.0">
                             <children>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
                                         <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
                                             <image>
@@ -233,7 +230,7 @@
                                         </ImageView>
                                     </graphic>
                                 </Button>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
                                         <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
                                             <image>
@@ -242,7 +239,7 @@
                                         </ImageView>
                                     </graphic>
                                 </Button>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
                                         <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
                                             <image>
@@ -251,7 +248,7 @@
                                         </ImageView>
                                     </graphic>
                                 </Button>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
                                         <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
                                             <image>
@@ -260,7 +257,7 @@
                                         </ImageView>
                                     </graphic>
                                 </Button>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
                                         <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
                                             <image>
@@ -269,7 +266,7 @@
                                         </ImageView>
                                     </graphic>
                                 </Button>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0">
+                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
                                         <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
                                             <image>
