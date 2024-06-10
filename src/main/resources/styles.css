@@ -236,6 +236,13 @@
     -fx-background-color: #B0C4DE;
 }
 
+.search-template-selected{
+    -fx-border-color: red;
+    -fx-border-style: segments(5, 2);
+    -fx-border-width: 10px;
+    -fx-background-color: #B0C4DE;
+}
+
 .search-template-inner{
     -fx-border-color: #778899;
     -fx-border-style: segments(5, 2);

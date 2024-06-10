@@ -31,6 +31,7 @@ public class TemplatesListView {
 
         container.getStylesheets().add("styles.css");
         container.getStyleClass().add("search-template");
+
         container.alignmentProperty().set(Pos.TOP_CENTER);
         container.prefWidthProperty().set(350);
         container.prefHeightProperty().set(400);

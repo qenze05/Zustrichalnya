@@ -65,7 +65,6 @@ public class TemplatesListController implements Initializable {
                 isTemplateSelected.set(true);
                 selectedTemplate = templates.get(id);
             });
-
             container.getChildren().add(container.getChildren().size()-1, template);
         });
 
@@ -84,6 +83,7 @@ public class TemplatesListController implements Initializable {
         template.onMouseClickedProperty().set(mouseEvent -> {
             isTemplateSelected.set(true);
             selectedTemplate = templates.get(id);
+
         });
 
         container.getChildren().add(container.getChildren().size()-1, template);

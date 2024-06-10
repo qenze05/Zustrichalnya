@@ -61,7 +61,7 @@ public class DetailsController extends TemplateContentClass{
         this.ageRangeSlider.adjustHighValue(model.getAge().getValue1());
         this.geoLocationCB.getSelectionModel().select(model.getGeoLocation());
         this.noGeoLocationCB.getSelectionModel().select(model.getNoGeoLocation());
-        this.model.getGenders().forEach((name, value) -> gendersContainer.getChildren().addLast(createGender(name, value)));
+        this.model.getGenders().forEach((name, value) -> gendersContainer.getChildren().add(createGender(name, value)));
     }
 
 

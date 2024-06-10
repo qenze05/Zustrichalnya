@@ -38,7 +38,7 @@ public class TemplateController extends TemplateContentClass {
 
     @Override
     public void loadModelData() {
-        infoContainer.getChildren().addFirst(view.getGeneralInfoFormRenderer());
+        infoContainer.getChildren().add(0, view.getGeneralInfoFormRenderer());
         model.getGeneralInfo().getGreenFlags().forEach(name -> greenFlagsContainer.getChildren().add(view.createFlag(name, model.getGeneralInfo().getGreenFlags(), greenFlagsContainer, "green")));
         model.getGeneralInfo().getRedFlags().forEach(name -> redFlagsContainer.getChildren().add(view.createFlag(name, model.getGeneralInfo().getRedFlags(), redFlagsContainer, "red")));
 
