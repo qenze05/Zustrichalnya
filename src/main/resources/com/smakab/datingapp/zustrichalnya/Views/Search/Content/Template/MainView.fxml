@@ -19,7 +19,7 @@
                 <Insets top="20.0" />
             </HBox.margin>
             <children>
-                <ScrollPane hbarPolicy="NEVER" hmax="0.0" styleClass="form-style">
+                <ScrollPane hbarPolicy="NEVER" hmax="0.0" styleClass="form-style" >
                     <content>
                         <VBox fx:id="infoContainer" prefWidth="750.0" spacing="10.0">
                             <children>
