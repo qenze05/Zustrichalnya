@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0e0dc30-7e3a-4317-829c-2d387ecd65c6" name="Changes" comment="Minor bug fixes, region chooser, slider fixes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/BaseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/ApplicationLauncher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/ApplicationLauncher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Profile/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Profile/ProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/SignUp/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/SignUp/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/SignUp/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/SignUp/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/SignUp/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/SignUp/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/SignIn/LoginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/SignIn/LoginView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/SignIn/RegistrationView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/SignIn/RegistrationView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/SignIn/SignInView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/SignIn/SignInView.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="a0e0dc30-7e3a-4317-829c-2d387ecd65c6" name="Changes" comment="Minor bug fixes, region chooser, slider fixes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,6 +135,7 @@
       <workItem from="1718029367141" duration="4181000" />
       <workItem from="1718088576031" duration="1414000" />
       <workItem from="1718090277344" duration="15487000" />
+      <workItem from="1718119196093" duration="1261000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />

@@ -292,6 +292,51 @@
     -fx-background-color: #ebf0f7;
 }
 
+.sign-in-window{
+    -fx-background-image: url('background.jpg');
+    -fx-background-size: cover;
+    -fx-border-width: 0;
+    -fx-border-color: #B0C4DE;
+    -fx-border-color: transparent;
+    -fx-border-style: none;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+}
+
+.sign-in-label{
+    -fx-text-fill: #778899; /* Білий колір тексту */
+    -fx-font-family: 'Verdana'; /* Шрифт, як у кнопок */
+    -fx-font-size: 26px; /* Більший розмір шрифту */
+    -fx-font-weight: bold;
+    -fx-graphic-text-gap: 10px; /* Відступ між текстом і зображенням */
+    -fx-padding: 0 13px; /* Відступи зліва і справа */
+}
+
+.sign-in-label-small{
+    -fx-text-fill: #778899; /* Білий колір тексту */
+    -fx-font-family: 'Verdana'; /* Шрифт, як у кнопок */
+    -fx-font-size: 20px; /* Більший розмір шрифту */
+    -fx-font-weight: bold;
+    -fx-graphic-text-gap: 10px; /* Відступ між текстом і зображенням */
+    -fx-padding: 0 13px; /* Відступи зліва і справа */
+}
+
+.sign-in-button{
+    -fx-background-color: #ebf0f7;
+    -fx-border-width: 3px;
+    -fx-border-color: #778899;
+    -fx-text-fill: #778899; /* Білий колір тексту */
+    -fx-font-family: 'Verdana'; /* Шрифт, як у кнопок */
+    -fx-font-size: 18px; /* Більший розмір шрифту */
+    -fx-font-weight: bold;
+    -fx-graphic-text-gap: 10px; /* Відступ між текстом і зображенням */
+    -fx-padding: 0 13px; /* Відступи зліва і справа */
+}
+
+.sign-in-button:hover {
+    -fx-background-color: #B0C4DE;
+}
+
 
 
 
