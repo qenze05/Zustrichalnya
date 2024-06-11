@@ -8,16 +8,21 @@ import org.javatuples.Triplet;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.UUID;
+
 //
 ////TODO: знести оцей треш і написати нормально
 public class Person {
+    UUID uuid;
     GeneralInfo generalInfo;
     Hobbies hobbies;
     Personality personality;
     Preferences preferences;
     Views views;
 
-    public Person() {
+    public Person(UUID uuid) {
+        this.uuid = uuid;
+        //TODO: підтягнути інфу про профіль з бд і створювати профіль з нею замість пустого
         generalInfo = new GeneralInfo();
         hobbies = new Hobbies();
         personality = new Personality();

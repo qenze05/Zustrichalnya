@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.SignUp.MainController" stylesheets="../../../../../../styles.css" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label text="Зустрічальня">
          <font>
@@ -16,12 +16,12 @@
             <Insets bottom="30.0" />
          </VBox.margin>
       </Label>
-      <Button mnemonicParsing="false" prefWidth="200.0" text=" Увійти">
+      <Button onAction="#openLoginView" mnemonicParsing="false" prefWidth="200.0" text="Увійти">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
-      <Button mnemonicParsing="false" prefWidth="200.0" text="Зареєструватися">
+      <Button onAction="#openRegistrationView" mnemonicParsing="false" prefWidth="200.0" text="Зареєструватися">
          <font>
             <Font size="20.0" />
          </font>

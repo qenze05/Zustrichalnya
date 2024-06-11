@@ -25,6 +25,9 @@ module com.smakab.datingapp.zustrichalnya {
     opens com.smakab.datingapp.zustrichalnya.Controllers.Chat to javafx.fxml;
     exports com.smakab.datingapp.zustrichalnya.Controllers.Chat;
 
+    opens com.smakab.datingapp.zustrichalnya.Controllers.SignUp to javafx.fxml;
+    exports com.smakab.datingapp.zustrichalnya.Controllers.SignUp;
+
     opens com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content to javafx.fxml;
     exports com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content;
 

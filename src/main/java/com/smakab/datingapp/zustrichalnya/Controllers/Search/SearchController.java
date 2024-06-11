@@ -1,5 +1,6 @@
 package com.smakab.datingapp.zustrichalnya.Controllers.Search;
 
+import com.smakab.datingapp.zustrichalnya.Controllers.BaseController;
 import com.smakab.datingapp.zustrichalnya.Controllers.Search.Content.TemplateContentClass;
 import com.smakab.datingapp.zustrichalnya.Controllers.Search.Content.TemplatesListController;
 import com.smakab.datingapp.zustrichalnya.Interfaces.TemplateDataDelegate;
@@ -18,7 +19,7 @@ import java.util.HashMap;
 import java.util.ResourceBundle;
 import java.util.UUID;
 
-public class SearchController implements Initializable, TemplateDataDelegate {
+public class SearchController extends BaseController implements Initializable, TemplateDataDelegate {
 
     @FXML
     public Button mainB, selectedTemplateB, generalInfoB, personalityB, hobbiesB, prefB, viewsB, newOffersB;
@@ -120,5 +121,10 @@ public class SearchController implements Initializable, TemplateDataDelegate {
     @Override
     public void didUpdateData(Template data) {
 
+    }
+
+    @Override
+    public void setProfileUUID(UUID uuid) {
+        this.uuid = uuid;
     }
 }

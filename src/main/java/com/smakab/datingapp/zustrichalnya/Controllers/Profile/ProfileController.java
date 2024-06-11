@@ -1,5 +1,6 @@
 package com.smakab.datingapp.zustrichalnya.Controllers.Profile;
 
+import com.smakab.datingapp.zustrichalnya.Controllers.BaseController;
 import com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content.ProfileContentClass;
 import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
@@ -16,7 +17,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.UUID;
 
-public class ProfileController implements Initializable, ProfileDataDelegate {
+public class ProfileController extends BaseController implements Initializable, ProfileDataDelegate {
 
     @FXML
     public Button mainB, personalityB, hobbiesB, prefB, viewsB;
@@ -25,15 +26,12 @@ public class ProfileController implements Initializable, ProfileDataDelegate {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        this.person = fetchProfileData(UUID.randomUUID());
+        //fetchProfileData(UUID.randomUUID());
     }
 
-
-    public Person fetchProfileData(UUID uuid) {
-        //TODO: підтягнути інфу про профіль з бд
-
-        Person person = new Person();
-        return person;
+    public void fetchProfileData(UUID uuid) {
+        Person person = new Person(uuid);
+        this.person = person;
     }
     public void switchMenu(ActionEvent actionEvent) {
         Object source = actionEvent.getSource();
@@ -82,5 +80,11 @@ public class ProfileController implements Initializable, ProfileDataDelegate {
     public void didUpdateData(Person data) {
         System.out.println(data);
         //TODO: оновити дані в бд
+    }
+
+    @Override
+    public void setProfileUUID(UUID uuid) {
+        this.uuid = uuid;
+        fetchProfileData(uuid);
     }
 }
