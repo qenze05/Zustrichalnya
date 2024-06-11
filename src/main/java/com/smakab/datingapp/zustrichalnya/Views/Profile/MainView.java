@@ -41,12 +41,12 @@ public class MainView implements ViewMixin {
                                 .label("По-батькові"),
                         Field.ofStringType(generalInfo.nicknameProperty())
                                 .label("Нікнейм"),
-                        Field.ofMultiSelectionType(generalInfo.nameVisibilityProperty())
+                        Field.ofMultiSelectionType(generalInfo.nameVisibilityAllProperty(), generalInfo.nameVisibilityProperty())
                                 .label("Що відображатиметься в анкетах?")
                                 .render(new SimpleCheckBoxControl<>() {
                                     @Override
                                     protected void setWidth(double value) {
-                                        super.setWidth(1200);
+                                        super.setWidth(1500);
                                     }
                                 })
                 ),
@@ -83,6 +83,16 @@ public class MainView implements ViewMixin {
                                 .label("Місце навчання"),
                         Field.ofStringType(generalInfo.professionProperty())
                                 .label("Професія")
+                ),
+                Group.of(
+                        Field.ofMultiSelectionType(generalInfo.relationshipTypeAllProperty(), generalInfo.relationshipTypeProperty())
+                                .label("Відкритість до заявок")
+                                .render(new SimpleCheckBoxControl<>() {
+                                    @Override
+                                    protected void setWidth(double value) {
+                                        super.setWidth(1500);
+                                    }
+                                })
                 )
         );
     }

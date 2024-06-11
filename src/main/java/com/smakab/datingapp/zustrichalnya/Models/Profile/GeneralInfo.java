@@ -16,7 +16,8 @@ public class GeneralInfo {
     private StringProperty name = new SimpleStringProperty("");
     private StringProperty patronymic = new SimpleStringProperty("");
     private StringProperty nickname = new SimpleStringProperty("");
-    private ListProperty<String> nameVisibility = new SimpleListProperty<>(FXCollections.observableArrayList("Імʼя", "Прізвище", "По-батькові", "Нікнейм"));
+    private ListProperty<String> nameVisibility = new SimpleListProperty<>(FXCollections.observableArrayList("Імʼя"));
+    private ListProperty<String> nameVisibilityAll = new SimpleListProperty<>(FXCollections.observableArrayList("Імʼя", "Прізвище", "По-батькові", "Нікнейм"));
     private ObjectProperty<LocalDate> birthdate = new SimpleObjectProperty<>(LocalDate.now());
     private BooleanProperty birthdateVisibility = new SimpleBooleanProperty(true);
     private StringProperty region = new SimpleStringProperty("");
@@ -28,8 +29,33 @@ public class GeneralInfo {
     private BooleanProperty isWorking = new SimpleBooleanProperty(false);
     private StringProperty university = new SimpleStringProperty("");
     private StringProperty profession = new SimpleStringProperty("");
-    private ListProperty<String> requestTypes = new SimpleListProperty<>(FXCollections.observableArrayList("Friends"));
+    private ListProperty<String> relationshipTypeAll = new SimpleListProperty<>(FXCollections.observableArrayList("На один день", "Дружба", "Короткочасні романтичні стосунки", "Партнерство", "Сімʼяʼ"));
+    private ListProperty<String> relationshipType = new SimpleListProperty<>(FXCollections.observableArrayList("На один день", "Дружба", "Короткочасні романтичні стосунки", "Партнерство", "Сімʼяʼ"));
 
+
+    public ObservableList<String> getRelationshipTypeAll() {
+        return relationshipTypeAll.get();
+    }
+
+    public ListProperty<String> relationshipTypeAllProperty() {
+        return relationshipTypeAll;
+    }
+
+    public ObservableList<String> getNameVisibilityAll() {
+        return nameVisibilityAll.get();
+    }
+
+    public ObservableList<String> getRelationshipType() {
+        return relationshipType.get();
+    }
+
+    public ListProperty<String> relationshipTypeProperty() {
+        return relationshipType;
+    }
+
+    public ListProperty<String> nameVisibilityAllProperty() {
+        return nameVisibilityAll;
+    }
 
     public ArrayList<Pair<Image, Boolean>> getPhotos() {
         return photos;
@@ -75,9 +101,6 @@ public class GeneralInfo {
         return city.get();
     }
 
-    public ObservableList<String> getRequestTypes() {
-        return requestTypes.get();
-    }
 
     public String getGender() {
         return gender.get();
@@ -134,10 +157,6 @@ public class GeneralInfo {
 
     public ListProperty<String> nameVisibilityProperty() {
         return nameVisibility;
-    }
-
-    public ListProperty<String> requestTypesProperty() {
-        return requestTypes;
     }
 
     public ObjectProperty<LocalDate> birthdateProperty() {
