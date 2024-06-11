@@ -259,6 +259,10 @@
     -fx-background-color: lightgrey;
 }
 
+.search-template-inner:hover{
+    -fx-background-color: #ebf0f7;
+}
+
 .requests-button {
     -fx-background-color: #778899; /* Колір фону */
     -fx-text-fill: white; /* Колір тексту */
@@ -279,6 +283,14 @@
     /* Колір тексту при наведенні */
 }
 
+.chat-person {
+    -fx-background-color: white;
+    -fx-border-width: 0;
+}
+
+.chat-person:hover{
+    -fx-background-color: #ebf0f7;
+}
 
 
 
