@@ -7,6 +7,7 @@ import javafx.scene.image.Image;
 import org.javatuples.Pair;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 
 public class GeneralInfo {
@@ -19,6 +20,7 @@ public class GeneralInfo {
     private ListProperty<String> nameVisibility = new SimpleListProperty<>(FXCollections.observableArrayList("Імʼя"));
     private ListProperty<String> nameVisibilityAll = new SimpleListProperty<>(FXCollections.observableArrayList("Імʼя", "Прізвище", "По-батькові", "Нікнейм"));
     private ObjectProperty<LocalDate> birthdate = new SimpleObjectProperty<>(LocalDate.now());
+    private int age = 0;
     private BooleanProperty birthdateVisibility = new SimpleBooleanProperty(true);
     private StringProperty region = new SimpleStringProperty("");
     private StringProperty city = new SimpleStringProperty("");
@@ -83,6 +85,12 @@ public class GeneralInfo {
 
     public LocalDate getBirthdate() {
         return birthdate.get();
+    }
+
+    public int getAge(){
+        LocalDate today = LocalDate.now();
+        Period age = Period.between(getBirthdate(), today);
+        return age.getYears();
     }
 
     public boolean isBirthdateVisibility() {

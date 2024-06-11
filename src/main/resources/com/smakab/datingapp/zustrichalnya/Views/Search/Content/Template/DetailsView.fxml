@@ -46,7 +46,7 @@
                                           <Font size="20.0" />
                                        </font>
                                     </Label>
-                                    <Slider fx:id="realPhotoSlider" blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
+                                    <Slider fx:id="realPhotoSlider" blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="0" minorTickCount="1" prefHeight="50.0" prefWidth="500.0" showTickLabels="true" snapToTicks="true">
                                        <padding>
                                           <Insets left="20.0" />
                                        </padding>

@@ -171,10 +171,12 @@
                     <children>
                         <HBox>
                             <children>
+                               <HBox >
                                 <ImageView fitHeight="550.0" fitWidth="550.0" pickOnBounds="true">
                            <HBox.margin>
                               <Insets left="125.0" />
                            </HBox.margin></ImageView>
+                                </HBox>
                                 <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" styleClass="requests-button" text="?">
                                     <HBox.margin>
                                         <Insets left="10.0" top="10.0" />
