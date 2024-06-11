@@ -22,9 +22,9 @@
                   <Font size="40.0" />
                </font>
             </Label>
-            <ScrollPane hbarPolicy="NEVER" hmax="0.0" maxWidth="1.7976931348623157E308">
+            <ScrollPane prefHeight="1200" hbarPolicy="NEVER" hmax="0.0" maxWidth="1.7976931348623157E308">
                <content>
-                  <VBox prefWidth="1600.0" spacing="10.0">
+                  <VBox prefWidth="1600.0" spacing="10.0" minHeight="1200" stylesheets="@../../../../../../../../styles.css" styleClass="background-padding">
                      <children>
                         <VBox spacing="10.0">
                            <children>

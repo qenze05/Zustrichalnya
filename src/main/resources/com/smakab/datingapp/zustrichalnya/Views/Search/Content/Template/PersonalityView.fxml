@@ -23,7 +23,7 @@
             </Label>
             <ScrollPane hbarPolicy="NEVER" hmax="0.0" maxWidth="1.7976931348623157E308">
                <content>
-                  <VBox prefWidth="1600.0" spacing="10.0">
+                  <VBox prefWidth="1600.0" spacing="10.0" stylesheets="@../../../../../../../../styles.css" styleClass="background-padding">
                      <children>
                         <VBox spacing="10.0">
                            <VBox.margin>
@@ -416,7 +416,7 @@
                               <Insets top="50.0" />
                            </padding>
                         </VBox>
-                        <VBox fx:id="personalitiesContainer">
+                        <VBox fx:id="personalitiesContainer" stylesheets="@../../../../../../../../styles.css" styleClass="background-padding">
                            <children>
                               <HBox alignment="CENTER_LEFT" spacing="20.0">
                                  <children>

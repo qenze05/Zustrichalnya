@@ -25,9 +25,9 @@
                   <Font size="40.0" />
                </font>
             </Label>
-              <ScrollPane hbarPolicy="NEVER" hmax="0.0" maxWidth="1.7976931348623157E308">
+              <ScrollPane hbarPolicy="NEVER" prefHeight="1200.0" hmax="0.0" maxWidth="1.7976931348623157E308">
                   <content>
-                      <VBox prefWidth="1600.0" spacing="10.0" stylesheets="@../../../../../../../../styles.css" styleClass="background-padding">
+                      <VBox prefWidth="1600.0" minHeight="1600" spacing="10.0" stylesheets="@../../../../../../../../styles.css" styleClass="background-padding">
                           <children>
                         <HBox alignment="CENTER_LEFT" spacing="50.0">
                            <children>

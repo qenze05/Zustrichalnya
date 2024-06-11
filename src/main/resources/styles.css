@@ -9,6 +9,15 @@
     -fx-background-repeat: no-repeat;
 }
 
+.background-white {
+    -fx-background-color: white;
+    -fx-border-width: 0;
+    -fx-border-color: #B0C4DE;
+    -fx-border-color: transparent;
+    -fx-border-style: none;
+    -fx-background-position: center center; /* Розташування зображення по центру */
+    -fx-background-repeat: no-repeat;
+}
 .header {
     -fx-background-color: #B0C4DE;
 }
