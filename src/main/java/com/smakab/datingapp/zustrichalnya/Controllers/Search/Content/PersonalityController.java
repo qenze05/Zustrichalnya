@@ -7,6 +7,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import org.controlsfx.control.RangeSlider;
+import org.javatuples.Pair;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -15,6 +17,7 @@ public class PersonalityController extends TemplateContentClass {
     public VBox personalitiesContainer;
     public VBox slidersContainer;
     public Personality model;
+    public Label name;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -25,13 +28,14 @@ public class PersonalityController extends TemplateContentClass {
         for (int i = 0; i < slidersContainer.getChildren().size(); i++) {
 
             HBox child = (HBox) slidersContainer.getChildren().get(i);
-            Slider slider = (Slider) child.getChildren().get(1);
+            RangeSlider slider = (RangeSlider) child.getChildren().get(1);
             Label label = (Label) child.getChildren().get(2);
 
             if(model.getSliders().containsKey(label.getText())) {
-                slider.valueProperty().set(model.getSliders().get(label.getText()));
+                slider.lowValueProperty().set(model.getSliders().get(label.getText()).getValue0());
+                slider.highValueProperty().set(model.getSliders().get(label.getText()).getValue1());
             } else {
-                model.updateSlider(label.getText(), (int) slider.getValue());
+                model.updateSlider(label.getText(), new Pair<>((int) slider.lowValueProperty().get(), (int) slider.highValueProperty().get()));
             }
             setSliderListener(slider, label.getText());
         }
@@ -54,10 +58,14 @@ public class PersonalityController extends TemplateContentClass {
         }
     }
 
-    public void setSliderListener(Slider slider, String label) {
-        slider.valueProperty().addListener(
+    public void setSliderListener(RangeSlider slider, String label) {
+        slider.lowValueProperty().addListener(
                 (observableValue, oldValue, newValue)
-                        -> model.updateSlider(label, newValue.intValue()));
+                        -> model.updateSlider(label, model.getSliders().get(label).setAt0(newValue.intValue())));
+
+        slider.highValueProperty().addListener(
+                (observableValue, oldValue, newValue)
+                        -> model.updateSlider(label, model.getSliders().get(label).setAt1(newValue.intValue())));
     }
 
     public void setPersonalityListener(Slider slider, String label) {
@@ -73,6 +81,12 @@ public class PersonalityController extends TemplateContentClass {
     @Override
     public void setModel(Template template) {
         this.model = template.getPersonality();
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name.textProperty().set(name);
+
     }
 
     @Override

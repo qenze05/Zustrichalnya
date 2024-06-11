@@ -20,7 +20,7 @@
             <Insets top="20.0" />
          </HBox.margin>
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Назва шаблону">
+            <Label fx:id="name" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Назва шаблону">
                <font>
                   <Font size="40.0" />
                </font>

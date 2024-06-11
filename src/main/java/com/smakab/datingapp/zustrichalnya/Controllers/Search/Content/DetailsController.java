@@ -26,6 +26,7 @@ public class DetailsController extends TemplateContentClass{
     public ChoiceBox<String> noGeoLocationCB;
     public VBox gendersContainer;
     public Details model;
+    public Label name;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -52,6 +53,11 @@ public class DetailsController extends TemplateContentClass{
     @Override
     public void setModel(Template template) {
         this.model = template.getDetails();
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name.textProperty().set(name);
     }
 
     @Override

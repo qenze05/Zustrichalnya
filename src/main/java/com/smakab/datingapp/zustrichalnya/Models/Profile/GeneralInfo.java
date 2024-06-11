@@ -22,7 +22,14 @@ public class GeneralInfo {
     private ObjectProperty<LocalDate> birthdate = new SimpleObjectProperty<>(LocalDate.now());
     private int age = 0;
     private BooleanProperty birthdateVisibility = new SimpleBooleanProperty(true);
-    private StringProperty region = new SimpleStringProperty("");
+    private ObjectProperty<String> region = new SimpleObjectProperty<>("");
+    private ListProperty<String> regionAll = new SimpleListProperty<>(FXCollections.observableArrayList("Вінницька", "Волинська", "Дніпропетровська", "Донецька", "Житомирська",
+            "Закарпатська", "Запорізька", "Івано-Франківська", "Київська та Київ", "Кіровоградська",
+            "Луганська", "Львівська", "Миколаївська", "Одеська", "Полтавська",
+            "Рівненська", "Сумська", "Тернопільська", "Харківська", "Херсонська",
+            "Хмельницька", "Черкаська", "Чернівецька", "Чернігівська",
+            "Севастополь та АР Крим"));
+
     private StringProperty city = new SimpleStringProperty("");
     private ObjectProperty<String> sex = new SimpleObjectProperty<>("Чоловік");
     private ListProperty<String> sexAll = new SimpleListProperty<>(FXCollections.observableArrayList("Чоловік", "Жінка"));
@@ -34,6 +41,14 @@ public class GeneralInfo {
     private ListProperty<String> relationshipTypeAll = new SimpleListProperty<>(FXCollections.observableArrayList("На один день", "Дружба", "Короткочасні романтичні стосунки", "Партнерство", "Сімʼяʼ"));
     private ListProperty<String> relationshipType = new SimpleListProperty<>(FXCollections.observableArrayList("На один день", "Дружба", "Короткочасні романтичні стосунки", "Партнерство", "Сімʼяʼ"));
 
+
+    public ListProperty<String> regionAllProperty() {
+        return regionAll;
+    }
+
+    public ObservableList<String> getRegionAll() {
+        return regionAll.get();
+    }
 
     public ObservableList<String> getRelationshipTypeAll() {
         return relationshipTypeAll.get();
@@ -195,7 +210,7 @@ public class GeneralInfo {
         return patronymic;
     }
 
-    public StringProperty regionProperty() {
+    public ObjectProperty<String> regionProperty() {
         return region;
     }
 

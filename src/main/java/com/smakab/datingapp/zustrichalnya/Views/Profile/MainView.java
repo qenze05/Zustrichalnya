@@ -59,12 +59,11 @@ public class MainView implements ViewMixin {
                                 .required(reqField)
                 ),
                 Group.of(
-                        Field.ofStringType(generalInfo.regionProperty())
+                        Field.ofSingleSelectionType(generalInfo.regionAllProperty(), generalInfo.regionProperty())
                                 .label("Область")
                                 .required(reqField),
                         Field.ofStringType(generalInfo.cityProperty())
                                 .label("Місто")
-                                .required(reqField)
                 ),
                 Group.of(
                         Field.ofSingleSelectionType(generalInfo.sexAllProperty(), generalInfo.sexProperty())

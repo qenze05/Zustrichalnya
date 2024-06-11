@@ -18,5 +18,6 @@ public abstract class TemplateContentClass implements Initializable, TemplateDat
     public abstract void initialize(URL url, ResourceBundle resourceBundle);
     public abstract void setDelegate(TemplateDataDelegate delegate);
     public abstract void setModel(Template template);
+    public abstract void setName(String name);
     public abstract void loadModelData();
 }

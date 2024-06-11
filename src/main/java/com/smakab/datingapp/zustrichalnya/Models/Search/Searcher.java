@@ -112,7 +112,7 @@ public class Searcher {
         }
 
         // Слайдери особистості
-        for(Map.Entry<String, Integer> personalitySliders : template.getPersonality().getSliders().entrySet()) {
+        for(Map.Entry<String, Pair<Integer, Integer>> personalitySliders : template.getPersonality().getSliders().entrySet()) {
         }
 
         double personalityTypeQuantifier = 1;
@@ -408,6 +408,14 @@ public class Searcher {
             }
         }
         
-        return result*genderQuantifier*geoQuantifier*movementsQuantifier*religionQuantifier*languageQuantifier*subculturesQuantifier*personalityTypeQuantifier*realPhotoQuantifier;
+        return result
+                *genderQuantifier
+                *geoQuantifier
+                *movementsQuantifier
+                *religionQuantifier
+                *languageQuantifier
+                *subculturesQuantifier
+                *personalityTypeQuantifier
+                *realPhotoQuantifier;
     }
 }

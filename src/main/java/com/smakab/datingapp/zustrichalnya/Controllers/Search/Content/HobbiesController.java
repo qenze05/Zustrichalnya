@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -20,6 +21,7 @@ public class HobbiesController extends TemplateContentClass{
 
     public VBox subculturesContainer;
     public VBox hobbiesContainer;
+    public Label name;
     Hobbies model;
 
     @Override
@@ -35,6 +37,12 @@ public class HobbiesController extends TemplateContentClass{
     @Override
     public void setModel(Template template) {
         this.model = template.getHobbies();
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name.textProperty().set(name);
+
     }
 
     @Override

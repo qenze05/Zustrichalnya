@@ -114,6 +114,7 @@ public class SearchController implements Initializable, TemplateDataDelegate {
         controller.loadModelData();
 
         controller.setDelegate(this);
+        controller.setName(this.mainVC.getSelectedTemplate().getGeneralInfo().getName());
     }
 
     @Override

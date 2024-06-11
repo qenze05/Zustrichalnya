@@ -23,6 +23,7 @@ public class PreferencesController extends TemplateContentClass {
 
     public VBox prefContainer;
     public Preferences model;
+    public Label name;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -37,6 +38,12 @@ public class PreferencesController extends TemplateContentClass {
     @Override
     public void setModel(Template template) {
         this.model = template.getPreferences();
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name.textProperty().set(name);
+
     }
 
     @Override

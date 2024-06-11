@@ -1,10 +1,12 @@
 package com.smakab.datingapp.zustrichalnya.Models.Search;
 
+import org.javatuples.Pair;
+
 import java.util.HashMap;
 
 public class Personality {
 
-    private HashMap<String, Integer> sliders;
+    private HashMap<String, Pair<Integer, Integer>> sliders;
     private HashMap<String, Integer> personalities;
 
     public Personality() {
@@ -20,15 +22,15 @@ public class Personality {
         this.personalities = personalities;
     }
 
-    public HashMap<String, Integer> getSliders() {
+    public HashMap<String, Pair<Integer, Integer>> getSliders() {
         return sliders;
     }
 
-    public void setSliders(HashMap<String, Integer> sliders) {
+    public void setSliders(HashMap<String, Pair<Integer, Integer>> sliders) {
         this.sliders = sliders;
     }
 
-    public void updateSlider(String name, Integer value) {
+    public void updateSlider(String name, Pair<Integer, Integer> value) {
         sliders.put(name, value);
     }
 

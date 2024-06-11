@@ -9,9 +9,9 @@ import java.util.HashSet;
 import java.util.TreeSet;
 
 public class GeneralInfo {
-    private StringProperty name = new SimpleStringProperty("");
+    private StringProperty name = new SimpleStringProperty("Назва");
     private StringProperty purpose = new SimpleStringProperty("");
-    private StringProperty description = new SimpleStringProperty("");
+    private StringProperty description = new SimpleStringProperty("Опис");
     private ObjectProperty<String> relationshipType = new SimpleObjectProperty<>("На один день");
     private ListProperty<String> relationshipTypeAll = new SimpleListProperty<>(FXCollections.observableArrayList("На один день", "Дружба", "Короткочасні романтичні стосунки", "Партнерство", "Сімʼяʼ"));
     private TreeSet<String> greenFlags = new TreeSet<>();

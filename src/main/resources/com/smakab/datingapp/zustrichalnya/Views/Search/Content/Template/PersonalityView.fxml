@@ -4,11 +4,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import org.controlsfx.control.RangeSlider?>
+<?import javafx.scene.control.Slider?>
 <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Search.Content.PersonalityController">
    <children>
       <VBox maxWidth="1.7976931348623157E308" prefWidth="1600.0" spacing="5.0">
@@ -16,7 +17,7 @@
             <Insets top="20.0" />
          </HBox.margin>
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Назва шаблону">
+            <Label fx:id="name" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" text="Назва шаблону">
                <font>
                   <Font size="40.0" />
                </font>
@@ -59,7 +60,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Екстраверт">
                                              <font>
                                                 <Font size="20.0" />
@@ -77,7 +78,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Серце">
                                              <font>
                                                 <Font size="20.0" />
@@ -95,7 +96,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Світлий">
                                              <font>
                                                 <Font size="20.0" />
@@ -113,7 +114,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Новатор">
                                              <font>
                                                 <Font size="20.0" />
@@ -131,7 +132,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Оптиміст">
                                              <font>
                                                 <Font size="20.0" />
@@ -149,7 +150,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Авантюрист">
                                              <font>
                                                 <Font size="20.0" />
@@ -167,7 +168,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Імпровізатор">
                                              <font>
                                                 <Font size="20.0" />
@@ -185,7 +186,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Подорожун">
                                              <font>
                                                 <Font size="20.0" />
@@ -203,7 +204,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Творчий">
                                              <font>
                                                 <Font size="20.0" />
@@ -221,7 +222,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Емоційний">
                                              <font>
                                                 <Font size="20.0" />
@@ -239,7 +240,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Наполегливий">
                                              <font>
                                                 <Font size="20.0" />
@@ -257,7 +258,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Альтруїст">
                                              <font>
                                                 <Font size="20.0" />
@@ -275,7 +276,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Амбітний">
                                              <font>
                                                 <Font size="20.0" />
@@ -293,7 +294,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Лідер">
                                              <font>
                                                 <Font size="20.0" />
@@ -311,7 +312,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Розкутий">
                                              <font>
                                                 <Font size="20.0" />
@@ -329,7 +330,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Ніжний">
                                              <font>
                                                 <Font size="20.0" />
@@ -347,7 +348,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Довірливий">
                                              <font>
                                                 <Font size="20.0" />
@@ -365,7 +366,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Розслаблений">
                                              <font>
                                                 <Font size="20.0" />
@@ -383,7 +384,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Label>
-                                          <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
+                                          <RangeSlider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="-5.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" />
                                           <Label alignment="CENTER" prefWidth="150.0" styleClass="label-personality" stylesheets="@../../../../../../../../styles.css" text="Непрямолінійний">
                                              <font>
                                                 <Font size="20.0" />

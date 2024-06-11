@@ -8,6 +8,7 @@ import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -21,6 +22,8 @@ public class ViewsController extends TemplateContentClass {
     public VBox languagesContainer;
     public VBox movementsContainer;
     public Views model;
+    public Label name;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
@@ -34,6 +37,12 @@ public class ViewsController extends TemplateContentClass {
     @Override
     public void setModel(Template template) {
         this.model = template.getViews();
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name.textProperty().set(name);
+
     }
 
     @Override
