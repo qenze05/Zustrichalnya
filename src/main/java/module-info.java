@@ -12,6 +12,7 @@ module com.smakab.datingapp.zustrichalnya {
 
     requires java.desktop;
     requires javatuples;
+    requires com.google.gson;
 
     opens com.smakab.datingapp.zustrichalnya to javafx.fxml;
     exports com.smakab.datingapp.zustrichalnya;

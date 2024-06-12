@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0e0dc30-7e3a-4317-829c-2d387ecd65c6" name="Changes" comment="Minor bug fixes, region chooser, slider fixes" />
+    <list default="true" id="a0e0dc30-7e3a-4317-829c-2d387ecd65c6" name="Changes" comment="Minor bug fixes, region chooser, slider fixes">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Database1.rules" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/FireBase/FirebaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Hobby.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Hobby.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Religion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Religion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/RomanticPreference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/RomanticPreference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,10 +28,16 @@
         <option value="Interface" />
         <option value="CSS File" />
         <option value="Class" />
+        <option value="Firestore Rule File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -30,12 +46,12 @@
     &quot;assignee&quot;: &quot;qenze05&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/qenze05/Zustrichalnya.git&quot;,
-    &quot;accountId&quot;: &quot;3f3f9e3f-376c-44a4-bf5f-4a54eb264b71&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/qenze05/Zustrichalnya.git",
+    "accountId": "f5f21fa6-55e6-4320-b466-184d68c4a340"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Profile/Content/HobbiesController.java" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -52,28 +68,29 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.ApplicationLauncher.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.ApplicationLauncher.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "Maven.Zustrichalnya [org.openjfx:javafx-maven-plugin:0.0.8:run].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "ARTIMA/serw",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Andrii\Documents\GitHub\Zustrichalnya\src\main\resources" />
@@ -109,8 +126,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
       </set>
     </attachedChunks>
   </component>
@@ -136,6 +153,7 @@
       <workItem from="1718088576031" duration="1414000" />
       <workItem from="1718090277344" duration="15487000" />
       <workItem from="1718119196093" duration="1261000" />
+      <workItem from="1718186906261" duration="2685000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
