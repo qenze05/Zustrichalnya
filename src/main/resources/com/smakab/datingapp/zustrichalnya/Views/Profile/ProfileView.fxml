@@ -6,37 +6,37 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<SplitPane fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Profile.ProfileController" dividerPositions="0.136" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../../../../../../styles.css" styleClass="background">
+<SplitPane dividerPositions="0.15" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="980.0" prefWidth="1920.0" styleClass="background" stylesheets="@../../../../../../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Profile.ProfileController">
   <items>
-      <VBox prefHeight="200.0" prefWidth="100.0" stylesheets="@../../../../../../styles.css" styleClass="left-side">
+      <VBox prefHeight="200.0" prefWidth="175.0" styleClass="left-side" stylesheets="@../../../../../../styles.css">
          <children>
-            <Button fx:id="mainB" onAction="#switchMenu" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Основне" stylesheets="@../../../../../../styles.css" styleClass="menu-button">
+            <Button fx:id="mainB" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchMenu" styleClass="menu-button" stylesheets="@../../../../../../styles.css" text="Основне">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="personalityB" onAction="#switchMenu" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Риси характеру" stylesheets="@../../../../../../styles.css" styleClass="menu-button">
+            <Button fx:id="personalityB" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchMenu" styleClass="menu-button" stylesheets="@../../../../../../styles.css" text="Риси характеру">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="hobbiesB" onAction="#switchMenu" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Хобі" stylesheets="@../../../../../../styles.css" styleClass="menu-button">
+            <Button fx:id="hobbiesB" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchMenu" styleClass="menu-button" stylesheets="@../../../../../../styles.css" text="Хобі">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="prefB" onAction="#switchMenu" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Романтичні вподобання" stylesheets="@../../../../../../styles.css" styleClass="menu-button">
+            <Button fx:id="prefB" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchMenu" styleClass="menu-button" stylesheets="@../../../../../../styles.css" text="Романтичні вподобання">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="viewsB" onAction="#switchMenu" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Погляди" stylesheets="@../../../../../../styles.css" styleClass="menu-button">
+            <Button fx:id="viewsB" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchMenu" styleClass="menu-button" stylesheets="@../../../../../../styles.css" text="Погляди">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
          </children>
       </VBox>
-    <AnchorPane fx:id="container"  minHeight="0.0" minWidth="0.0" />
+    <AnchorPane fx:id="container" minHeight="0.0" minWidth="0.0" />
   </items>
 </SplitPane>

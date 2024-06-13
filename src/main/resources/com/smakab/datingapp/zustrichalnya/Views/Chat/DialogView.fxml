@@ -1,14 +1,262 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.smakab.datingapp.zustrichalnya.Views.Chat.DialogView"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="980.0" prefWidth="1920.0" spacing="15.0" styleClass="background" stylesheets="@../../../../../../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox maxHeight="100.0" prefHeight="100.0" prefWidth="575.0" spacing="10.0" styleClass="chat-person" stylesheets="@../../../../../../styles.css">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+            <Label alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" prefWidth="400.0" text="Імʼя" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" hmax="0.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="1000.0">
+         <content>
+            <VBox alignment="BOTTOM_LEFT" fillWidth="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="1920.0" spacing="20.0">
+               <children>
+                  <HBox maxWidth="700.0" spacing="10.0" styleClass="chat-person" stylesheets="@../../../../../../styles.css">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                        <HBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" spacing="10.0">
+                           <children>
+                              <Label text="Повідомленняяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя" wrapText="true" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" minWidth="70.0" text="00:00">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <VBox alignment="BOTTOM_RIGHT" fillWidth="false" maxWidth="1.7976931348623157E308" prefWidth="2000.0">
+                     <children>
+                        <HBox alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="700.0" spacing="10.0" styleClass="chat-person" stylesheets="@../../../../../../styles.css">
+                           <children>
+                              <HBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0">
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Label maxWidth="1.7976931348623157E308" text="Поііііііііііііііііііііііііііііввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввввііііііііііівідомлення" wrapText="true" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER_RIGHT" minWidth="70.0" text="00:00">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox maxWidth="700.0" spacing="10.0" styleClass="chat-person" stylesheets="@../../../../../../styles.css">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                        <HBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" spacing="10.0">
+                           <children>
+                              <Label text="Повідомленняяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя" wrapText="true" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" minWidth="70.0" text="00:00">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox maxWidth="700.0" spacing="10.0" styleClass="chat-person" stylesheets="@../../../../../../styles.css">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                        <HBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" spacing="10.0">
+                           <children>
+                              <Label text="Повідомленняяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя" wrapText="true" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" minWidth="70.0" text="00:00">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox maxWidth="700.0" spacing="10.0" styleClass="chat-person" stylesheets="@../../../../../../styles.css">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                        <HBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" spacing="10.0">
+                           <children>
+                              <Label text="Повідомленняяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя" wrapText="true" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" minWidth="70.0" text="00:00">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox maxWidth="700.0" spacing="10.0" styleClass="chat-person" stylesheets="@../../../../../../styles.css">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                        <HBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" spacing="10.0">
+                           <children>
+                              <Label text="Повідомленняяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя" wrapText="true" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" minWidth="70.0" text="00:00">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox maxWidth="700.0" spacing="10.0" styleClass="chat-person" stylesheets="@../../../../../../styles.css">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                        <HBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" spacing="10.0">
+                           <children>
+                              <Label text="Повідомленняяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя" wrapText="true" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" minWidth="70.0" text="00:00">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox maxWidth="700.0" spacing="10.0" styleClass="chat-person" stylesheets="@../../../../../../styles.css">
+                     <children>
+                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+                        <HBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" spacing="10.0">
+                           <children>
+                              <Label text="Повідомленняяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяяя" wrapText="true" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER_RIGHT" minWidth="70.0" text="00:00">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <HBox alignment="BOTTOM_RIGHT" maxHeight="100.0" prefHeight="100.0" prefWidth="575.0" spacing="10.0" styleClass="chat-person" stylesheets="@../../../../../../styles.css">
+         <children>
+            <TextArea maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="2000.0" promptText="Введіть текст повідомлення" wrapText="true">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </TextArea>
+            <Button mnemonicParsing="false">
+               <graphic>
+                  <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="15.0" />
+         </padding>
+         <VBox.margin>
+            <Insets bottom="10.0" right="15.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+   </children>
+</VBox>

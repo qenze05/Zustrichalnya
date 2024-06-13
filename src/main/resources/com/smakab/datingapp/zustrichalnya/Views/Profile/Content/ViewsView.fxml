@@ -10,16 +10,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content.ViewsController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="980.0" minWidth="-Infinity" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content.ViewsController">
     <children>
-        <ScrollPane hbarPolicy="NEVER">
+        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER">
             <HBox.margin>
                 <Insets left="0.0" top="0.0" />
             </HBox.margin>
             <content>
-                <VBox prefWidth="1590.0" minHeight="1590.0" spacing="10.0" stylesheets="@../../../../../../../styles.css" styleClass="background-padding">
+                <VBox minHeight="980.0" prefWidth="1920.0" spacing="10.0" styleClass="background-padding" stylesheets="@../../../../../../../styles.css">
                     <children>
-                  <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0" >
+                  <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
                      <children>
                         <Label prefWidth="200.0" text="Релігія">
                            <font>
@@ -55,7 +55,7 @@
                                         <Font size="25.0" />
                                     </font>
                                 </Label>
-                                <Button onAction="#addMovement"  mnemonicParsing="false" text="+" stylesheets="@../../../../../../../styles.css" styleClass="add-button">
+                                <Button mnemonicParsing="false" onAction="#addMovement" styleClass="add-button" stylesheets="@../../../../../../../styles.css" text="+">
                                     <HBox.margin>
                                         <Insets left="20.0" />
                                     </HBox.margin>

@@ -1,4 +1,4 @@
 package com.smakab.datingapp.zustrichalnya.Controllers.Chat;
 
-public class ChatController  {
+public class DialogController {
 }
