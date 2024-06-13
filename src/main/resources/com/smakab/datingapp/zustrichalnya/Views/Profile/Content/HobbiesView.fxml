@@ -39,28 +39,6 @@
                      </children>
                   </HBox>
                   <FlowPane fx:id="subculturesContainer" hgap="5.0" maxWidth="1.7976931348623157E308" vgap="5.0">
-                     <children>
-<!--                        <HBox fx:id="boxSample" alignment="CENTER" prefHeight="40.0" style="-fx-background-color: white;">-->
-<!--                           <children>-->
-<!--&lt;!&ndash;                              <Label text="Sample">&ndash;&gt;-->
-<!--&lt;!&ndash;                                 <font>&ndash;&gt;-->
-<!--&lt;!&ndash;                                    <Font size="20.0" />&ndash;&gt;-->
-<!--&lt;!&ndash;                                 </font>&ndash;&gt;-->
-<!--&lt;!&ndash;                              </Label>&ndash;&gt;-->
-<!--                              <Button mnemonicParsing="false" text="X">-->
-<!--                                 <HBox.margin>-->
-<!--                                    <Insets left="10.0" />-->
-<!--                                 </HBox.margin>-->
-<!--                              </Button>-->
-<!--                           </children>-->
-<!--                           <FlowPane.margin>-->
-<!--                              <Insets />-->
-<!--                           </FlowPane.margin>-->
-<!--                           <padding>-->
-<!--                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />-->
-<!--                           </padding>-->
-<!--                        </HBox>-->
-                     </children>
                   </FlowPane>
                   <HBox alignment="CENTER_LEFT" spacing="20.0">
                      <VBox.margin>
@@ -82,26 +60,9 @@
                   <VBox fx:id="hobbiesContainer">
                      <children>
                         <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
-                           <children>
-<!--                              <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Sample">-->
-<!--                                 <font>-->
-<!--                                    <Font size="20.0" />-->
-<!--                                 </font>-->
-<!--                                 <HBox.margin>-->
-<!--                                    <Insets />-->
-<!--                                 </HBox.margin>-->
-<!--                              </Label>-->
-<!--                              <Slider blockIncrement="1.0" majorTickUnit="1.0" max="10.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" snapToTicks="true" />-->
-<!--                              <Button mnemonicParsing="false" text="X">-->
-<!--                                 <HBox.margin>-->
-<!--                                    <Insets left="20.0" />-->
-<!--                                 </HBox.margin>-->
-<!--                              </Button>-->
-                           </children>
                         </HBox>
                      </children>
                   </VBox>
-<!--                  <CheckTreeView />-->
                </children>
             </VBox>
          </content>

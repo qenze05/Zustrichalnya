@@ -4,75 +4,498 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Slider?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="background" stylesheets="@../../../../../../../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Search.Content.NewOffersController">
     <children>
-        <ScrollPane hbarPolicy="NEVER">
+        <VBox prefWidth="800.0" spacing="10.0">
             <HBox.margin>
-                <Insets left="0.0" top="0.0" />
+                <Insets top="20.0" />
             </HBox.margin>
-            <content>
-                <VBox prefWidth="1590.0" spacing="10.0" stylesheets="@../../../../../../../styles.css" styleClass="background-padding">
+            <children>
+            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Шаблон, за яким вас знайшли">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+                <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" hmax="0.0" styleClass="form-style">
+                    <content>
+                        <VBox prefWidth="750.0" spacing="15.0">
+                     <children>
+                        <VBox spacing="10.0">
+                           <children>
+                              <Label text="Основна інформація">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="BOTTOM_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label text="Назва">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Label" wrapText="true">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="BOTTOM_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label text="Мета">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Label" wrapText="true">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="BOTTOM_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label text="Опис">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Label" wrapText="true">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="BOTTOM_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label text="Тип">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Label" wrapText="true">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox spacing="10.0">
+                           <children>
+                              <Label text="Зелені та червоні прапорці">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                               <HBox alignment="CENTER">
+                                   <children>
+                                       <VBox HBox.hgrow="ALWAYS">
+                                           <children>
+                                               <HBox alignment="CENTER">
+                                                   <children>
+                                                       <Label prefWidth="180.0" styleClass="label-greenflag" stylesheets="@../../../../../../../styles.css" text="Зелені прапорці">
+                                                           <font>
+                                                               <Font size="20.0" />
+                                                           </font>
+                                                       </Label>
+                                                   </children>
+                                               </HBox>
+                                               <FlowPane fx:id="greenFlagsContainer" hgap="10.0" prefWidth="200.0" vgap="20.0">
+                                                   <padding>
+                                                       <Insets left="5.0" right="5.0" top="10.0" />
+                                                   </padding>
+                                               </FlowPane>
+                                           </children>
+                                       </VBox>
+                                       <Separator orientation="VERTICAL" prefHeight="200.0" />
+                                       <VBox HBox.hgrow="ALWAYS">
+                                           <children>
+                                               <HBox alignment="CENTER">
+                                                   <children>
+                                                       <Label prefWidth="180.0" styleClass="label-redflag" stylesheets="@../../../../../../../styles.css" text="Червоні прапорці">
+                                                           <font>
+                                                               <Font size="20.0" />
+                                                           </font>
+                                                       </Label>
+                                                   </children>
+                                               </HBox>
+                                               <FlowPane fx:id="redFlagsContainer" hgap="10.0" prefWidth="200.0" vgap="20.0">
+                                                   <padding>
+                                                       <Insets left="5.0" right="5.0" top="10.0" />
+                                                   </padding>
+                                               </FlowPane>
+                                           </children>
+                                       </VBox>
+                                   </children>
+                               </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+                           <children>
+                              <Label text="Деталі">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="BOTTOM_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label text="Наявність реального фото (0-5)">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Label" wrapText="true">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="BOTTOM_LEFT" spacing="20.0">
+                                 <children>
+                                    <Label text="Шкала віку">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Label" wrapText="true">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="506.0" spacing="10.0">
+                           <children>
+                              <Label text="Хобі та субкультури">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                               <VBox spacing="10.0" styleClass="background-padding" stylesheets="@../../../../../../../styles.css">
+                                   <children>
+                                       <VBox spacing="10.0">
+                                           <children>
+                                               <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                                   <children>
+                                                       <Label text="Субкультури:">
+                                                           <font>
+                                                               <Font size="30.0" />
+                                                           </font>
+                                                       </Label>
+                                                   </children>
+                                               </HBox>
+                                           </children>
+                                           <padding>
+                                               <Insets top="50.0" />
+                                           </padding>
+                                       </VBox>
+                                       <VBox fx:id="subculturesContainer">
+
+                                           <padding>
+                                               <Insets left="10.0" />
+                                           </padding>
+                                       </VBox>
+                                       <VBox spacing="10.0">
+                                           <children>
+                                               <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                                   <children>
+                                                       <Label text="Хобі:">
+                                                           <font>
+                                                               <Font size="30.0" />
+                                                           </font>
+                                                       </Label>
+                                                   </children>
+                                               </HBox>
+                                           </children>
+                                           <padding>
+                                               <Insets top="50.0" />
+                                           </padding>
+                                       </VBox>
+                                       <VBox fx:id="hobbiesContainer">
+                                           <padding>
+                                               <Insets left="10.0" />
+                                           </padding>
+                                       </VBox>
+                                   </children>
+                               </VBox>
+
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="506.0" spacing="10.0">
+                           <children>
+                              <Label text="Романтичні вподобання">
+                                 <font>
+                                    <Font name="System Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                               <VBox spacing="10.0" styleClass="background-padding" stylesheets="@../../../../../../../styles.css">
+                                   <children>
+                                       <VBox spacing="10.0">
+                                           <children>
+                                               <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                                   <children>
+                                                       <Label text="Вподобання">
+                                                           <font>
+                                                               <Font size="30.0" />
+                                                           </font>
+                                                       </Label>
+                                                   </children>
+                                               </HBox>
+                                           </children>
+                                           <padding>
+                                               <Insets top="50.0" />
+                                           </padding>
+                                       </VBox>
+                                       <VBox fx:id="prefContainer">
+                                           <padding>
+                                               <Insets left="10.0" />
+                                           </padding>
+                                       </VBox>
+                                   </children>
+                               </VBox>
+
+
+                           </children>
+                        </VBox>
+                         <VBox spacing="10.0">
+                             <children>
+                                 <Label text="Громадянські, політичні, релігійні погляди">
+                                     <font>
+                                         <Font name="System Bold" size="25.0" />
+                                     </font>
+                                 </Label>
+                                 <VBox prefWidth="1600.0" spacing="10.0" styleClass="background-padding" stylesheets="@../../../../../../../styles.css">
+                                     <children>
+                                         <VBox spacing="10.0">
+                                             <children>
+                                                 <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                                     <children>
+                                                         <Label text="Релігія">
+                                                             <font>
+                                                                 <Font size="30.0" />
+                                                             </font>
+                                                         </Label>
+                                                     </children>
+                                                 </HBox>
+                                             </children>
+                                             <padding>
+                                                 <Insets top="50.0" />
+                                             </padding>
+                                         </VBox>
+                                         <VBox fx:id="religionsContainer">
+                                             <padding>
+                                                 <Insets left="10.0" />
+                                             </padding>
+                                         </VBox>
+                                         <VBox spacing="10.0">
+                                             <children>
+                                                 <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                                     <children>
+                                                         <Label text="Мова спілкування">
+                                                             <font>
+                                                                 <Font size="30.0" />
+                                                             </font>
+                                                         </Label>
+                                                     </children>
+                                                 </HBox>
+                                             </children>
+                                             <padding>
+                                                 <Insets top="50.0" />
+                                             </padding>
+                                         </VBox>
+                                         <VBox fx:id="languagesContainer">
+                                             <padding>
+                                                 <Insets left="10.0" />
+                                             </padding>
+                                         </VBox>
+                                         <VBox spacing="10.0">
+                                             <children>
+                                                 <HBox alignment="CENTER_LEFT" spacing="20.0">
+                                                     <children>
+                                                         <Label text="Громадянські рухи">
+                                                             <font>
+                                                                 <Font size="30.0" />
+                                                             </font>
+                                                         </Label>
+                                                     </children>
+                                                 </HBox>
+                                             </children>
+                                             <padding>
+                                                 <Insets top="50.0" />
+                                             </padding>
+                                         </VBox>
+                                         <VBox fx:id="movementsContainer">
+                                             <padding>
+                                                 <Insets left="10.0" />
+                                             </padding>
+                                         </VBox>
+                                     </children>
+                                 </VBox>
+
+                             </children>
+                         </VBox>
+                     </children>
+                        </VBox>
+                    </content>
+                    <VBox.margin>
+                        <Insets />
+                    </VBox.margin>
+                    <padding>
+                        <Insets left="10.0" />
+                    </padding>
+                </ScrollPane>
+            </children>
+        </VBox>
+        <VBox prefWidth="800.0" spacing="5.0" stylesheets="@../../../../../../../styles.css">
+            <HBox.margin>
+                <Insets top="20.0" />
+            </HBox.margin>
+            <children>
+                <HBox alignment="CENTER" prefHeight="100.0" styleClass="label-personality">
                     <children>
-                        <Label text="Мої романтичні вподобання:">
+                        <Label styleClass="label-name" text="Нові пропозиції:">
                             <font>
-                                <Font size="25.0" />
+                                <Font size="30.0" />
                             </font>
-                            <VBox.margin>
-                                <Insets top="50.0" />
-                            </VBox.margin>
                         </Label>
-                        <TextArea prefWidth="502.0" promptText="Тут має бути текст">
+                        <Label styleClass="delete-button" text="5">
                             <font>
-                                <Font size="20.0" />
+                                <Font size="30.0" />
                             </font>
-                        </TextArea>
-                        <HBox alignment="CENTER_LEFT">
+                        </Label>
+                    </children>
+                </HBox>
+                <VBox prefWidth="800.0" spacing="20.0" styleClass="search-template" stylesheets="@../../../../../../../styles.css">
+                    <children>
+                        <HBox>
                             <children>
-                                <Label text="Додайте теги:">
-                                    <font>
-                                        <Font size="25.0" />
-                                    </font>
-                                </Label>
-                                <Button mnemonicParsing="false" text="+">
+                                <HBox>
+                                    <ImageView fitHeight="550.0" fitWidth="550.0" pickOnBounds="true">
+                                        <HBox.margin>
+                                            <Insets left="125.0" />
+                                        </HBox.margin></ImageView>
+                                </HBox>
+                                <Button onAction="#openProfileShowcase" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" styleClass="requests-button" text="?">
                                     <HBox.margin>
-                                        <Insets left="20.0" />
+                                        <Insets left="10.0" top="10.0" />
                                     </HBox.margin>
                                     <font>
-                                        <Font size="20.0" />
+                                        <Font size="40.0" />
                                     </font>
                                 </Button>
                             </children>
-                            <VBox.margin>
-                                <Insets top="50.0" />
-                            </VBox.margin>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefWidth="600.0" spacing="10.0">
+                        <VBox spacing="15.0" styleClass="search-template-inner">
                             <children>
-                                <Label alignment="CENTER_RIGHT" prefWidth="150.0" text="Прогулянки">
+                                <HBox spacing="10.0">
+                                    <children>
+                                        <Label text="Name">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="•">
+                                            <font>
+                                                <Font name="System Bold" size="20.0" />
+                                            </font>
+                                        </Label>
+                                        <Label text="Age">
+                                            <font>
+                                                <Font size="20.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                    <padding>
+                                        <Insets left="10.0" />
+                                    </padding>
+                                </HBox>
+                                <Label maxWidth="1.7976931348623157E308" text="Description" wrapText="true">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
-                                    <HBox.margin>
-                                        <Insets />
-                                    </HBox.margin>
                                 </Label>
-                                <Slider blockIncrement="1.0" majorTickUnit="1.0" max="10.0" minorTickCount="1" prefHeight="50.0" prefWidth="300.0" showTickLabels="true" snapToTicks="true" />
-                                <Button mnemonicParsing="false" text="X">
-                                    <HBox.margin>
-                                        <Insets left="20.0" />
-                                    </HBox.margin>
+                            </children>
+                            <padding>
+                                <Insets left="10.0" />
+                            </padding>
+                        </VBox>
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" spacing="15.0">
+                            <children>
+                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
+                                    <graphic>
+                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@../../../../../../../icons/arrow_left.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
+                                    <graphic>
+                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@../../../../../../../icons/heart.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
+                                    <graphic>
+                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@../../../../../../../icons/message.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
+                                    <graphic>
+                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@../../../../../../../icons/x.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
+                                    <graphic>
+                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@../../../../../../../icons/archive.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
+                                    <graphic>
+                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                                            <image>
+                                                <Image url="@../../../../../../../icons/arrow_right.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
                                 </Button>
                             </children>
                         </HBox>
                     </children>
                 </VBox>
-            </content>
-        </ScrollPane>
+            </children>
+        </VBox>
     </children>
 </HBox>

@@ -2,32 +2,33 @@ package com.smakab.datingapp.zustrichalnya.Controllers.Search.Content;
 
 import com.smakab.datingapp.zustrichalnya.Interfaces.TemplateDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Search.Template;
-import com.smakab.datingapp.zustrichalnya.Views.Template.MainView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.HashSet;
 import java.util.ResourceBundle;
-import java.util.TreeSet;
 
-public class TemplateController extends TemplateContentClass {
-    public Button saveB;
-    public Button removeB;
-    public VBox infoContainer;
+public class NewOffersController extends TemplateContentClass {
+
+    public Template model;
     public FlowPane greenFlagsContainer;
     public FlowPane redFlagsContainer;
-    MainView view;
-    Template model;
+    public VBox subculturesContainer;
+    public VBox hobbiesContainer;
+    public VBox prefContainer;
+    public VBox religionsContainer;
+    public VBox languagesContainer;
+    public VBox movementsContainer;
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
     }
 
     @Override
@@ -38,7 +39,6 @@ public class TemplateController extends TemplateContentClass {
     @Override
     public void setModel(Template template) {
         this.model = template;
-        this.view = new MainView(model.getGeneralInfo(), saveB, removeB);
     }
 
     @Override
@@ -48,22 +48,32 @@ public class TemplateController extends TemplateContentClass {
 
     @Override
     public void loadModelData() {
-        infoContainer.getChildren().add(0, view.getGeneralInfoFormRenderer());
-        model.getGeneralInfo().getGreenFlags().forEach(name -> greenFlagsContainer.getChildren().add(view.createFlag(name, model.getGeneralInfo().getGreenFlags(), greenFlagsContainer, "green")));
-        model.getGeneralInfo().getRedFlags().forEach(name -> redFlagsContainer.getChildren().add(view.createFlag(name, model.getGeneralInfo().getRedFlags(), redFlagsContainer, "red")));
 
     }
 
-    public void addFlag(FlowPane container, TreeSet<String> set, String style) {
-        container.getChildren().add(view.createFlag("###", set, container, style));
+    public void addGreenFlag(ActionEvent actionEvent) {
     }
 
-    public void addGreenFlag() {
-        addFlag(greenFlagsContainer, model.getGeneralInfo().getGreenFlags(), "green");
+    public void addRegFlag(ActionEvent actionEvent) {
     }
 
-    public void addRegFlag() {
-        addFlag(redFlagsContainer, model.getGeneralInfo().getRedFlags(), "red");
+    public void addSubculture(ActionEvent actionEvent) {
+    }
+
+    public void addHobby(ActionEvent actionEvent) {
+    }
+
+    public void addPreference(ActionEvent actionEvent) {
+    }
+
+    public void addReligion(ActionEvent actionEvent) {
+    }
+
+    public void addLanguage(ActionEvent actionEvent) {
+    }
+
+    public void addMovement(ActionEvent actionEvent) {
+
     }
 
     public void openProfileShowcase(ActionEvent actionEvent) throws IOException {

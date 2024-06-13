@@ -66,28 +66,6 @@
                             </children>
                         </HBox>
                         <FlowPane fx:id="movementsContainer" hgap="5.0" maxWidth="1.7976931348623157E308" vgap="5.0">
-                            <children>
-<!--                                <HBox alignment="CENTER" prefHeight="40.0" style="-fx-background-color: gray;">-->
-<!--                                    <children>-->
-<!--                                        <Label text="Sample">-->
-<!--                                            <font>-->
-<!--                                                <Font size="20.0" />-->
-<!--                                            </font>-->
-<!--                                        </Label>-->
-<!--                                        <Button mnemonicParsing="false" text="X">-->
-<!--                                            <HBox.margin>-->
-<!--                                                <Insets left="10.0" />-->
-<!--                                            </HBox.margin>-->
-<!--                                        </Button>-->
-<!--                                    </children>-->
-<!--                                    <FlowPane.margin>-->
-<!--                                        <Insets />-->
-<!--                                    </FlowPane.margin>-->
-<!--                                    <padding>-->
-<!--                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />-->
-<!--                                    </padding>-->
-<!--                                </HBox>-->
-                            </children>
                         </FlowPane>
                     </children>
                 </VBox>

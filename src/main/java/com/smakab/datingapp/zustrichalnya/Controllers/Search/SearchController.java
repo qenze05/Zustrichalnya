@@ -59,7 +59,7 @@ public class SearchController extends BaseController implements Initializable, T
         } else if (source.equals(viewsB)) {
             loadView("Template/ViewsView");
         } else if (source.equals(newOffersB)) {
-            //loadView("NewOffersView");
+            loadView("NewOffersView");
         }
     }
 
@@ -115,7 +115,10 @@ public class SearchController extends BaseController implements Initializable, T
         controller.loadModelData();
 
         controller.setDelegate(this);
-        controller.setName(this.mainVC.getSelectedTemplate().getGeneralInfo().getName());
+
+        if(this.mainVC.getSelectedTemplate() != null) {
+            controller.setName(this.mainVC.getSelectedTemplate().getGeneralInfo().getName());
+        }
     }
 
     @Override
