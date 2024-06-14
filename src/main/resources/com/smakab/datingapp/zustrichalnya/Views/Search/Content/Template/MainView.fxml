@@ -225,7 +225,7 @@
                             <children>
                                 <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
-                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                                        <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true">
                                             <image>
                                                 <Image url="@../../../../../../../../icons/arrow_left.png" />
                                             </image>
@@ -234,7 +234,7 @@
                                 </Button>
                                 <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
-                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                                        <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true">
                                             <image>
                                                 <Image url="@../../../../../../../../icons/heart.png" />
                                             </image>
@@ -243,16 +243,7 @@
                                 </Button>
                                 <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
-                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
-                                            <image>
-                                                <Image url="@../../../../../../../../icons/message.png" />
-                                            </image>
-                                        </ImageView>
-                                    </graphic>
-                                </Button>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
-                                    <graphic>
-                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                                        <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true">
                                             <image>
                                                 <Image url="@../../../../../../../../icons/x.png" />
                                             </image>
@@ -261,16 +252,7 @@
                                 </Button>
                                 <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
-                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
-                                            <image>
-                                                <Image url="@../../../../../../../../icons/archive.png" />
-                                            </image>
-                                        </ImageView>
-                                    </graphic>
-                                </Button>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
-                                    <graphic>
-                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                                        <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true">
                                             <image>
                                                 <Image url="@../../../../../../../../icons/arrow_right.png" />
                                             </image>

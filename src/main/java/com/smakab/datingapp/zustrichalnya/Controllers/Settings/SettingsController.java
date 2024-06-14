@@ -30,7 +30,7 @@ public class SettingsController extends BaseController implements Initializable 
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.model = new SettingsModel();
         this.view = new MainView(model, saveButton, resetButton);
-        container.getChildren().addFirst(view.getGeneralInfoFormRenderer());
+        container.getChildren().add(0,view.getGeneralInfoFormRenderer());
     }
 
     public void saveForm() {

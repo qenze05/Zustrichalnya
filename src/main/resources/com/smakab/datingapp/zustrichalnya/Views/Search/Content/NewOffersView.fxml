@@ -24,11 +24,11 @@
                   <Font size="30.0" />
                </font>
             </Label>
-                <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" hmax="0.0" styleClass="form-style">
+                <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" hmax="0.0" styleClass="background" stylesheets="@../../../../../../../styles.css">
                     <content>
                         <VBox prefWidth="750.0" spacing="15.0">
                      <children>
-                        <VBox spacing="10.0">
+                        <VBox spacing="10.0" styleClass="background" stylesheets="@../../../../../../../styles.css">
                            <children>
                               <Label text="Основна інформація">
                                  <font>
@@ -93,7 +93,7 @@
                               </HBox>
                            </children>
                         </VBox>
-                        <VBox spacing="10.0">
+                        <VBox spacing="10.0" styleClass="background" stylesheets="@../../../../../../../styles.css">
                            <children>
                               <Label text="Зелені та червоні прапорці">
                                  <font>
@@ -143,7 +143,7 @@
                                </HBox>
                            </children>
                         </VBox>
-                        <VBox layoutX="10.0" layoutY="10.0" spacing="10.0">
+                        <VBox layoutX="10.0" layoutY="10.0" spacing="10.0" styleClass="background" stylesheets="@../../../../../../../styles.css">
                            <children>
                               <Label text="Деталі">
                                  <font>
@@ -180,7 +180,7 @@
                               </HBox>
                            </children>
                         </VBox>
-                        <VBox layoutX="10.0" layoutY="506.0" spacing="10.0">
+                        <VBox layoutX="10.0" layoutY="506.0" spacing="10.0" styleClass="background" stylesheets="@../../../../../../../styles.css">
                            <children>
                               <Label text="Хобі та субкультури">
                                  <font>
@@ -237,7 +237,7 @@
 
                            </children>
                         </VBox>
-                        <VBox layoutX="10.0" layoutY="506.0" spacing="10.0">
+                        <VBox layoutX="10.0" layoutY="506.0" spacing="10.0" styleClass="background" stylesheets="@../../../../../../../styles.css">
                            <children>
                               <Label text="Романтичні вподобання">
                                  <font>
@@ -273,7 +273,7 @@
 
                            </children>
                         </VBox>
-                         <VBox spacing="10.0">
+                         <VBox spacing="10.0" styleClass="background" stylesheets="@../../../../../../../styles.css">
                              <children>
                                  <Label text="Громадянські, політичні, релігійні погляди">
                                      <font>
@@ -439,7 +439,7 @@
                             <children>
                                 <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
-                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                                        <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true">
                                             <image>
                                                 <Image url="@../../../../../../../icons/arrow_left.png" />
                                             </image>
@@ -448,7 +448,7 @@
                                 </Button>
                                 <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
-                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                                        <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true">
                                             <image>
                                                 <Image url="@../../../../../../../icons/heart.png" />
                                             </image>
@@ -457,16 +457,7 @@
                                 </Button>
                                 <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
-                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
-                                            <image>
-                                                <Image url="@../../../../../../../icons/message.png" />
-                                            </image>
-                                        </ImageView>
-                                    </graphic>
-                                </Button>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
-                                    <graphic>
-                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                                        <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true">
                                             <image>
                                                 <Image url="@../../../../../../../icons/x.png" />
                                             </image>
@@ -475,16 +466,7 @@
                                 </Button>
                                 <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
-                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
-                                            <image>
-                                                <Image url="@../../../../../../../icons/archive.png" />
-                                            </image>
-                                        </ImageView>
-                                    </graphic>
-                                </Button>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
-                                    <graphic>
-                                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true">
+                                        <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true">
                                             <image>
                                                 <Image url="@../../../../../../../icons/arrow_right.png" />
                                             </image>

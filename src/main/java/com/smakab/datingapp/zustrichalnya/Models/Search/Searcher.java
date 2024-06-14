@@ -113,6 +113,12 @@ public class Searcher {
 
         // Слайдери особистості
         for(Map.Entry<String, Pair<Integer, Integer>> personalitySliders : template.getPersonality().getSliders().entrySet()) {
+            boolean personalityIn = false;
+            int value = thatPerson.getPersonality().getSliders().get(personalitySliders.getKey());
+            int length = personalitySliders.getValue().getValue1() - personalitySliders.getValue().getValue0();
+            if(value > personalitySliders.getValue().getValue0() && value < personalitySliders.getValue().getValue1()) personalityIn = true;
+            if(personalityIn) result+= (11 - length);
+            else result -= length;
         }
 
         double personalityTypeQuantifier = 1;
