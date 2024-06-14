@@ -1,7 +1,10 @@
 package com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.smakab.datingapp.zustrichalnya.Controllers.JsonUtil;
 import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
+import com.smakab.datingapp.zustrichalnya.Models.Profile.GeneralInfo;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.Hobbies;
 import com.smakab.datingapp.zustrichalnya.Utils.EditableLabel;
 import javafx.geometry.Insets;
@@ -13,6 +16,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -69,12 +74,24 @@ public class HobbiesController extends ProfileContentClass {
 
     @Override
     public void loadModelData() {
+        try {
+            File jsonFile = new File("personHobbies.json");
+            if(jsonFile.exists()) {
+                model = JsonUtil.fromJsonFile(jsonFile, Hobbies.class);
+                System.out.println("loaded");
+            }
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         System.out.println(model.getHobbies().size());
         model.getSubcultures().forEach(name -> subculturesContainer.getChildren().add(createSubculture(name)));
         model.getHobbies().forEach((name, value) -> hobbiesContainer.getChildren().add(createHobby(name, value)));
     }
 
     public void addHobby() {
+        model.writeInfoToFile("personHobbies.json");
         hobbiesContainer.getChildren().add(createHobby("###", 5));
     }
 
@@ -123,7 +140,6 @@ public class HobbiesController extends ProfileContentClass {
         container.getChildren().add(label);
         container.getChildren().add(slider);
         container.getChildren().add(delete);
-
 
         return container;
     }

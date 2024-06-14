@@ -5,6 +5,8 @@ import javafx.scene.image.Image;
 import org.javatuples.Pair;
 import org.javatuples.Triplet;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -69,4 +71,6 @@ public class Person {
     public void setViews(Views views) {
         this.views = views;
     }
+
+
 }

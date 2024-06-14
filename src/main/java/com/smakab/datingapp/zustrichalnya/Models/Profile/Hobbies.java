@@ -1,5 +1,10 @@
 package com.smakab.datingapp.zustrichalnya.Models.Profile;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.smakab.datingapp.zustrichalnya.Controllers.JsonUtil;
+
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.TreeMap;
 import java.util.TreeSet;
 
@@ -51,5 +56,17 @@ public class Hobbies {
 
     public void removeHobby(String value) {
         this.hobbies.remove(value);
+    }
+
+    public String toJson() throws JsonProcessingException {
+        return JsonUtil.toJson(this);
+    }
+
+    public void writeInfoToFile(String filename) {
+        try (FileWriter writer = new FileWriter(filename, false)) {
+            writer.write(this.toJson());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -1,7 +1,10 @@
 package com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.smakab.datingapp.zustrichalnya.Controllers.JsonUtil;
 import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
+import com.smakab.datingapp.zustrichalnya.Models.Profile.GeneralInfo;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.Personality;
 
 import javafx.collections.FXCollections;
@@ -13,6 +16,8 @@ import javafx.scene.control.Slider;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -75,6 +80,17 @@ public class PersonalityController extends ProfileContentClass {
 
     @Override
     public void loadModelData() {
+        try {
+            File jsonFile = new File("personPersonality.json");
+            if(jsonFile.exists()) {
+                model = JsonUtil.fromJsonFile(jsonFile, Personality.class);
+                System.out.println("loaded");
+            }
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         initSliders();
         initCB();
     }

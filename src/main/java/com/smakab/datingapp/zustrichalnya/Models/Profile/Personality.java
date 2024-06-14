@@ -1,5 +1,10 @@
 package com.smakab.datingapp.zustrichalnya.Models.Profile;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.smakab.datingapp.zustrichalnya.Controllers.JsonUtil;
+
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.HashMap;
 
 public class Personality {
@@ -31,5 +36,17 @@ public class Personality {
     public void updateSlider(String name, Integer value) {
         sliders.put(name, value);
         System.out.println(sliders.get(name));
+    }
+
+    public String toJson() throws JsonProcessingException {
+        return JsonUtil.toJson(this);
+    }
+
+    public void writeInfoToFile(String filename) {
+        try (FileWriter writer = new FileWriter(filename, false)) {
+            writer.write(this.toJson());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

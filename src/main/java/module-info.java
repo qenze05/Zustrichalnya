@@ -13,6 +13,10 @@ module com.smakab.datingapp.zustrichalnya {
     requires java.desktop;
     requires javatuples;
     requires com.google.gson;
+    requires com.fasterxml.jackson.core;
+    requires com.fasterxml.jackson.databind;
+    requires com.fasterxml.jackson.datatype.jsr310;
+    requires javafx.swing;
 
     opens com.smakab.datingapp.zustrichalnya.Models to com.google.gson, javafx.fxml;
     opens com.smakab.datingapp.zustrichalnya.Models.Profile to com.google.gson, javafx.fxml;
@@ -26,6 +30,8 @@ module com.smakab.datingapp.zustrichalnya {
 
     opens com.smakab.datingapp.zustrichalnya.Controllers.Profile to javafx.fxml;
     exports com.smakab.datingapp.zustrichalnya.Controllers.Profile;
+
+
 
     opens com.smakab.datingapp.zustrichalnya.Controllers.Settings to javafx.fxml;
     exports com.smakab.datingapp.zustrichalnya.Controllers.Settings;

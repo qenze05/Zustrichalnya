@@ -1,45 +1,50 @@
 package com.smakab.datingapp.zustrichalnya.Models.Profile;
 
+import com.smakab.datingapp.zustrichalnya.Controllers.JsonUtil;
 import javafx.beans.property.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.image.Image;
 import org.javatuples.Pair;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 public class GeneralInfo {
-    private ArrayList<Pair<Image, Boolean>> photos = new ArrayList<>();
-    private String description;
-    private StringProperty surname = new SimpleStringProperty("");
-    private StringProperty name = new SimpleStringProperty("");
-    private StringProperty patronymic = new SimpleStringProperty("");
-    private StringProperty nickname = new SimpleStringProperty("");
-    private ListProperty<String> nameVisibility = new SimpleListProperty<>(FXCollections.observableArrayList("Імʼя"));
-    private ListProperty<String> nameVisibilityAll = new SimpleListProperty<>(FXCollections.observableArrayList("Імʼя", "Прізвище", "По-батькові", "Нікнейм"));
-    private ObjectProperty<LocalDate> birthdate = new SimpleObjectProperty<>(LocalDate.now());
-    private int age = 0;
-    private BooleanProperty birthdateVisibility = new SimpleBooleanProperty(true);
-    private ObjectProperty<String> region = new SimpleObjectProperty<>("");
-    private ListProperty<String> regionAll = new SimpleListProperty<>(FXCollections.observableArrayList("Вінницька", "Волинська", "Дніпропетровська", "Донецька", "Житомирська",
+    public ArrayList<Pair<Image, Boolean>> photos = new ArrayList<>();
+    public String description;
+    public StringProperty surname = new SimpleStringProperty("");
+    public StringProperty name = new SimpleStringProperty("");
+    public StringProperty patronymic = new SimpleStringProperty("");
+    public StringProperty nickname = new SimpleStringProperty("");
+    public ListProperty<String> nameVisibility = new SimpleListProperty<>(FXCollections.observableArrayList("Імʼя"));
+    public ListProperty<String> nameVisibilityAll = new SimpleListProperty<>(FXCollections.observableArrayList("Імʼя", "Прізвище", "По-батькові", "Нікнейм"));
+
+    public int age = 0;
+    public BooleanProperty birthdateVisibility = new SimpleBooleanProperty(true);
+    public ObjectProperty<String> region = new SimpleObjectProperty<>("");
+    public ListProperty<String> regionAll = new SimpleListProperty<>(FXCollections.observableArrayList("Вінницька", "Волинська", "Дніпропетровська", "Донецька", "Житомирська",
             "Закарпатська", "Запорізька", "Івано-Франківська", "Київська та Київ", "Кіровоградська",
             "Луганська", "Львівська", "Миколаївська", "Одеська", "Полтавська",
             "Рівненська", "Сумська", "Тернопільська", "Харківська", "Херсонська",
             "Хмельницька", "Черкаська", "Чернівецька", "Чернігівська",
             "Севастополь та АР Крим"));
 
-    private StringProperty city = new SimpleStringProperty("");
-    private ObjectProperty<String> sex = new SimpleObjectProperty<>("Чоловік");
-    private ListProperty<String> sexAll = new SimpleListProperty<>(FXCollections.observableArrayList("Чоловік", "Жінка"));
-    private StringProperty gender = new SimpleStringProperty("");
-    private StringProperty orientation = new SimpleStringProperty("");
-    private BooleanProperty isWorking = new SimpleBooleanProperty(false);
-    private StringProperty university = new SimpleStringProperty("");
-    private StringProperty profession = new SimpleStringProperty("");
-    private ListProperty<String> relationshipTypeAll = new SimpleListProperty<>(FXCollections.observableArrayList("На один день", "Дружба", "Короткочасні романтичні стосунки", "Партнерство", "Сімʼяʼ"));
-    private ListProperty<String> relationshipType = new SimpleListProperty<>(FXCollections.observableArrayList("На один день", "Дружба", "Короткочасні романтичні стосунки", "Партнерство", "Сімʼяʼ"));
+    public StringProperty city = new SimpleStringProperty("");
+    public ObjectProperty<String> sex = new SimpleObjectProperty<>("Чоловік");
+    public ListProperty<String> sexAll = new SimpleListProperty<>(FXCollections.observableArrayList("Чоловік", "Жінка"));
+    public StringProperty gender = new SimpleStringProperty("");
+    public StringProperty orientation = new SimpleStringProperty("");
+    public BooleanProperty isWorking = new SimpleBooleanProperty(false);
+    public StringProperty university = new SimpleStringProperty("");
+    public StringProperty profession = new SimpleStringProperty("");
+    public ListProperty<String> relationshipTypeAll = new SimpleListProperty<>(FXCollections.observableArrayList("На один день", "Дружба", "Короткочасні романтичні стосунки", "Партнерство", "Сімʼяʼ"));
+    public ListProperty<String> relationshipType = new SimpleListProperty<>(FXCollections.observableArrayList("На один день", "Дружба", "Короткочасні романтичні стосунки", "Партнерство", "Сімʼяʼ"));
 
 
     public ListProperty<String> regionAllProperty() {
@@ -98,14 +103,9 @@ public class GeneralInfo {
         return sexAll;
     }
 
-    public LocalDate getBirthdate() {
-        return birthdate.get();
-    }
 
     public int getAge(){
-        LocalDate today = LocalDate.now();
-        Period age = Period.between(getBirthdate(), today);
-        return age.getYears();
+        return 1;
     }
 
     public boolean isBirthdateVisibility() {
@@ -182,9 +182,7 @@ public class GeneralInfo {
         return nameVisibility;
     }
 
-    public ObjectProperty<LocalDate> birthdateProperty() {
-        return birthdate;
-    }
+
 
     public StringProperty cityProperty() {
         return city;
@@ -225,4 +223,43 @@ public class GeneralInfo {
     public StringProperty universityProperty() {
         return university;
     }
+
+    public String toJson() throws JsonProcessingException {
+        return JsonUtil.toJson(this);
+    }
+
+
+    public String toFormattedString() {
+        return "Photos: " + photos + "\n" +
+                "Description: " + description + "\n" +
+                "Surname: " + surname.get() + "\n" +
+                "Name: " + name.get() + "\n" +
+                "Patronymic: " + patronymic.get() + "\n" +
+                "Nickname: " + nickname.get() + "\n" +
+                "Name Visibility: " + nameVisibility.get() + "\n" +
+                "Name Visibility All: " + nameVisibilityAll.get() + "\n" +
+                "Age: " + getAge() + "\n" +
+                "Birthdate Visibility: " + birthdateVisibility.get() + "\n" +
+                "Region: " + region.get() + "\n" +
+                "Region All: " + regionAll.get() + "\n" +
+                "City: " + city.get() + "\n" +
+                "Sex: " + sex.get() + "\n" +
+                "Sex All: " + sexAll.get() + "\n" +
+                "Gender: " + gender.get() + "\n" +
+                "Orientation: " + orientation.get() + "\n" +
+                "Is Working: " + isWorking.get() + "\n" +
+                "University: " + university.get() + "\n" +
+                "Profession: " + profession.get() + "\n" +
+                "Relationship Type All: " + relationshipTypeAll.get() + "\n" +
+                "Relationship Type: " + relationshipType.get();
+    }
+
+    public void writeInfoToFile(String filename) {
+        try (FileWriter writer = new FileWriter(filename, false)) {
+            writer.write(this.toJson());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

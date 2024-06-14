@@ -51,9 +51,7 @@ public class MainView implements ViewMixin {
                                 })
                 ),
                 Group.of(
-                        Field.ofDate(generalInfo.getBirthdate())
-                                .label("Дата народження")
-                                .required(reqField),
+
                         Field.ofBooleanType(generalInfo.isBirthdateVisibility())
                                 .label("Показувати дату?")
                                 .required(reqField)
