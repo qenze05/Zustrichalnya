@@ -39,7 +39,7 @@
                   <Insets right="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="chatB" maxWidth="1.7976931348623157E308" minWidth="200.0" mnemonicParsing="false" onAction="#switchMenu" prefHeight="60.0" styleClass="menu-button" stylesheets="@../../../../../styles.css" text="Чат 💬" HBox.hgrow="ALWAYS">
+            <Button fx:id="chatB" maxWidth="1.7976931348623157E308" minWidth="200.0" mnemonicParsing="false" onAction="#switchMenu" prefHeight="60.0" styleClass="menu-button" stylesheets="@../../../../../styles.css" text="Спілкуватися 💬" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="20.0" />
                </font>

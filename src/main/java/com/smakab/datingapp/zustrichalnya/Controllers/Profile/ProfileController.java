@@ -1,5 +1,6 @@
 package com.smakab.datingapp.zustrichalnya.Controllers.Profile;
 
+import com.google.gson.Gson;
 import com.smakab.datingapp.zustrichalnya.Controllers.BaseController;
 import com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content.ProfileContentClass;
 import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
@@ -77,9 +78,8 @@ public class ProfileController extends BaseController implements Initializable, 
     }
 
     @Override
-    public void didUpdateData(Person data) {
-        System.out.println(data);
-        //TODO: оновити дані в бд
+    public void didUpdateData() {
+        System.out.println(new Gson().toJson(person));
     }
 
     @Override

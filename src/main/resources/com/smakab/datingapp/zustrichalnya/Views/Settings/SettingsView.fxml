@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.smakab.datingapp.zustrichalnya.Views.Menus.SettingsView"
-            prefHeight="400.0" prefWidth="600.0" stylesheets="@../../../../../../styles.css" styleClass="background">
-
-</AnchorPane>
+<SplitPane dividerPositions="0.15" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="980.0" prefWidth="1920.0" styleClass="background" stylesheets="@../../../../../../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Settings.SettingsController">
+    <items>
+        <VBox prefHeight="200.0" prefWidth="175.0" styleClass="left-side" stylesheets="@../../../../../../styles.css">
+            <children>
+                <Button fx:id="mainB" alignment="CENTER" contentDisplay="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="menu-button" stylesheets="@../../../../../../styles.css" text="Контакти">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+        <AnchorPane minHeight="0.0" minWidth="0.0">
+         <children>
+            <VBox fx:id="container" prefWidth="700.0">
+               <children>
+                  <HBox alignment="CENTER" spacing="30.0">
+                     <children>
+                        <Button fx:id="saveButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#saveForm" prefHeight="50.0" styleClass="photo-button" stylesheets="@../../../../../../styles.css" text="Зберегти">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="resetButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearForm" prefHeight="50.0" styleClass="photo-delete-button" stylesheets="@../../../../../../styles.css" text="Очистити">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+    </items>
+</SplitPane>

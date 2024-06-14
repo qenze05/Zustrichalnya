@@ -391,7 +391,7 @@
                                             <Insets left="125.0" />
                                         </HBox.margin></ImageView>
                                 </HBox>
-                                <Button onAction="#openProfileShowcase" mnemonicParsing="false" prefHeight="80.0" prefWidth="80.0" styleClass="requests-button" text="?">
+                                <Button mnemonicParsing="false" onAction="#openProfileShowcase" prefHeight="80.0" prefWidth="80.0" styleClass="requests-button" text="?">
                                     <HBox.margin>
                                         <Insets left="10.0" top="10.0" />
                                     </HBox.margin>

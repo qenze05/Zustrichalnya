@@ -1,15 +1,20 @@
 package com.smakab.datingapp.zustrichalnya.Controllers;
 
+import com.smakab.datingapp.zustrichalnya.ApplicationLauncher;
 import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.SplitPane;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -35,6 +40,10 @@ public class MenuController extends BaseController implements Initializable{
             openMenu("Search/SearchView");
         }else if (source.equals(chatB)) {
             openMenu("Chat/ChatView");
+        } else if (source.equals(settingsB)) {
+            openMenu("Settings/SettingsView");
+        } else if (source.equals(logoutB)) {
+            backToLogin();
         }
     }
 
@@ -52,6 +61,23 @@ public class MenuController extends BaseController implements Initializable{
 
             container.getChildren().setAll(view);
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void backToLogin() {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("/com/smakab/datingapp/zustrichalnya/Views/SignIn/SignInView.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("Зустрічальня");
+            stage.setScene(new Scene(root, 600, 400));
+            stage.getIcons().add(new Image(getClass().getResourceAsStream("/icons/logo_bordered.png")));
+            stage.show();
+            // Hide this current window (if this is what you want)
+            container.getScene().getWindow().hide();
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }
