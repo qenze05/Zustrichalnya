@@ -73,6 +73,18 @@ public class HobbiesController extends ProfileContentClass {
 
     @Override
     public void loadModelData() {
+        loadHobbies();
+        System.out.println(model.getHobbies().size());
+        model.getSubcultures().forEach(name -> subculturesContainer.getChildren().add(createSubculture(name)));
+        model.getHobbies().forEach((name, value) -> hobbiesContainer.getChildren().add(createHobby(name, value)));
+    }
+
+    public void addHobby() {
+        saveHobbies();
+        hobbiesContainer.getChildren().add(createHobby("###", 5));
+    }
+
+    public void loadHobbies(){
         try {
             File jsonFile = new File("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\hobbies.json");
             if(jsonFile.exists()) {
@@ -84,18 +96,13 @@ public class HobbiesController extends ProfileContentClass {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        System.out.println(model.getHobbies().size());
-        model.getSubcultures().forEach(name -> subculturesContainer.getChildren().add(createSubculture(name)));
-        model.getHobbies().forEach((name, value) -> hobbiesContainer.getChildren().add(createHobby(name, value)));
     }
-
-    public void addHobby() {
+    public void saveHobbies(){
         try {
             model.writeInfoToFile("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\hobbies.json");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        hobbiesContainer.getChildren().add(createHobby("###", 5));
     }
 
     public void addSubculture() {

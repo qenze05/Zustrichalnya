@@ -17,9 +17,33 @@ public class Searcher {
 
     Template template;
     Person thisPerson;
-    public Searcher(Template template, Person thisPerson){
+    public Searcher(Template template, UUID personUUID){
         this.template = template;
-        this.thisPerson = thisPerson;
+        try {
+            this.thisPerson = getPerson(personUUID);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Person getPerson(UUID uuid) throws IOException {
+        File generalInfoFile = new File("src\\main\\resources\\local-database\\"+uuid+"\\profile-data\\main.json");
+        com.smakab.datingapp.zustrichalnya.Models.Profile.GeneralInfo generalInfo = JsonUtil.fromJsonFile(generalInfoFile, com.smakab.datingapp.zustrichalnya.Models.Profile.GeneralInfo.class);
+
+        File personalityFile = new File("src\\main\\resources\\local-database\\"+uuid+"\\profile-data\\personality.json");
+        com.smakab.datingapp.zustrichalnya.Models.Profile.Personality personality = JsonUtil.fromJsonFile(personalityFile, com.smakab.datingapp.zustrichalnya.Models.Profile.Personality.class);
+
+        File hobbiesFile = new File("src\\main\\resources\\local-database\\"+uuid+"\\profile-data\\hobbies.json");
+        com.smakab.datingapp.zustrichalnya.Models.Profile.Hobbies hobbies = JsonUtil.fromJsonFile(hobbiesFile, com.smakab.datingapp.zustrichalnya.Models.Profile.Hobbies.class);
+
+        File preferencesFile = new File("src\\main\\resources\\local-database\\"+uuid+"\\profile-data\\preferences.json");
+        com.smakab.datingapp.zustrichalnya.Models.Profile.Preferences preferences = JsonUtil.fromJsonFile(preferencesFile, com.smakab.datingapp.zustrichalnya.Models.Profile.Preferences.class);
+
+        File viewsFile = new File("src\\main\\resources\\local-database\\"+uuid+"\\profile-data\\views.json");
+        com.smakab.datingapp.zustrichalnya.Models.Profile.Views views = JsonUtil.fromJsonFile(viewsFile, com.smakab.datingapp.zustrichalnya.Models.Profile.Views.class);
+
+        Person person = new Person(uuid, generalInfo, hobbies, personality, preferences, views);
+        return person;
     }
 
     public ArrayList<PersonComparable> search(){
@@ -27,7 +51,7 @@ public class Searcher {
         ArrayList<PersonComparable> compatiblePeople = new ArrayList<>();
         for(Person person : allPeople){
             double compatability = this.getCompatibility(person);
-            if(compatability > 0) compatiblePeople.add(new PersonComparable(person, compatability));
+            if(compatability > 0.5) compatiblePeople.add(new PersonComparable(person, compatability));
         }
         compatiblePeople.sort(new PersonComparator());
         return compatiblePeople;
@@ -35,8 +59,9 @@ public class Searcher {
 
     public void tempSout(){
         ArrayList<PersonComparable> souting = search();
+        if (souting.isEmpty()) System.out.println("empty :£");
         for(PersonComparable personComparable : souting){
-            System.out.println(personComparable.compatability);
+            System.out.println("Compat:" + personComparable.compatability);
         }
     }
 
@@ -176,7 +201,7 @@ public class Searcher {
             boolean personalityIn = false;
             int value = thatPerson.getPersonality().getSliders().get(personalitySliders.getKey());
             int length = personalitySliders.getValue().get(1) - personalitySliders.getValue().get(0);
-            if(value > personalitySliders.getValue().get(0) && value < personalitySliders.getValue().get(1)) personalityIn = true;
+            if(value >= personalitySliders.getValue().get(0) && value <= personalitySliders.getValue().get(1)) personalityIn = true;
             if(personalityIn) result+= (11 - length);
             else result -= length;
         }

@@ -44,16 +44,9 @@ public class ViewsController extends ProfileContentClass {
 
     @Override
     public void loadModelData() {
-        try {
-            File jsonFile = new File("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\views.json");
-            if(jsonFile.exists()) {
-                model = JsonUtil.fromJsonFile(jsonFile, Views.class);
-            }
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+
+        loadViews();
+
         religionField.textProperty().set(model.getReligion());
         religionField.textProperty().addListener((observableValue, oldV, newV) -> model.setReligion(newV));
 
@@ -61,6 +54,8 @@ public class ViewsController extends ProfileContentClass {
         langField.textProperty().addListener((observableValue, oldV, newV) -> model.setLanguage(newV));
 
         model.getMovements().forEach(name -> movementsContainer.getChildren().add(createMovement(name)));
+
+        saveViews();
     }
 
     public HBox createMovement(String name) {
@@ -94,6 +89,27 @@ public class ViewsController extends ProfileContentClass {
         container.getChildren().add(delete);
 
         return container;
+    }
+
+    public void saveViews(){
+        try {
+            model.writeInfoToFile("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\views.json");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void loadViews(){
+        try {
+            File jsonFile = new File("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\views.json");
+            if(jsonFile.exists()) {
+                model = JsonUtil.fromJsonFile(jsonFile, Views.class);
+            }
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void addMovement(ActionEvent actionEvent) {

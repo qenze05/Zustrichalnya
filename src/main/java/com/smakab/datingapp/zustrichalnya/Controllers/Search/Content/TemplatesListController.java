@@ -116,7 +116,8 @@ public class TemplatesListController implements Initializable {
                 throw new RuntimeException(e);
             }
         }
-        if (templates == null) return;
+        System.out.println("Hi!");
+        if (templates == null || templates.isEmpty()) return;
         for(Map.Entry<UUID, Template> template : templates.entrySet())
         try {
             UUID uuid = template.getKey();
@@ -129,7 +130,12 @@ public class TemplatesListController implements Initializable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        Searcher searcher = new Searcher(templates.get(0), new Person(UUID.fromString("550e8400-e29b-41d4-a716-446655440000")));
+        System.out.println("Hello there");
+        Searcher searcher = new Searcher(selectedTemplate, personUUID);
+        if(selectedTemplate == null){
+            System.out.println("whoopsie, null");
+            return;
+        }
         searcher.tempSout();
     }
 

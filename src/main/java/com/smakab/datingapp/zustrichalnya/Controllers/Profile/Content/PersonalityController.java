@@ -80,6 +80,14 @@ public class PersonalityController extends ProfileContentClass {
 
     @Override
     public void loadModelData() {
+        loadPersonality();
+        initSliders();
+        initCB();
+
+        savePersonality();
+    }
+
+    public void loadPersonality(){
         try {
             File jsonFile = new File("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\personality.json");
             if(jsonFile.exists()) {
@@ -90,7 +98,13 @@ public class PersonalityController extends ProfileContentClass {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        initSliders();
-        initCB();
+    }
+
+    public void savePersonality(){
+        try {
+            model.writeInfoToFile("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\personality.json");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

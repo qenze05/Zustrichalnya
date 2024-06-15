@@ -42,26 +42,12 @@ public class PreferencesController extends ProfileContentClass {
 
     @Override
     public void loadModelData() {
-        try {
-            File jsonFile = new File("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\preferences.json");
-            if(jsonFile.exists()) {
-                model = JsonUtil.fromJsonFile(jsonFile, Preferences.class);
-                System.out.println("loaded");
-            }
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        loadPreferences();
         model.getPreferences().forEach((name, value) -> prefContainer.getChildren().add(createPreference(name, value)));
     }
 
     public void addPreference() {
-        try {
-            model.writeInfoToFile("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\preferences.json");
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        savePreferences();
         prefContainer.getChildren().add(createPreference("###", 5));
     }
 
@@ -108,5 +94,26 @@ public class PreferencesController extends ProfileContentClass {
         container.getChildren().add(delete);
 
         return container;
+    }
+
+    public void loadPreferences(){
+        try {
+            File jsonFile = new File("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\preferences.json");
+            if(jsonFile.exists()) {
+                model = JsonUtil.fromJsonFile(jsonFile, Preferences.class);
+                System.out.println("loaded");
+            }
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public void savePreferences(){
+        try {
+            model.writeInfoToFile("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\preferences.json");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

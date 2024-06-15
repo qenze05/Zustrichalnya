@@ -29,7 +29,7 @@ public class GeneralInfo {
     public ListProperty<String> nameVisibility = new SimpleListProperty<>(FXCollections.observableArrayList("Імʼя"));
     public ListProperty<String> nameVisibilityAll = new SimpleListProperty<>(FXCollections.observableArrayList("Імʼя", "Прізвище", "По-батькові", "Нікнейм"));
 
-    public int age = 0;
+    public int age = 25;
     public BooleanProperty birthdateVisibility = new SimpleBooleanProperty(true);
     public ObjectProperty<String> region = new SimpleObjectProperty<>("");
     public ListProperty<String> regionAll = new SimpleListProperty<>(FXCollections.observableArrayList("Вінницька", "Волинська", "Дніпропетровська", "Донецька", "Житомирська",
@@ -109,7 +109,7 @@ public class GeneralInfo {
 
 
     public int getAge(){
-        return 1;
+        return age;
     }
 
     public boolean isBirthdateVisibility() {

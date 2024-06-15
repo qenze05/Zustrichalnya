@@ -53,16 +53,7 @@ public class MainController extends ProfileContentClass {
     @Override
     public void loadModelData() {
 
-        try {
-            File jsonFile = new File("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\main.json");
-            if(jsonFile.exists()) {
-                model = JsonUtil.fromJsonFile(jsonFile, GeneralInfo.class);
-            }
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        loadMain();
 
         view = new MainView(model, saveButton, resetButton);
         formContainer.setContent(view.getGeneralInfoFormRenderer());
@@ -159,8 +150,25 @@ public class MainController extends ProfileContentClass {
 
     public void saveForm() {
         view.getGeneralInfoForm().persist();
+        saveMain();
+    }
+
+    public void saveMain(){
         try {
             model.writeInfoToFile("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\main.json");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void loadMain(){
+        try {
+            File jsonFile = new File("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\main.json");
+            if(jsonFile.exists()) {
+                model = JsonUtil.fromJsonFile(jsonFile, GeneralInfo.class);
+            }
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
