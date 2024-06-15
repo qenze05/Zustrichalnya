@@ -15,7 +15,7 @@ import java.util.UUID;
 //
 ////TODO: знести оцей треш і написати нормально
 public class Person {
-    UUID uuid;
+    public UUID uuid;
     GeneralInfo generalInfo;
     Hobbies hobbies;
     Personality personality;
@@ -30,6 +30,16 @@ public class Person {
         personality = new Personality(this.uuid);
         preferences = new Preferences(this.uuid);
         views = new Views(this.uuid);
+    }
+
+    public Person(){};
+
+    public Person(UUID uuid, GeneralInfo generalInfo, Hobbies hobbies, Personality personality, Preferences preferences, Views views){
+        this.uuid = uuid;
+        this.generalInfo = generalInfo;
+        this.hobbies = hobbies;
+        this.personality = personality;
+        this.views = views;
     }
 
     public GeneralInfo getGeneralInfo() {

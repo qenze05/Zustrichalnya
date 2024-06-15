@@ -1,24 +1,82 @@
 package com.smakab.datingapp.zustrichalnya.Models.Search;
 
+import com.smakab.datingapp.zustrichalnya.JsonUtils.JsonUtil;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
 import javafx.scene.image.Image;
 import org.javatuples.Pair;
 
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.UUID;
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
+
+import static com.smakab.datingapp.zustrichalnya.Controllers.Search.Content.TemplatesListController.directoryExists;
+import static com.smakab.datingapp.zustrichalnya.Controllers.Search.Content.TemplatesListController.listDirectories;
 
 
 public class Searcher {
 
     Template template;
-
     Person thisPerson;
     public Searcher(Template template, Person thisPerson){
         this.template = template;
         this.thisPerson = thisPerson;
     }
 
+    public ArrayList<PersonComparable> search(){
+        ArrayList<Person> allPeople = loadPeopleFromFiles();
+        ArrayList<PersonComparable> compatiblePeople = new ArrayList<>();
+        for(Person person : allPeople){
+            double compatability = this.getCompatibility(person);
+            if(compatability > 0) compatiblePeople.add(new PersonComparable(person, compatability));
+        }
+        compatiblePeople.sort(new PersonComparator());
+        return compatiblePeople;
+    }
+
+    public void tempSout(){
+        ArrayList<PersonComparable> souting = search();
+        for(PersonComparable personComparable : souting){
+            System.out.println(personComparable.compatability);
+        }
+    }
+
+    public ArrayList<Person> loadPeopleFromFiles(){
+        ArrayList<Person> people = new ArrayList<>();
+        String folderPath = "src\\main\\resources\\local-database";
+        if(directoryExists(folderPath)) {
+            try {
+                List<String> folderNames = listDirectories(folderPath);
+                for(String folderName : folderNames){
+                    if(folderName.equals(this.thisPerson.uuid.toString())) continue;
+                    String nextFolderPath = "src\\main\\resources\\local-database\\"+folderName+"\\profile-data";
+                    if(directoryExists(nextFolderPath)){
+
+                        File generalInfoFile = new File("src\\main\\resources\\local-database\\"+folderName+"\\profile-data\\main.json");
+                        com.smakab.datingapp.zustrichalnya.Models.Profile.GeneralInfo generalInfo = JsonUtil.fromJsonFile(generalInfoFile, com.smakab.datingapp.zustrichalnya.Models.Profile.GeneralInfo.class);
+
+                        File personalityFile = new File("src\\main\\resources\\local-database\\"+folderName+"\\profile-data\\personality.json");
+                        com.smakab.datingapp.zustrichalnya.Models.Profile.Personality personality = JsonUtil.fromJsonFile(personalityFile, com.smakab.datingapp.zustrichalnya.Models.Profile.Personality.class);
+
+                        File hobbiesFile = new File("src\\main\\resources\\local-database\\"+folderName+"\\profile-data\\hobbies.json");
+                        com.smakab.datingapp.zustrichalnya.Models.Profile.Hobbies hobbies = JsonUtil.fromJsonFile(hobbiesFile, com.smakab.datingapp.zustrichalnya.Models.Profile.Hobbies.class);
+
+                        File preferencesFile = new File("src\\main\\resources\\local-database\\"+folderName+"\\profile-data\\preferences.json");
+                        com.smakab.datingapp.zustrichalnya.Models.Profile.Preferences preferences = JsonUtil.fromJsonFile(preferencesFile, com.smakab.datingapp.zustrichalnya.Models.Profile.Preferences.class);
+
+                        File viewsFile = new File("src\\main\\resources\\local-database\\"+folderName+"\\profile-data\\views.json");
+                        com.smakab.datingapp.zustrichalnya.Models.Profile.Views views = JsonUtil.fromJsonFile(viewsFile, com.smakab.datingapp.zustrichalnya.Models.Profile.Views.class);
+
+                        Person person = new Person(UUID.fromString(folderName), generalInfo, hobbies, personality, preferences, views);
+                        people.add(person);
+                    }
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+        return people;
+    }
     public double getCompatibility(Person thatPerson){
 
         double result = 0;
@@ -52,8 +110,8 @@ public class Searcher {
                 if(!hasRealPhoto) return Double.NEGATIVE_INFINITY;
         }
 
-        Pair<Integer, Integer> allowedAge = template.getDetails().getAge();
-        if(thatPerson.getGeneralInfo().getAge() < allowedAge.getValue0() || thatPerson.getGeneralInfo().getAge() > allowedAge.getValue1()) return Double.NEGATIVE_INFINITY;
+        ArrayList<Integer> allowedAge = template.getDetails().getAge();
+        if(thatPerson.getGeneralInfo().getAge() < allowedAge.get(0) || thatPerson.getGeneralInfo().getAge() > allowedAge.get(1)) return Double.NEGATIVE_INFINITY;
 
         double geoQuantifier = 1;
         if ( template.getDetails().getGeoLocation().equals("Тільки місто") ) {

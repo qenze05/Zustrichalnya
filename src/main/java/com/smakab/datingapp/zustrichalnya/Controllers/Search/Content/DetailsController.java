@@ -63,8 +63,8 @@ public class DetailsController extends TemplateContentClass{
     @Override
     public void loadModelData() {
         this.realPhotoSlider.valueProperty().set(model.getRealPhoto());
-        this.ageRangeSlider.adjustLowValue(model.getAge().getValue0());
-        this.ageRangeSlider.adjustHighValue(model.getAge().getValue1());
+        this.ageRangeSlider.adjustLowValue(model.getAge().get(0));
+        this.ageRangeSlider.adjustHighValue(model.getAge().get(1));
         this.geoLocationCB.getSelectionModel().select(model.getGeoLocation());
         this.noGeoLocationCB.getSelectionModel().select(model.getNoGeoLocation());
         this.model.getGenders().forEach((name, value) -> gendersContainer.getChildren().add(createGender(name, value)));

@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.TreeMap;
 import java.util.UUID;
 
@@ -17,7 +19,7 @@ public class Details {
     public UUID uuid;
     private int realPhoto = 0;
 
-    private Pair<Integer, Integer> age = new Pair<>(18, 120);
+    private ArrayList<Integer> age = new ArrayList<>(Arrays.asList(18, 120));
     private String geoLocation = "Всюди";
     private String noGeoLocation = "Допускати";
     private TreeMap<String, Integer> genders = new TreeMap<>();
@@ -33,16 +35,16 @@ public class Details {
         return realPhoto;
     }
 
-    public Pair<Integer, Integer> getAge() {
+    public ArrayList<Integer>  getAge() {
         return age;
     }
 
     public void setUpperAge(int age) {
-        this.age = this.age.setAt1(age);
+        this.age.set(1, age);
     }
 
     public void setLowerAge(int age) {
-        this.age = this.age.setAt0(age);
+        this.age.set(0, age);
     }
 
     public String getGeoLocation() {
@@ -57,7 +59,7 @@ public class Details {
         return genders;
     }
 
-    public void setAge(Pair<Integer, Integer> age) {
+    public void setAge(ArrayList<Integer> age) {
         this.age = age;
     }
 

@@ -57,7 +57,6 @@ public class MainController extends ProfileContentClass {
             File jsonFile = new File("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\main.json");
             if(jsonFile.exists()) {
                 model = JsonUtil.fromJsonFile(jsonFile, GeneralInfo.class);
-                System.out.println("loaded");
             }
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);

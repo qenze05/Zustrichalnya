@@ -1,7 +1,10 @@
 package com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
+import com.smakab.datingapp.zustrichalnya.JsonUtils.JsonUtil;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
+import com.smakab.datingapp.zustrichalnya.Models.Profile.Hobbies;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.Views;
 import com.smakab.datingapp.zustrichalnya.Utils.EditableLabel;
 import javafx.beans.value.ChangeListener;
@@ -15,6 +18,8 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Font;
 
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -39,6 +44,16 @@ public class ViewsController extends ProfileContentClass {
 
     @Override
     public void loadModelData() {
+        try {
+            File jsonFile = new File("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\views.json");
+            if(jsonFile.exists()) {
+                model = JsonUtil.fromJsonFile(jsonFile, Views.class);
+            }
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         religionField.textProperty().set(model.getReligion());
         religionField.textProperty().addListener((observableValue, oldV, newV) -> model.setReligion(newV));
 

@@ -73,4 +73,7 @@ module com.smakab.datingapp.zustrichalnya {
     exports com.smakab.datingapp.zustrichalnya.JsonUtils;
     opens com.smakab.datingapp.zustrichalnya.JsonUtils to javafx.fxml;
 
+    opens com.smakab.datingapp.zustrichalnya.Models.Settings to com.fasterxml.jackson.databind;
+
+
 }

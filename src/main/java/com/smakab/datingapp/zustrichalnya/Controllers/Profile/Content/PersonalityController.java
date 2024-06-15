@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.smakab.datingapp.zustrichalnya.JsonUtils.JsonUtil;
 import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
+import com.smakab.datingapp.zustrichalnya.Models.Profile.Hobbies;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.Personality;
 
 import javafx.collections.FXCollections;
@@ -80,10 +81,9 @@ public class PersonalityController extends ProfileContentClass {
     @Override
     public void loadModelData() {
         try {
-            File jsonFile = new File("personPersonality.json");
+            File jsonFile = new File("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\personality.json");
             if(jsonFile.exists()) {
                 model = JsonUtil.fromJsonFile(jsonFile, Personality.class);
-                System.out.println("loaded");
             }
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);

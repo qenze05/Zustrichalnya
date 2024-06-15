@@ -9,8 +9,10 @@ import com.fasterxml.jackson.databind.ser.impl.MapEntrySerializer;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.smakab.datingapp.zustrichalnya.Interfaces.TemplateDataDelegate;
 import com.smakab.datingapp.zustrichalnya.JsonUtils.JsonUtil;
+import com.smakab.datingapp.zustrichalnya.Models.Person;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.GeneralInfo;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.Personality;
+import com.smakab.datingapp.zustrichalnya.Models.Search.Searcher;
 import com.smakab.datingapp.zustrichalnya.Models.Search.Template;
 import com.smakab.datingapp.zustrichalnya.Views.Template.TemplatesListView;
 import javafx.beans.property.BooleanProperty;
@@ -70,9 +72,8 @@ public class TemplatesListController implements Initializable {
     }
 
     public void loadTemplates() {
-        this.templates = new HashMap<>();
+        if(templates != null && !templates.isEmpty()) saveTemplates();
         loadTemplatesFromFile();
-
 
         templates.forEach((id, temp) -> {
             VBox template = view.createTemplate(temp.getGeneralInfo().getName(), temp.getGeneralInfo().getDescription(), id);
@@ -115,6 +116,7 @@ public class TemplatesListController implements Initializable {
                 throw new RuntimeException(e);
             }
         }
+        if (templates == null) return;
         for(Map.Entry<UUID, Template> template : templates.entrySet())
         try {
             UUID uuid = template.getKey();
@@ -127,10 +129,13 @@ public class TemplatesListController implements Initializable {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        Searcher searcher = new Searcher(templates.get(0), new Person(UUID.fromString("550e8400-e29b-41d4-a716-446655440000")));
+        searcher.tempSout();
     }
 
     public void loadTemplatesFromFile(){
-        templates.clear();
+        if(templates != null ) templates.clear();
+        else templates = new HashMap<>();
         String folderPath = "src\\main\\resources\\local-database\\"+personUUID+"\\templates";
         if(directoryExists(folderPath)) {
             try {
@@ -161,6 +166,7 @@ public class TemplatesListController implements Initializable {
                 e.printStackTrace();
             }
         }
+
 
     }
 
