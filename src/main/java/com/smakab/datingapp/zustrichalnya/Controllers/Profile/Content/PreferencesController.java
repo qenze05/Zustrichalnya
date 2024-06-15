@@ -1,10 +1,9 @@
 package com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.smakab.datingapp.zustrichalnya.Controllers.JsonUtil;
+import com.smakab.datingapp.zustrichalnya.JsonUtils.JsonUtil;
 import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
-import com.smakab.datingapp.zustrichalnya.Models.Profile.GeneralInfo;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.Preferences;
 import com.smakab.datingapp.zustrichalnya.Utils.EditableLabel;
 import javafx.geometry.Insets;
@@ -44,7 +43,7 @@ public class PreferencesController extends ProfileContentClass {
     @Override
     public void loadModelData() {
         try {
-            File jsonFile = new File("personPreferences.json");
+            File jsonFile = new File("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\preferences.json");
             if(jsonFile.exists()) {
                 model = JsonUtil.fromJsonFile(jsonFile, Preferences.class);
                 System.out.println("loaded");
@@ -58,7 +57,11 @@ public class PreferencesController extends ProfileContentClass {
     }
 
     public void addPreference() {
-        model.writeInfoToFile("personPreferences.json");
+        try {
+            model.writeInfoToFile("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\preferences.json");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         prefContainer.getChildren().add(createPreference("###", 5));
     }
 

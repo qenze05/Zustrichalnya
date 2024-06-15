@@ -1,10 +1,9 @@
 package com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.smakab.datingapp.zustrichalnya.Controllers.JsonUtil;
+import com.smakab.datingapp.zustrichalnya.JsonUtils.JsonUtil;
 import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
-import com.smakab.datingapp.zustrichalnya.Models.Profile.GeneralInfo;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.Personality;
 
 import javafx.collections.FXCollections;

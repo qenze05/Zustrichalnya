@@ -1,10 +1,9 @@
 package com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.smakab.datingapp.zustrichalnya.Controllers.JsonUtil;
+import com.smakab.datingapp.zustrichalnya.JsonUtils.JsonUtil;
 import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
-import com.smakab.datingapp.zustrichalnya.Models.Profile.GeneralInfo;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.Hobbies;
 import com.smakab.datingapp.zustrichalnya.Utils.EditableLabel;
 import javafx.geometry.Insets;
@@ -75,7 +74,7 @@ public class HobbiesController extends ProfileContentClass {
     @Override
     public void loadModelData() {
         try {
-            File jsonFile = new File("personHobbies.json");
+            File jsonFile = new File("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\hobbies.json");
             if(jsonFile.exists()) {
                 model = JsonUtil.fromJsonFile(jsonFile, Hobbies.class);
                 System.out.println("loaded");
@@ -91,7 +90,11 @@ public class HobbiesController extends ProfileContentClass {
     }
 
     public void addHobby() {
-        model.writeInfoToFile("personHobbies.json");
+        try {
+            model.writeInfoToFile("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\hobbies.json");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
         hobbiesContainer.getChildren().add(createHobby("###", 5));
     }
 

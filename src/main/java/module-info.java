@@ -70,5 +70,7 @@ module com.smakab.datingapp.zustrichalnya {
 
     exports com.smakab.datingapp.zustrichalnya.Views.Template;
     opens com.smakab.datingapp.zustrichalnya.Views.Template to javafx.fxml;
+    exports com.smakab.datingapp.zustrichalnya.JsonUtils;
+    opens com.smakab.datingapp.zustrichalnya.JsonUtils to javafx.fxml;
 
 }

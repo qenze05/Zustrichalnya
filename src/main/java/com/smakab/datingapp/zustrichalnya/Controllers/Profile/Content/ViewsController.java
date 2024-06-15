@@ -50,6 +50,7 @@ public class ViewsController extends ProfileContentClass {
 
     public HBox createMovement(String name) {
 
+
         HBox container = new HBox();
         container.setPadding(new Insets(5, 5, 5, 5));
         container.spacingProperty().set(10);

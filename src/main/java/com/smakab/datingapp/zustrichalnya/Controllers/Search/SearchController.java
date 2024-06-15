@@ -26,10 +26,11 @@ public class SearchController extends BaseController implements Initializable, T
     public AnchorPane container;
     public TemplatesListController mainVC;
     public HashMap<UUID, Template> templates;
+    public UUID personUUID;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        loadMainView();
+
     }
 
     public void bindButtons() {
@@ -65,6 +66,7 @@ public class SearchController extends BaseController implements Initializable, T
 
     public void loadMainView() {
         try {
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/smakab/datingapp/zustrichalnya/Views/Search/Content/SearchMainView.fxml"));
             Parent view = loader.load();
 
@@ -76,6 +78,10 @@ public class SearchController extends BaseController implements Initializable, T
                 mainVC = loader.getController();
                 mainVC.setTemplates(templates);
             }
+
+            mainVC.personUUID = uuid;
+
+
             mainVC.loadTemplates();
 
 
@@ -88,11 +94,16 @@ public class SearchController extends BaseController implements Initializable, T
 
 
             bindButtons();
+
+
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     public void loadView(String menu) {
+
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/smakab/datingapp/zustrichalnya/Views/Search/Content/"+menu+".fxml"));
             Parent view = loader.load();
@@ -103,6 +114,7 @@ public class SearchController extends BaseController implements Initializable, T
             AnchorPane.setLeftAnchor(view, 0.0);
 
             configureContentView(loader.getController());
+
 
             container.getChildren().setAll(view);
         } catch (IOException e) {
@@ -127,7 +139,7 @@ public class SearchController extends BaseController implements Initializable, T
     }
 
     @Override
-    public void setProfileUUID(UUID uuid) {
+    public void setProfileUUID(UUID uuid){
         this.uuid = uuid;
     }
 }

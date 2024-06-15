@@ -11,6 +11,7 @@ import org.controlsfx.control.RangeSlider;
 import org.javatuples.Pair;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class PersonalityController extends TemplateContentClass {
@@ -32,10 +33,14 @@ public class PersonalityController extends TemplateContentClass {
             Label label = (Label) child.getChildren().get(2);
 
             if(model.getSliders().containsKey(label.getText())) {
-                slider.lowValueProperty().set(model.getSliders().get(label.getText()).getValue0());
-                slider.highValueProperty().set(model.getSliders().get(label.getText()).getValue1());
+                slider.lowValueProperty().set(model.getSliders().get(label.getText()).get(0));
+                slider.highValueProperty().set(model.getSliders().get(label.getText()).get(1));
             } else {
-                model.updateSlider(label.getText(), new Pair<>((int) slider.lowValueProperty().get(), (int) slider.highValueProperty().get()));
+                ArrayList<Integer> slide = new ArrayList<>();
+                slide.add((int)slider.lowValueProperty().get());
+                slide.add((int)slider.highValueProperty().get());
+                model.updateSlider(label.getText(), 0, slider.lowValueProperty().intValue());
+                model.updateSlider(label.getText(), 1, slider.highValueProperty().intValue());
             }
             setSliderListener(slider, label.getText());
         }
@@ -61,11 +66,11 @@ public class PersonalityController extends TemplateContentClass {
     public void setSliderListener(RangeSlider slider, String label) {
         slider.lowValueProperty().addListener(
                 (observableValue, oldValue, newValue)
-                        -> model.updateSlider(label, model.getSliders().get(label).setAt0(newValue.intValue())));
+                        -> model.updateSlider(label, 0, newValue.intValue()));
 
         slider.highValueProperty().addListener(
                 (observableValue, oldValue, newValue)
-                        -> model.updateSlider(label, model.getSliders().get(label).setAt1(newValue.intValue())));
+                        -> model.updateSlider(label, 1, newValue.intValue()));
     }
 
     public void setPersonalityListener(Slider slider, String label) {

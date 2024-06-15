@@ -4,7 +4,9 @@ import com.smakab.datingapp.zustrichalnya.Models.Person;
 import javafx.scene.image.Image;
 import org.javatuples.Pair;
 
+import java.util.ArrayList;
 import java.util.Map;
+import java.util.UUID;
 
 
 public class Searcher {
@@ -112,11 +114,11 @@ public class Searcher {
         }
 
         // Слайдери особистості
-        for(Map.Entry<String, Pair<Integer, Integer>> personalitySliders : template.getPersonality().getSliders().entrySet()) {
+        for(Map.Entry<String, ArrayList<Integer>> personalitySliders : template.getPersonality().getSliders().entrySet()) {
             boolean personalityIn = false;
             int value = thatPerson.getPersonality().getSliders().get(personalitySliders.getKey());
-            int length = personalitySliders.getValue().getValue1() - personalitySliders.getValue().getValue0();
-            if(value > personalitySliders.getValue().getValue0() && value < personalitySliders.getValue().getValue1()) personalityIn = true;
+            int length = personalitySliders.getValue().get(1) - personalitySliders.getValue().get(0);
+            if(value > personalitySliders.getValue().get(0) && value < personalitySliders.getValue().get(1)) personalityIn = true;
             if(personalityIn) result+= (11 - length);
             else result -= length;
         }

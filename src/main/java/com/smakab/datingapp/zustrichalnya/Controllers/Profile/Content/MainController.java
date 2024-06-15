@@ -1,7 +1,7 @@
 package com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.smakab.datingapp.zustrichalnya.Controllers.JsonUtil;
+import com.smakab.datingapp.zustrichalnya.JsonUtils.JsonUtil;
 import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.GeneralInfo;
@@ -54,7 +54,7 @@ public class MainController extends ProfileContentClass {
     public void loadModelData() {
 
         try {
-            File jsonFile = new File("person.json");
+            File jsonFile = new File("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\main.json");
             if(jsonFile.exists()) {
                 model = JsonUtil.fromJsonFile(jsonFile, GeneralInfo.class);
                 System.out.println("loaded");
@@ -160,7 +160,11 @@ public class MainController extends ProfileContentClass {
 
     public void saveForm() {
         view.getGeneralInfoForm().persist();
-        model.writeInfoToFile("person.json");
+        try {
+            model.writeInfoToFile("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\main.json");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void clearForm() {

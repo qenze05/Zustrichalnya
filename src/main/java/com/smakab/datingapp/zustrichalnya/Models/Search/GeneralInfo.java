@@ -1,21 +1,38 @@
 package com.smakab.datingapp.zustrichalnya.Models.Search;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.smakab.datingapp.zustrichalnya.JsonUtils.JsonUtil;
 import javafx.beans.property.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.TreeSet;
+import java.util.UUID;
 
 public class GeneralInfo {
-    private StringProperty name = new SimpleStringProperty("Назва");
-    private StringProperty purpose = new SimpleStringProperty("");
-    private StringProperty description = new SimpleStringProperty("Опис");
-    private ObjectProperty<String> relationshipType = new SimpleObjectProperty<>("На один день");
-    private ListProperty<String> relationshipTypeAll = new SimpleListProperty<>(FXCollections.observableArrayList("На один день", "Дружба", "Короткочасні романтичні стосунки", "Партнерство", "Сімʼяʼ"));
-    private TreeSet<String> greenFlags = new TreeSet<>();
-    private TreeSet<String> redFlags = new TreeSet<>();
+
+    public UUID uuid;
+    public StringProperty name = new SimpleStringProperty("Назва");
+    public StringProperty purpose = new SimpleStringProperty("");
+    public StringProperty description = new SimpleStringProperty("Опис");
+    public ObjectProperty<String> relationshipType = new SimpleObjectProperty<>("На один день");
+    public ListProperty<String> relationshipTypeAll = new SimpleListProperty<>(FXCollections.observableArrayList("На один день", "Дружба", "Короткочасні романтичні стосунки", "Партнерство", "Сімʼяʼ"));
+    public TreeSet<String> greenFlags = new TreeSet<>();
+    public TreeSet<String> redFlags = new TreeSet<>();
+
+    public GeneralInfo(){
+
+    }
+    public GeneralInfo(UUID uuid){
+        this.uuid = uuid;
+    }
 
     public TreeSet<String> getGreenFlags() {
         return greenFlags;
@@ -72,5 +89,23 @@ public class GeneralInfo {
 
     public ListProperty<String> relationshipTypeAllProperty() {
         return relationshipTypeAll;
+    }
+
+    public String toJson() throws JsonProcessingException {
+        return JsonUtil.toJson(this);
+    }
+
+    public void writeInfoToFile(String filename) throws IOException {
+        Path path = Paths.get(filename).getParent();
+        if (path != null) {
+            Files.createDirectories(path);
+        }
+        // Write the JSON string to the specified file
+        try (FileWriter writer = new FileWriter(filename, false)) {
+            writer.write(this.toJson());
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
+
     }
 }

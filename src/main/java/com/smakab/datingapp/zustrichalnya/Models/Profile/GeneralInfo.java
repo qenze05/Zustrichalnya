@@ -1,6 +1,6 @@
 package com.smakab.datingapp.zustrichalnya.Models.Profile;
 
-import com.smakab.datingapp.zustrichalnya.Controllers.JsonUtil;
+import com.smakab.datingapp.zustrichalnya.JsonUtils.JsonUtil;
 import javafx.beans.property.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,13 +9,17 @@ import org.javatuples.Pair;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.Period;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.UUID;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class GeneralInfo {
+
+    public UUID uuid;
     public ArrayList<Pair<Image, Boolean>> photos = new ArrayList<>();
     public String description;
     public StringProperty surname = new SimpleStringProperty("");
@@ -224,42 +228,30 @@ public class GeneralInfo {
         return university;
     }
 
+
+    public GeneralInfo(UUID uuid){
+        this.uuid = uuid;
+    }
+
+    public GeneralInfo(){
+    }
+
     public String toJson() throws JsonProcessingException {
         return JsonUtil.toJson(this);
     }
 
-
-    public String toFormattedString() {
-        return "Photos: " + photos + "\n" +
-                "Description: " + description + "\n" +
-                "Surname: " + surname.get() + "\n" +
-                "Name: " + name.get() + "\n" +
-                "Patronymic: " + patronymic.get() + "\n" +
-                "Nickname: " + nickname.get() + "\n" +
-                "Name Visibility: " + nameVisibility.get() + "\n" +
-                "Name Visibility All: " + nameVisibilityAll.get() + "\n" +
-                "Age: " + getAge() + "\n" +
-                "Birthdate Visibility: " + birthdateVisibility.get() + "\n" +
-                "Region: " + region.get() + "\n" +
-                "Region All: " + regionAll.get() + "\n" +
-                "City: " + city.get() + "\n" +
-                "Sex: " + sex.get() + "\n" +
-                "Sex All: " + sexAll.get() + "\n" +
-                "Gender: " + gender.get() + "\n" +
-                "Orientation: " + orientation.get() + "\n" +
-                "Is Working: " + isWorking.get() + "\n" +
-                "University: " + university.get() + "\n" +
-                "Profession: " + profession.get() + "\n" +
-                "Relationship Type All: " + relationshipTypeAll.get() + "\n" +
-                "Relationship Type: " + relationshipType.get();
-    }
-
-    public void writeInfoToFile(String filename) {
+    public void writeInfoToFile(String filename) throws IOException {
+        Path path = Paths.get(filename).getParent();
+        if (path != null) {
+            Files.createDirectories(path);
+        }
+        // Write the JSON string to the specified file
         try (FileWriter writer = new FileWriter(filename, false)) {
             writer.write(this.toJson());
-        } catch (IOException e) {
-            e.printStackTrace();
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
         }
+
     }
 
 }

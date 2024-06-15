@@ -25,11 +25,11 @@ public class Person {
     public Person(UUID uuid) {
         this.uuid = uuid;
         //TODO: підтягнути інфу про профіль з бд і створювати профіль з нею замість пустого
-        generalInfo = new GeneralInfo();
-        hobbies = new Hobbies();
-        personality = new Personality();
-        preferences = new Preferences();
-        views = new Views();
+        generalInfo = new GeneralInfo(this.uuid);
+        hobbies = new Hobbies(this.uuid);
+        personality = new Personality(this.uuid);
+        preferences = new Preferences(this.uuid);
+        views = new Views(this.uuid);
     }
 
     public GeneralInfo getGeneralInfo() {
