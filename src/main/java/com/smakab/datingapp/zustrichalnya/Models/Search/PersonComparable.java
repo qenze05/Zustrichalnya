@@ -19,4 +19,8 @@ public class PersonComparable implements Comparable<PersonComparable>{
         if(this.compatability < that.compatability) return -1;
         return 0;
     }
+
+    public Person getPerson() {
+        return person;
+    }
 }

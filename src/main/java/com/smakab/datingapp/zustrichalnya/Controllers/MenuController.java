@@ -1,6 +1,8 @@
 package com.smakab.datingapp.zustrichalnya.Controllers;
 
 import com.smakab.datingapp.zustrichalnya.ApplicationLauncher;
+import com.smakab.datingapp.zustrichalnya.Controllers.Search.SearchController;
+import com.smakab.datingapp.zustrichalnya.Controllers.Settings.SettingsController;
 import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
 import javafx.event.ActionEvent;
@@ -84,10 +86,23 @@ public class MenuController extends BaseController implements Initializable{
 
     private void configureMenu(BaseController controller) {
         controller.setProfileUUID(uuid);
+        try{
+            SearchController cont = (SearchController) controller;
+            cont.loadMainView();
+        }catch (ClassCastException e) {
+        }
+
+        try{
+            SettingsController cont = (SettingsController) controller;
+            cont.loadSettings();
+        }catch (ClassCastException e) {
+            System.out.println("error");
+        }
     }
 
     @Override
     public void setProfileUUID(UUID uuid) {
         this.uuid = uuid;
+        System.out.println(uuid);
     }
 }

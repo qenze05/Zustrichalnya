@@ -6,6 +6,9 @@ import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.Preferences;
 import com.smakab.datingapp.zustrichalnya.Utils.EditableLabel;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -44,10 +47,18 @@ public class PreferencesController extends ProfileContentClass {
     public void loadModelData() {
         loadPreferences();
         model.getPreferences().forEach((name, value) -> prefContainer.getChildren().add(createPreference(name, value)));
+        description.textProperty().set(model.getDescription());
+
+        description.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                model.setDescription(t1);
+            }
+        });
+
     }
 
     public void addPreference() {
-        savePreferences();
         prefContainer.getChildren().add(createPreference("###", 5));
     }
 
@@ -115,5 +126,9 @@ public class PreferencesController extends ProfileContentClass {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void saveForm(ActionEvent actionEvent) {
+        savePreferences();
     }
 }

@@ -8,10 +8,7 @@ import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateSerializer;
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.ListProperty;
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 import javafx.util.Pair;
 
 import java.io.File;
@@ -50,6 +47,10 @@ public class JsonUtil {
 
         objectMapper.registerModule(new SimplePairModule());
 
+        SimpleModule customModule3 = new SimpleModule();
+        customModule3.addSerializer(IntegerProperty.class, new IntegerPropertySerializer());
+        customModule3.addDeserializer(IntegerProperty.class, new IntegerPropertyDeserializer());
+        objectMapper.registerModule(customModule3);
 
     }
 

@@ -14,6 +14,7 @@ import java.util.UUID;
 public class Preferences {
     public UUID uuid;
     private TreeMap<String, Integer> preferences;
+    private String description;
 
     public TreeMap<String, Integer> getPreferences() {
         return preferences;
@@ -62,5 +63,13 @@ public class Preferences {
             throw new RuntimeException(ex);
         }
 
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

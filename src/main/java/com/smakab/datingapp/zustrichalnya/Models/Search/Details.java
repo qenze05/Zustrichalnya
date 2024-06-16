@@ -21,7 +21,6 @@ public class Details {
 
     private ArrayList<Integer> age = new ArrayList<>(Arrays.asList(18, 120));
     private String geoLocation = "Всюди";
-    private String noGeoLocation = "Допускати";
     private TreeMap<String, Integer> genders = new TreeMap<>();
 
     public Details(){
@@ -51,9 +50,7 @@ public class Details {
         return geoLocation;
     }
 
-    public String getNoGeoLocation() {
-        return noGeoLocation;
-    }
+
 
     public TreeMap<String, Integer> getGenders() {
         return genders;
@@ -71,9 +68,7 @@ public class Details {
         this.geoLocation = geoLocation;
     }
 
-    public void setNoGeoLocation(String noGeoLocation) {
-        this.noGeoLocation = noGeoLocation;
-    }
+
 
     public void setRealPhoto(int realPhoto) {
         this.realPhoto = realPhoto;
@@ -86,6 +81,7 @@ public class Details {
 
     public void editGender(String value, int sliderValue) {
         genders.put(value, sliderValue);
+        System.out.println(genders);
     }
 
     public void removeGender(String value) {

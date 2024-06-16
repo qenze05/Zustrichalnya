@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.smakab.datingapp.zustrichalnya.Controllers.BaseController;
 import com.smakab.datingapp.zustrichalnya.JsonUtils.JsonUtil;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.GeneralInfo;
+import com.smakab.datingapp.zustrichalnya.Models.Profile.Hobbies;
 import com.smakab.datingapp.zustrichalnya.Models.Settings.SettingsModel;
 import com.smakab.datingapp.zustrichalnya.Views.Settings.MainView;
 import javafx.event.ActionEvent;
@@ -38,6 +39,22 @@ public class SettingsController extends BaseController implements Initializable 
         container.getChildren().add(0,view.getGeneralInfoFormRenderer());
     }
 
+    public void loadSettings(){
+        try {
+            File jsonFile = new File("src\\main\\resources\\local-database\\"+this.uuid+"\\settings\\contacts.json");
+            if(jsonFile.exists()) {
+                SettingsModel model = JsonUtil.fromJsonFile(jsonFile, SettingsModel.class);
+                this.model.zustrichatProperty().set(model.getZustrichat());
+                this.model.instagramProperty().set(model.getInstagram());
+                this.model.telegramProperty().set(model.getTelegram());
+                System.out.println("loaded "+model.getZustrichat());
+            }
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
     public void saveForm() {
         view.getGeneralInfoForm().persist();
         try {

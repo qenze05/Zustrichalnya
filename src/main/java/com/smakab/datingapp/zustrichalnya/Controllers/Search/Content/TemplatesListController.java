@@ -131,12 +131,12 @@ public class TemplatesListController implements Initializable {
             throw new RuntimeException(e);
         }
         System.out.println("Hello there");
-        Searcher searcher = new Searcher(selectedTemplate, personUUID);
-        if(selectedTemplate == null){
-            System.out.println("whoopsie, null");
-            return;
-        }
-        searcher.tempSout();
+//        Searcher searcher = new Searcher(selectedTemplate, personUUID);
+//        if(selectedTemplate == null){
+//            System.out.println("whoopsie, null");
+//            return;
+//        }
+//        searcher.tempSout();
     }
 
     public void loadTemplatesFromFile(){

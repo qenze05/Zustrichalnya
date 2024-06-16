@@ -3,6 +3,7 @@ package com.smakab.datingapp.zustrichalnya.Views.Profile;
 import com.dlsc.formsfx.model.structure.Field;
 import com.dlsc.formsfx.model.structure.Form;
 import com.dlsc.formsfx.model.structure.Group;
+import com.dlsc.formsfx.model.validators.IntegerRangeValidator;
 import com.dlsc.formsfx.view.controls.SimpleCheckBoxControl;
 import com.dlsc.formsfx.view.controls.SimpleRadioButtonControl;
 import com.dlsc.formsfx.view.renderer.FormRenderer;
@@ -52,9 +53,10 @@ public class MainView implements ViewMixin {
                 ),
                 Group.of(
 
-                        Field.ofBooleanType(generalInfo.isBirthdateVisibility())
-                                .label("Показувати дату?")
+                        Field.ofIntegerType(generalInfo.ageProperty())
+                                .label("Вік")
                                 .required(reqField)
+                                .validate(IntegerRangeValidator.between(18, 120, reqField))
                 ),
                 Group.of(
                         Field.ofSingleSelectionType(generalInfo.regionAllProperty(), generalInfo.regionProperty())

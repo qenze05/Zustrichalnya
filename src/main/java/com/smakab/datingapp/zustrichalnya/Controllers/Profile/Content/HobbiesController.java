@@ -6,6 +6,7 @@ import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
 import com.smakab.datingapp.zustrichalnya.Models.Profile.Hobbies;
 import com.smakab.datingapp.zustrichalnya.Utils.EditableLabel;
+import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -80,7 +81,6 @@ public class HobbiesController extends ProfileContentClass {
     }
 
     public void addHobby() {
-        saveHobbies();
         hobbiesContainer.getChildren().add(createHobby("###", 5));
     }
 
@@ -152,5 +152,9 @@ public class HobbiesController extends ProfileContentClass {
         container.getChildren().add(delete);
 
         return container;
+    }
+
+    public void saveForm(ActionEvent actionEvent) {
+        saveHobbies();
     }
 }

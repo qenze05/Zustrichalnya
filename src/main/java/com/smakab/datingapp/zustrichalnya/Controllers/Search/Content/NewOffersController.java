@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.UUID;
 
 public class NewOffersController extends TemplateContentClass {
 
@@ -43,6 +44,12 @@ public class NewOffersController extends TemplateContentClass {
 
     @Override
     public void setName(String name) {
+
+    }
+
+    @Override
+    public void setUserUUID(UUID uuid) {
+        this.userUUID = uuid;
 
     }
 

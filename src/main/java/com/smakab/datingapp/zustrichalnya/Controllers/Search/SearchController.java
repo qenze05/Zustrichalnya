@@ -30,10 +30,10 @@ public class SearchController extends BaseController implements Initializable, T
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 
     public void bindButtons() {
+
         selectedTemplateB.disableProperty().bind(mainVC.isTemplateSelectedProperty().not());
         generalInfoB.disableProperty().bind(mainVC.isTemplateSelectedProperty().not());
         personalityB.disableProperty().bind(mainVC.isTemplateSelectedProperty().not());
@@ -80,6 +80,7 @@ public class SearchController extends BaseController implements Initializable, T
             }
 
             mainVC.personUUID = uuid;
+            System.out.println("main uuid" + uuid);
 
 
             mainVC.loadTemplates();
@@ -127,6 +128,7 @@ public class SearchController extends BaseController implements Initializable, T
         controller.loadModelData();
 
         controller.setDelegate(this);
+        controller.setUserUUID(this.uuid);
 
         if(this.mainVC.getSelectedTemplate() != null) {
             controller.setName(this.mainVC.getSelectedTemplate().getGeneralInfo().getName());
@@ -141,5 +143,6 @@ public class SearchController extends BaseController implements Initializable, T
     @Override
     public void setProfileUUID(UUID uuid){
         this.uuid = uuid;
+        System.out.println(uuid);
     }
 }

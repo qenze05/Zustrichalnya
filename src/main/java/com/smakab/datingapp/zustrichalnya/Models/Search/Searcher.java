@@ -17,6 +17,7 @@ public class Searcher {
 
     Template template;
     Person thisPerson;
+    ArrayList<PersonComparable> list;
     public Searcher(Template template, UUID personUUID){
         this.template = template;
         try {
@@ -108,12 +109,12 @@ public class Searcher {
 
         if(!thatPerson.getGeneralInfo().relationshipTypeAllProperty().contains(template.getGeneralInfo().getRelationshipType())) return Double.NEGATIVE_INFINITY;
         boolean hasRealPhoto = false;
-        for(Pair<Image, Boolean> pair : thatPerson.getGeneralInfo().getPhotos()){
-            if(pair.getValue1() == true){
-                hasRealPhoto = true;
-                break;
-            }
-        }
+//        for(Pair<Image, Boolean> pair : thatPerson.getGeneralInfo().getPhotos()){
+//            if(pair.getValue1() == true){
+//                hasRealPhoto = true;
+//                break;
+//            }
+//        }
 
         double realPhotoQuantifier = 1;
         switch (template.getDetails().getRealPhoto()){

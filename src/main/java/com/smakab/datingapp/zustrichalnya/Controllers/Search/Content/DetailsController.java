@@ -18,12 +18,12 @@ import org.controlsfx.control.RangeSlider;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.UUID;
 
 public class DetailsController extends TemplateContentClass{
     public Slider realPhotoSlider;
     public RangeSlider ageRangeSlider;
     public ChoiceBox<String> geoLocationCB;
-    public ChoiceBox<String> noGeoLocationCB;
     public VBox gendersContainer;
     public Details model;
     public Label name;
@@ -34,10 +34,8 @@ public class DetailsController extends TemplateContentClass{
         ObservableList<String> noGeoLocationOptions = FXCollections.observableArrayList("Допускати", "Допускати рідше", "Не допускати");
 
         geoLocationCB.setItems(geoLocationOptions);
-        noGeoLocationCB.setItems(noGeoLocationOptions);
 
         geoLocationCB.getSelectionModel().selectedItemProperty().addListener((observableValue, s, t1) -> model.setGeoLocation(t1));
-        noGeoLocationCB.getSelectionModel().selectedItemProperty().addListener((observableValue, s, t1) -> model.setNoGeoLocation(t1));
 
         realPhotoSlider.valueProperty().addListener((observableValue, number, t1) -> model.setRealPhoto(t1.intValue()));
         ageRangeSlider.lowValueProperty().addListener((observableValue, number, t1) -> model.setLowerAge(t1.intValue()));
@@ -61,12 +59,16 @@ public class DetailsController extends TemplateContentClass{
     }
 
     @Override
+    public void setUserUUID(UUID uuid) {
+        this.userUUID = uuid;
+    }
+
+    @Override
     public void loadModelData() {
         this.realPhotoSlider.valueProperty().set(model.getRealPhoto());
         this.ageRangeSlider.adjustLowValue(model.getAge().get(0));
         this.ageRangeSlider.adjustHighValue(model.getAge().get(1));
         this.geoLocationCB.getSelectionModel().select(model.getGeoLocation());
-        this.noGeoLocationCB.getSelectionModel().select(model.getNoGeoLocation());
         this.model.getGenders().forEach((name, value) -> gendersContainer.getChildren().add(createGender(name, value)));
     }
 

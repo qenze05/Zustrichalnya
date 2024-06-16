@@ -13,6 +13,7 @@ import org.javatuples.Pair;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.UUID;
 
 public class PersonalityController extends TemplateContentClass {
     public VBox personalitiesContainer;
@@ -91,6 +92,12 @@ public class PersonalityController extends TemplateContentClass {
     @Override
     public void setName(String name) {
         this.name.textProperty().set(name);
+
+    }
+
+    @Override
+    public void setUserUUID(UUID uuid) {
+        this.userUUID = uuid;
 
     }
 

@@ -5,15 +5,13 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import org.controlsfx.control.RangeSlider?>
 
-<HBox fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Search.Content.DetailsController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Search.Content.DetailsController">
     <children>
       <VBox maxWidth="1.7976931348623157E308" prefWidth="1600.0" spacing="5.0">
          <HBox.margin>
@@ -25,9 +23,9 @@
                   <Font size="40.0" />
                </font>
             </Label>
-              <ScrollPane hbarPolicy="NEVER" prefHeight="1200.0" hmax="0.0" maxWidth="1.7976931348623157E308"  stylesheets="@../../../../../../../../styles.css" styleClass="background-white">
+              <ScrollPane hbarPolicy="NEVER" hmax="0.0" maxWidth="1.7976931348623157E308" prefHeight="1200.0" styleClass="background-white" stylesheets="@../../../../../../../../styles.css">
                   <content>
-                      <VBox prefWidth="1600.0" minHeight="1600" spacing="10.0" stylesheets="@../../../../../../../../styles.css" styleClass="background-padding">
+                      <VBox minHeight="1600" prefWidth="1600.0" spacing="10.0" styleClass="background-padding" stylesheets="@../../../../../../../../styles.css">
                           <children>
                         <HBox alignment="CENTER_LEFT" spacing="50.0">
                            <children>
@@ -101,54 +99,6 @@
                                  </font>
                               </Label>
                               <ChoiceBox fx:id="geoLocationCB" prefWidth="150.0" />
-<!--                              <ChoiceBox prefWidth="150.0" />-->
-<!--                              <HBox alignment="CENTER_LEFT" spacing="15.0">-->
-<!--                                 <children>-->
-<!--                                    <Label prefWidth="200.0" text="Бажано (км):">-->
-<!--                                       <font>-->
-<!--                                          <Font size="20.0" />-->
-<!--                                       </font>-->
-<!--                                    </Label>-->
-<!--                                    <TextField maxWidth="-Infinity" prefWidth="100.0">-->
-<!--                                       <font>-->
-<!--                                          <Font size="20.0" />-->
-<!--                                       </font>-->
-<!--                                    </TextField>-->
-<!--                                 </children>-->
-<!--                                 <padding>-->
-<!--                                    <Insets top="10.0" />-->
-<!--                                 </padding>-->
-<!--                              </HBox>-->
-<!--                              <HBox alignment="CENTER_LEFT" spacing="15.0">-->
-<!--                                 <children>-->
-<!--                                    <Label prefWidth="200.0" text="Допускається (км):">-->
-<!--                                       <font>-->
-<!--                                          <Font size="20.0" />-->
-<!--                                       </font>-->
-<!--                                    </Label>-->
-<!--                                    <TextField maxWidth="-Infinity" prefWidth="100.0">-->
-<!--                                       <font>-->
-<!--                                          <Font size="20.0" />-->
-<!--                                       </font>-->
-<!--                                    </TextField>-->
-<!--                                 </children>-->
-<!--                                 <padding>-->
-<!--                                    <Insets top="10.0" />-->
-<!--                                 </padding>-->
-<!--                              </HBox>-->
-                              <VBox spacing="10.0">
-                                 <children>
-                                    <Label text="Якщо геолокація відсутня">
-                                       <font>
-                                          <Font size="20.0" />
-                                       </font>
-                                    </Label>
-                                    <ChoiceBox fx:id="noGeoLocationCB" prefWidth="150.0" />
-                                 </children>
-                                 <padding>
-                                    <Insets top="10.0" />
-                                 </padding>
-                              </VBox>
                            </children>
                            <padding>
                               <Insets top="50.0" />
@@ -163,7 +113,7 @@
                                           <Font size="30.0" />
                                        </font>
                                     </Label>
-                                    <Button onAction="#addGender" mnemonicParsing="false" text="+" stylesheets="@../../../../../../../../styles.css" styleClass="add-button">
+                                    <Button mnemonicParsing="false" onAction="#addGender" styleClass="add-button" stylesheets="@../../../../../../../../styles.css" text="+">
                                        <font>
                                           <Font size="20.0" />
                                        </font>

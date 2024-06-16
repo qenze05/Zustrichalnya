@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="980.0" minWidth="-Infinity" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content.ViewsController">
+<HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="-Infinity" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Profile.Content.ViewsController">
     <children>
-        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER">
+        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" HBox.hgrow="ALWAYS">
             <HBox.margin>
                 <Insets left="0.0" top="0.0" />
             </HBox.margin>
@@ -71,5 +71,21 @@
                 </VBox>
             </content>
         </ScrollPane>
+      <VBox prefWidth="400.0" spacing="25.0">
+         <children>
+            <Button fx:id="saveButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#saveForm" prefHeight="50.0" styleClass="photo-button" stylesheets="@../../../../../../../styles.css" text="Зберегти">
+               <VBox.margin>
+                  <Insets left="50.0" right="50.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+
+         </children>
+         <padding>
+            <Insets top="25.0" />
+         </padding>
+      </VBox>
     </children>
 </HBox>

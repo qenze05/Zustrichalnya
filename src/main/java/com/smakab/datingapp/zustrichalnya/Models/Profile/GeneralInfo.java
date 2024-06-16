@@ -13,6 +13,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.TreeMap;
 import java.util.UUID;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -20,7 +22,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 public class GeneralInfo {
 
     public UUID uuid;
-    public ArrayList<Pair<Image, Boolean>> photos = new ArrayList<>();
+    public ArrayList<HashMap<String, Boolean>> photos = new ArrayList<>();
     public String description;
     public StringProperty surname = new SimpleStringProperty("");
     public StringProperty name = new SimpleStringProperty("");
@@ -29,8 +31,7 @@ public class GeneralInfo {
     public ListProperty<String> nameVisibility = new SimpleListProperty<>(FXCollections.observableArrayList("Імʼя"));
     public ListProperty<String> nameVisibilityAll = new SimpleListProperty<>(FXCollections.observableArrayList("Імʼя", "Прізвище", "По-батькові", "Нікнейм"));
 
-    public int age = 25;
-    public BooleanProperty birthdateVisibility = new SimpleBooleanProperty(true);
+    public IntegerProperty age = new SimpleIntegerProperty(18);
     public ObjectProperty<String> region = new SimpleObjectProperty<>("");
     public ListProperty<String> regionAll = new SimpleListProperty<>(FXCollections.observableArrayList("Вінницька", "Волинська", "Дніпропетровська", "Донецька", "Житомирська",
             "Закарпатська", "Запорізька", "Івано-Франківська", "Київська та Київ", "Кіровоградська",
@@ -83,7 +84,7 @@ public class GeneralInfo {
         return nameVisibilityAll;
     }
 
-    public ArrayList<Pair<Image, Boolean>> getPhotos() {
+    public ArrayList<HashMap<String, Boolean>> getPhotos() {
         return photos;
     }
 
@@ -95,7 +96,7 @@ public class GeneralInfo {
         this.description = description;
     }
 
-    public void setPhotos(ArrayList<Pair<Image, Boolean>> photos) {
+    public void setPhotos(ArrayList<HashMap<String, Boolean>> photos) {
         this.photos = photos;
     }
 
@@ -108,12 +109,12 @@ public class GeneralInfo {
     }
 
 
-    public int getAge(){
-        return age;
+    public int getAge() {
+        return age.get();
     }
 
-    public boolean isBirthdateVisibility() {
-        return birthdateVisibility.get();
+    public IntegerProperty ageProperty() {
+        return age;
     }
 
     public boolean isIsWorking() {
@@ -174,9 +175,6 @@ public class GeneralInfo {
         return profession;
     }
 
-    public BooleanProperty birthdateVisibilityProperty() {
-        return birthdateVisibility;
-    }
 
     public BooleanProperty isWorkingProperty() {
         return isWorking;
@@ -253,5 +251,23 @@ public class GeneralInfo {
         }
 
     }
+
+//    public String getFullName() {
+//        String[] result = new String[4];
+//        if (nameVisibility.contains("Ім'я")) {result[0] = name.get();}
+//        if (nameVisibility.contains("Прізвище")) {result[1] = surname.get();}
+//        if (nameVisibility.contains("По-батькові")) {result[2] = patronymic.get();}
+//        if (nameVisibility.contains("Нікнейм")) {result[3] = nickname.get();}
+//
+//        if(result[0].isEmpty() && result[1].isEmpty() && result[2].isEmpty()) {
+//            return result[3];
+//        } else {
+//            StringBuilder res = new StringBuilder();
+//            for (String s : result) {
+//                res.append(" ").append(s);
+//            }
+//            return res.toString().strip();
+//        }
+//    }
 
 }

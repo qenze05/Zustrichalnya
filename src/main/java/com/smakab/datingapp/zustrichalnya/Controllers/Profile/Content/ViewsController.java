@@ -55,7 +55,6 @@ public class ViewsController extends ProfileContentClass {
 
         model.getMovements().forEach(name -> movementsContainer.getChildren().add(createMovement(name)));
 
-        saveViews();
     }
 
     public HBox createMovement(String name) {
@@ -114,5 +113,9 @@ public class ViewsController extends ProfileContentClass {
 
     public void addMovement(ActionEvent actionEvent) {
         movementsContainer.getChildren().add(createMovement("###"));
+    }
+
+    public void saveForm(ActionEvent actionEvent) {
+        saveViews();
     }
 }

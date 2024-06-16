@@ -18,6 +18,7 @@ import javafx.scene.text.Font;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.UUID;
 
 public class PreferencesController extends TemplateContentClass {
 
@@ -43,6 +44,12 @@ public class PreferencesController extends TemplateContentClass {
     @Override
     public void setName(String name) {
         this.name.textProperty().set(name);
+
+    }
+
+    @Override
+    public void setUserUUID(UUID uuid) {
+        this.userUUID = uuid;
 
     }
 

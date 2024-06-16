@@ -160,11 +160,11 @@
                                 <Font size="30.0" />
                             </font>
                         </Label>
-                        <Label styleClass="delete-button" text="5">
+                        <Button onAction="#findPeople" styleClass="delete-button" text="🔃">
                             <font>
                                 <Font size="30.0" />
                             </font>
-                        </Label>
+                        </Button>
                     </children>
                 </HBox>
                 <VBox prefWidth="800.0" spacing="20.0" styleClass="search-template" stylesheets="@../../../../../../../../styles.css">
@@ -172,7 +172,7 @@
                         <HBox>
                             <children>
                                <HBox >
-                                <ImageView fitHeight="550.0" fitWidth="550.0" pickOnBounds="true">
+                                <ImageView fx:id="personImage" fitHeight="550.0" fitWidth="550.0" pickOnBounds="true">
                            <HBox.margin>
                               <Insets left="125.0" />
                            </HBox.margin></ImageView>
@@ -191,7 +191,7 @@
                             <children>
                                 <HBox spacing="10.0">
                                     <children>
-                                        <Label text="Name">
+                                        <Label fx:id="personName" text="Name">
                                             <font>
                                                 <Font size="20.0" />
                                             </font>
@@ -211,7 +211,7 @@
                                         <Insets left="10.0" />
                                     </padding>
                                 </HBox>
-                                <Label maxWidth="1.7976931348623157E308" text="Description" wrapText="true">
+                                <Label fx:id="personDescription" maxWidth="1.7976931348623157E308" text="Description" wrapText="true">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
@@ -223,7 +223,7 @@
                         </VBox>
                         <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" spacing="15.0">
                             <children>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
+                                <Button onAction="#prevPerson" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
                                         <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true">
                                             <image>
@@ -232,7 +232,7 @@
                                         </ImageView>
                                     </graphic>
                                 </Button>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
+                                <Button onAction="#likePerson" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
                                         <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true">
                                             <image>
@@ -241,7 +241,7 @@
                                         </ImageView>
                                     </graphic>
                                 </Button>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
+                                <Button onAction="#removePerson" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
                                         <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true">
                                             <image>
@@ -250,7 +250,7 @@
                                         </ImageView>
                                     </graphic>
                                 </Button>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
+                                <Button onAction="#nextPerson" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
                                         <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true">
                                             <image>

@@ -18,7 +18,11 @@ import org.javatuples.Pair;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class MainController extends ProfileContentClass {
@@ -58,9 +62,11 @@ public class MainController extends ProfileContentClass {
         view = new MainView(model, saveButton, resetButton);
         formContainer.setContent(view.getGeneralInfoFormRenderer());
 
+
         //TODO: зробити плейсхолдер якщо фото немає
         if(!model.getPhotos().isEmpty()) {
-            imageView.setImage(model.getPhotos().get(0).getValue0());
+
+            imageView.setImage(new Image(model.getPhotos().get(0).keySet().toArray(new String[1])[0]));
         }
 
         descriptionArea.textProperty().set(model.getDescription());
@@ -74,7 +80,7 @@ public class MainController extends ProfileContentClass {
         this.stage = (Stage) node.getScene().getWindow();
     }
 
-    public void loadPhoto(ActionEvent actionEvent) {
+    public void loadPhoto(ActionEvent actionEvent) throws IOException {
         if(stage == null) loadStage(actionEvent);
 
         FileChooser fileChooser = new FileChooser();
@@ -89,9 +95,22 @@ public class MainController extends ProfileContentClass {
         }
     }
 
-    public void addImage(File file) {
-        Image image = new Image(file.toURI().toString());
-        model.getPhotos().add(new Pair<>(image, false));
+    public void addImage(File file) throws IOException {
+
+        File imgFile = new File("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\"+file.getName());
+        Path path = Paths.get(imgFile.toURI()).getParent();
+        if (path != null) {
+            Files.createDirectories(path);
+        }
+
+        Files.copy(file.toPath(), imgFile.toPath());
+
+        Image image = new Image(imgFile.toURI().toString());
+
+        HashMap<String, Boolean> img = new HashMap<>();
+        img.put(image.getUrl(), false);
+
+        model.getPhotos().add(img);
 
         switchImage(model.getPhotos().size()-1);
     }
@@ -101,9 +120,9 @@ public class MainController extends ProfileContentClass {
      */
     private void switchImage(int i) {
         if(model.getPhotos().size() > i && i >= 0) {
-            imageView.setImage(model.getPhotos().get(i).getValue0());
+            imageView.setImage(new Image(model.getPhotos().get(i).keySet().toArray(new String[1])[0]));
             currentImage = i;
-            isPhotoRealCB.setSelected(model.getPhotos().get(i).getValue1());
+            isPhotoRealCB.setSelected(model.getPhotos().get(i).values().toArray(new Boolean[1])[0]);
         } else if (i == -1) {
             imageView.setImage(null);
             isPhotoRealCB.setSelected(false);
@@ -128,13 +147,18 @@ public class MainController extends ProfileContentClass {
 
     public void setIsPhotoReal() {
         if(!model.getPhotos().isEmpty()) {
-            Pair<Image, Boolean> pair = model.getPhotos().get(currentImage).setAt1(isPhotoRealCB.isSelected());
-            model.getPhotos().set(currentImage, pair);
+            HashMap<String, Boolean> img = model.getPhotos().get(currentImage);
+            img.put(model.getPhotos().get(currentImage).keySet().toArray(new String[1])[0], isPhotoRealCB.isSelected());
+            model.getPhotos().set(currentImage, img);
         }
     }
 
-    public void deleteImage() {
+    public void deleteImage() throws IOException {
         if(!model.getPhotos().isEmpty()) {
+
+            String[] pathSplit = model.getPhotos().get(currentImage).keySet().toArray(new String[1])[0].split("/");
+            String path = pathSplit[pathSplit.length-1];
+            Files.delete(Paths.get("src\\main\\resources\\local-database\\"+model.uuid+"\\profile-data\\"+path));
 
             model.getPhotos().remove(currentImage);
 
