@@ -23,7 +23,7 @@ public class ProfileController extends BaseController implements Initializable, 
     @FXML
     public Button mainB, personalityB, hobbiesB, prefB, viewsB;
     public AnchorPane container;
-    private Person person;
+    public Person person;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

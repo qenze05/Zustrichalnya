@@ -1,10 +1,12 @@
 package com.smakab.datingapp.zustrichalnya.Controllers;
 
 import com.smakab.datingapp.zustrichalnya.ApplicationLauncher;
+import com.smakab.datingapp.zustrichalnya.Controllers.Profile.ProfileController;
 import com.smakab.datingapp.zustrichalnya.Controllers.Search.SearchController;
 import com.smakab.datingapp.zustrichalnya.Controllers.Settings.SettingsController;
 import com.smakab.datingapp.zustrichalnya.Interfaces.ProfileDataDelegate;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
+import com.smakab.datingapp.zustrichalnya.Models.Profile.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -30,6 +32,7 @@ public class MenuController extends BaseController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
 
     }
 
@@ -104,5 +107,46 @@ public class MenuController extends BaseController implements Initializable{
     public void setProfileUUID(UUID uuid) {
         this.uuid = uuid;
         System.out.println(uuid);
+        initPersonDB();
+    }
+
+    private void initPersonDB() {
+//        Person person = new Person();
+//
+//        person.uuid = this.uuid;
+//        person.setGeneralInfo(new GeneralInfo(uuid));
+//        person.setPersonality(new Personality(uuid));
+//        person.setHobbies(new Hobbies(uuid));
+//        person.setPreferences(new Preferences(uuid));
+//        person.setViews(new Views(uuid));
+//
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/smakab/datingapp/zustrichalnya/Views/Profile/ProfileView.fxml"));
+            loader.load();
+
+            configureMenu(loader.getController());
+
+            ProfileController controller = loader.getController();
+            controller.loadView("ProfileMainView");
+            controller.loadView("PersonalityView");
+            controller.loadView("HobbiesView");
+            controller.loadView("PreferencesView");
+            controller.loadView("ViewsView");
+
+            Person person = controller.person;
+            person.getGeneralInfo().writeInfoToFile("src\\main\\resources\\local-database\\"+uuid+"\\profile-data\\main.json");
+            person.getHobbies().writeInfoToFile("src\\main\\resources\\local-database\\"+uuid+"\\profile-data\\hobbies.json");
+            person.getPersonality().writeInfoToFile("src\\main\\resources\\local-database\\"+uuid+"\\profile-data\\personality.json");
+            person.getPreferences().writeInfoToFile("src\\main\\resources\\local-database\\"+uuid+"\\profile-data\\preferences.json");
+            person.getViews().writeInfoToFile("src\\main\\resources\\local-database\\"+uuid+"\\profile-data\\views.json");
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+
+
+
+
     }
 }

@@ -112,9 +112,9 @@ public class TemplateController extends TemplateContentClass {
     }
 
     private void setPersonInfoLabels() {
-//        personDescription.textProperty().set(people.get(currentPerson).getPerson().getGeneralInfo().getDescription());
-//        personName.textProperty().set(people.get(currentPerson).getPerson().getGeneralInfo().getFullName());
-//        personImage.imageProperty().set(new Image(people.get(currentPerson).getPerson().getGeneralInfo().
-//                getPhotos().getFirst().keySet().toArray(new String[1])[0]));
+        personDescription.textProperty().set(people.get(currentPerson).getPerson().getGeneralInfo().getDescription());
+        personName.textProperty().set(people.get(currentPerson).getPerson().getGeneralInfo().getFullName());
+        personImage.imageProperty().set(new Image(people.get(currentPerson).getPerson().getGeneralInfo().
+                getPhotos().getFirst().keySet().toArray(new String[1])[0]));
     }
 }

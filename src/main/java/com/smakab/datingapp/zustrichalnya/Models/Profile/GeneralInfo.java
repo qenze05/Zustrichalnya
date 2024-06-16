@@ -252,22 +252,22 @@ public class GeneralInfo {
 
     }
 
-//    public String getFullName() {
-//        String[] result = new String[4];
-//        if (nameVisibility.contains("Ім'я")) {result[0] = name.get();}
-//        if (nameVisibility.contains("Прізвище")) {result[1] = surname.get();}
-//        if (nameVisibility.contains("По-батькові")) {result[2] = patronymic.get();}
-//        if (nameVisibility.contains("Нікнейм")) {result[3] = nickname.get();}
-//
-//        if(result[0].isEmpty() && result[1].isEmpty() && result[2].isEmpty()) {
-//            return result[3];
-//        } else {
-//            StringBuilder res = new StringBuilder();
-//            for (String s : result) {
-//                res.append(" ").append(s);
-//            }
-//            return res.toString().strip();
-//        }
-//    }
+    public String getFullName() {
+        String[] result = new String[4];
+        if (nameVisibility.contains("Ім'я")) {result[0] = name.get();}
+        if (nameVisibility.contains("Прізвище")) {result[1] = surname.get();}
+        if (nameVisibility.contains("По-батькові")) {result[2] = patronymic.get();}
+        if (nameVisibility.contains("Нікнейм")) {result[3] = nickname.get();}
+
+        if(result[0].isEmpty() && result[1].isEmpty() && result[2].isEmpty()) {
+            return result[3];
+        } else {
+            StringBuilder res = new StringBuilder();
+            for (String s : result) {
+                res.append(" ").append(s);
+            }
+            return res.toString().strip();
+        }
+    }
 
 }
