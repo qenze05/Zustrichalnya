@@ -136,9 +136,25 @@ public class TemplateController extends TemplateContentClass {
                 for(String folderName : folderNames){
 
                     String shownPerson = "src\\main\\resources\\local-database\\"+folderName+"\\";
+                    String currPerson = "src\\main\\resources\\local-database\\"+userUUID+"\\";
 
                     boolean found = false;
-                    File file = new File(shownPerson, "blacklist");
+                    File file = new File(currPerson, "blacklist");
+                    if (file.exists() && file.isFile()) {
+                        try (Scanner scanner = new Scanner(file)) {
+
+                            while (scanner.hasNextLine()) {
+                                String line = scanner.nextLine();
+                                if (line.contains(folderName)) {
+                                    found = true;
+                                    break;
+                                }
+                            }
+                        } catch (FileNotFoundException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    file = new File(shownPerson, "blacklist");
                     if (file.exists() && file.isFile()) {
                         try (Scanner scanner = new Scanner(file)) {
 
@@ -234,7 +250,7 @@ public class TemplateController extends TemplateContentClass {
         System.out.println("user uuid "+this.userUUID);
         Searcher searcher = new Searcher(this.model, this.userUUID);
         people = searcher.search();
-        searcher.tempSout();
+        System.out.println("people size "+people.size());
 
         if(!people.isEmpty()) {
             currentPerson = 0;
@@ -245,7 +261,10 @@ public class TemplateController extends TemplateContentClass {
     }
 
     public void nextPerson() {
-        if(people.isEmpty()) return;
+        if(people.isEmpty()) {
+            setPersonInfoLabels();
+            return;
+        }
         currentPerson++;
         if(currentPerson >= people.size()) currentPerson = 0;
         setPersonInfoLabels();
@@ -303,13 +322,24 @@ public class TemplateController extends TemplateContentClass {
     }
 
     public void prevPerson() {
-        if(people.isEmpty()) return;
+        if(people.isEmpty()) {
+            setPersonInfoLabels();
+            return;
+        }
         currentPerson--;
         if(currentPerson < 0) currentPerson = people.size()-1;
         setPersonInfoLabels();
     }
 
     private void setPersonInfoLabels() {
+        if(people.isEmpty()) {
+            personName.textProperty().set("");
+            personDescription.textProperty().set("");
+            personAge.textProperty().set("");
+
+            personImage.imageProperty().set(new Image(getClass().getResourceAsStream("/icons/avatar.png")));
+            return;
+        }
         String name = people.get(currentPerson).getPerson().getGeneralInfo().fullName();
         String desc = people.get(currentPerson).getPerson().getGeneralInfo().getDescription();
         String age = String.valueOf(people.get(currentPerson).getPerson().getGeneralInfo().getAge());

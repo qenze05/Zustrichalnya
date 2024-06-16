@@ -17,6 +17,7 @@ module com.smakab.datingapp.zustrichalnya {
     requires com.fasterxml.jackson.databind;
     requires com.fasterxml.jackson.datatype.jsr310;
     requires javafx.swing;
+    requires java.sql;
 
     opens com.smakab.datingapp.zustrichalnya.Models to com.google.gson, javafx.fxml;
     opens com.smakab.datingapp.zustrichalnya.Models.Profile to com.google.gson, javafx.fxml;

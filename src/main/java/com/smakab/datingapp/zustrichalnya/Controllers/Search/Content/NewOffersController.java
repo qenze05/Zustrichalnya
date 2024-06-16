@@ -202,6 +202,15 @@ public class NewOffersController extends TemplateContentClass {
     }
 
     private void setPersonInfoLabels() {
+        if(people.isEmpty()) {
+            personName.textProperty().set("");
+            personDescription.textProperty().set("");
+            personAge.textProperty().set("");
+
+            personImage.imageProperty().set(new Image(getClass().getResourceAsStream("/icons/avatar.png")));
+           return;
+        }
+
         String name = people.get(currentPerson).person().getGeneralInfo().fullName();
         String desc = people.get(currentPerson).person().getGeneralInfo().getDescription();
         String age = String.valueOf(people.get(currentPerson).person().getGeneralInfo().getAge());
@@ -220,13 +229,23 @@ public class NewOffersController extends TemplateContentClass {
     }
 
     private void setTemplateInfoLabels() {
+        if(people.isEmpty()) {
+            tempName.textProperty().set("");
+            tempGoal.textProperty().set("");
+            tempDescription.textProperty().set("");
+            tempType.textProperty().set("");
+
+            greenFlagsContainer.getChildren().clear();
+            redFlagsContainer.getChildren().clear();
+            return;
+        }
         tempName.textProperty().set(people.get(currentPerson).template().getGeneralInfo().getName());
         tempGoal.textProperty().set(people.get(currentPerson).template().getGeneralInfo().getPurpose());
         tempDescription.textProperty().set(people.get(currentPerson).template().getGeneralInfo().getDescription());
         tempType.textProperty().set(people.get(currentPerson).template().getGeneralInfo().getRelationshipType());
 
-        greenFlagsContainer.getChildren().removeAll();
-        redFlagsContainer.getChildren().removeAll();
+        greenFlagsContainer.getChildren().clear();
+        redFlagsContainer.getChildren().clear();
 
         people.get(currentPerson).template().getGeneralInfo().getGreenFlags().forEach(this::addGreenFlag);
         people.get(currentPerson).template().getGeneralInfo().getRedFlags().forEach(this::addRegFlag);
@@ -243,7 +262,11 @@ public class NewOffersController extends TemplateContentClass {
     }
 
     public void nextPerson() {
-        if(people.isEmpty()) return;
+        if(people.isEmpty()) {
+            setTemplateInfoLabels();
+            setPersonInfoLabels();
+            return;
+        }
         currentPerson++;
         if(currentPerson >= people.size()) currentPerson = 0;
         setPersonInfoLabels();
@@ -251,7 +274,11 @@ public class NewOffersController extends TemplateContentClass {
     }
 
     public void removePerson() {
-        if(people.isEmpty()) return;
+        if(people.isEmpty()) {
+            setTemplateInfoLabels();
+            setPersonInfoLabels();
+            return;
+        }
         try (FileWriter fw = new FileWriter("src\\main\\resources\\local-database\\"+userUUID+"\\blacklist", true);
              PrintWriter pw = new PrintWriter(fw)) {
             pw.println(people.get(currentPerson).person().uuid);

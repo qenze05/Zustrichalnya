@@ -52,6 +52,7 @@ public class Searcher {
         ArrayList<PersonComparable> compatiblePeople = new ArrayList<>();
         for(Person person : allPeople){
             double compatability = this.getCompatibility(person);
+            System.out.println("found "+person.uuid+" | "+compatability);
             if(compatability > 0.5) compatiblePeople.add(new PersonComparable(person, compatability));
         }
         compatiblePeople.sort(new PersonComparator());
@@ -202,7 +203,7 @@ public class Searcher {
             boolean personalityIn = false;
 
             Integer value = thatPerson.getPersonality().getSliders().get(personalitySliders.getKey());
-            if(value == null) continue;
+            if(value == null) value = 0;
 
             int length = personalitySliders.getValue().get(1) - personalitySliders.getValue().get(0);
             if(value >= personalitySliders.getValue().get(0) && value <= personalitySliders.getValue().get(1)) personalityIn = true;
