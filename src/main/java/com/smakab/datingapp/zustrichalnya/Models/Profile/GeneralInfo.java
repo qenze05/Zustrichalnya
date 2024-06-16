@@ -4,8 +4,6 @@ import com.smakab.datingapp.zustrichalnya.JsonUtils.JsonUtil;
 import javafx.beans.property.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.image.Image;
-import org.javatuples.Pair;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -14,7 +12,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.TreeMap;
 import java.util.UUID;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -252,18 +249,19 @@ public class GeneralInfo {
 
     }
 
-    public String getFullName() {
+    public String fullName() {
         String[] result = new String[4];
-        if (nameVisibility.contains("Ім'я")) {result[0] = name.get();}
+        if (nameVisibility.contains("Імʼя")) {result[0] = name.get();}
         if (nameVisibility.contains("Прізвище")) {result[1] = surname.get();}
         if (nameVisibility.contains("По-батькові")) {result[2] = patronymic.get();}
         if (nameVisibility.contains("Нікнейм")) {result[3] = nickname.get();}
 
-        if(result[0].isEmpty() && result[1].isEmpty() && result[2].isEmpty()) {
+        if(result[0] == null && result[1] == null && result[2] == null) {
             return result[3];
         } else {
             StringBuilder res = new StringBuilder();
             for (String s : result) {
+                if(s == null) continue;
                 res.append(" ").append(s);
             }
             return res.toString().strip();

@@ -61,7 +61,9 @@ public class SignInController implements Initializable {
                 BaseController controller = loader.getController();
 
                 //TODO: замінити фейковий айді на реальний
-                controller.setProfileUUID(UUID.randomUUID());
+//                controller.setProfileUUID(UUID.randomUUID());
+//                controller.setProfileUUID(UUID.fromString("02861c00-875f-4326-9bbd-dbd98de0c56f"));
+                controller.setProfileUUID(UUID.fromString("ef85612a-af60-45d2-8c8e-86e0dbd2451c"));
                 // Hide this current window (if this is what you want)
                 ((Node)(actionEvent.getSource())).getScene().getWindow().hide();
             }

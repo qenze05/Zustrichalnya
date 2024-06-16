@@ -20,9 +20,13 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Scanner;
 import java.util.UUID;
 
 public class MenuController extends BaseController implements Initializable{
@@ -111,16 +115,13 @@ public class MenuController extends BaseController implements Initializable{
     }
 
     private void initPersonDB() {
-//        Person person = new Person();
-//
-//        person.uuid = this.uuid;
-//        person.setGeneralInfo(new GeneralInfo(uuid));
-//        person.setPersonality(new Personality(uuid));
-//        person.setHobbies(new Hobbies(uuid));
-//        person.setPreferences(new Preferences(uuid));
-//        person.setViews(new Views(uuid));
-//
+
+        File file = new File("src\\main\\resources\\local-database\\"+uuid+"\\profile-data\\", "main.json");
+        if (file.exists() && file.isFile()) return;
+
         try {
+
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/smakab/datingapp/zustrichalnya/Views/Profile/ProfileView.fxml"));
             loader.load();
 
@@ -139,6 +140,17 @@ public class MenuController extends BaseController implements Initializable{
             person.getPersonality().writeInfoToFile("src\\main\\resources\\local-database\\"+uuid+"\\profile-data\\personality.json");
             person.getPreferences().writeInfoToFile("src\\main\\resources\\local-database\\"+uuid+"\\profile-data\\preferences.json");
             person.getViews().writeInfoToFile("src\\main\\resources\\local-database\\"+uuid+"\\profile-data\\views.json");
+
+            try  {
+                FileWriter writer = new FileWriter("src\\main\\resources\\local-database\\"+uuid+"\\blacklist", true);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
+            try  {
+                FileWriter writer = new FileWriter("src\\main\\resources\\local-database\\"+uuid+"\\requests", true);
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
 
         } catch (IOException e) {
             throw new RuntimeException(e);

@@ -39,6 +39,7 @@ public class Person {
         this.generalInfo = generalInfo;
         this.hobbies = hobbies;
         this.personality = personality;
+        this.preferences = preferences;
         this.views = views;
     }
 

@@ -23,4 +23,8 @@ public class PersonComparable implements Comparable<PersonComparable>{
     public Person getPerson() {
         return person;
     }
+
+    public double getCompatability() {
+        return compatability;
+    }
 }

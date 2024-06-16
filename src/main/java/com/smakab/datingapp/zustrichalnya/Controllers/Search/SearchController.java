@@ -124,11 +124,12 @@ public class SearchController extends BaseController implements Initializable, T
     }
 
     private void configureContentView(TemplateContentClass controller) {
+        controller.setUserUUID(this.uuid);
+
         controller.setModel(this.mainVC.getSelectedTemplate());
         controller.loadModelData();
 
         controller.setDelegate(this);
-        controller.setUserUUID(this.uuid);
 
         if(this.mainVC.getSelectedTemplate() != null) {
             controller.setName(this.mainVC.getSelectedTemplate().getGeneralInfo().getName());

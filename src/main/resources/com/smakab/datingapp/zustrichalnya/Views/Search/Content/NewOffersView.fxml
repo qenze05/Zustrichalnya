@@ -42,7 +42,7 @@
                                           <Font size="25.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Label" wrapText="true">
+                                    <Label fx:id="tempName" text="Label" wrapText="true">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -56,7 +56,7 @@
                                           <Font size="25.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Label" wrapText="true">
+                                    <Label fx:id="tempGoal" text="Label" wrapText="true">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -70,7 +70,7 @@
                                           <Font size="25.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Label" wrapText="true">
+                                    <Label fx:id="tempDescription" text="Label" wrapText="true">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -84,7 +84,7 @@
                                           <Font size="25.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Label" wrapText="true">
+                                    <Label fx:id="tempType" text="Label" wrapText="true">
                                        <font>
                                           <Font size="20.0" />
                                        </font>
@@ -143,213 +143,213 @@
                                </HBox>
                            </children>
                         </VBox>
-                        <VBox layoutX="10.0" layoutY="10.0" spacing="10.0" styleClass="background" stylesheets="@../../../../../../../styles.css">
-                           <children>
-                              <Label text="Деталі">
-                                 <font>
-                                    <Font name="System Bold" size="25.0" />
-                                 </font>
-                              </Label>
-                              <HBox alignment="BOTTOM_LEFT" spacing="20.0">
-                                 <children>
-                                    <Label text="Наявність реального фото (0-5)">
-                                       <font>
-                                          <Font size="25.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="Label" wrapText="true">
-                                       <font>
-                                          <Font size="20.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </HBox>
-                              <HBox alignment="BOTTOM_LEFT" spacing="20.0">
-                                 <children>
-                                    <Label text="Шкала віку">
-                                       <font>
-                                          <Font size="25.0" />
-                                       </font>
-                                    </Label>
-                                    <Label text="Label" wrapText="true">
-                                       <font>
-                                          <Font size="20.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <VBox layoutX="10.0" layoutY="506.0" spacing="10.0" styleClass="background-white" stylesheets="@../../../../../../../styles.css">
-                           <children>
-                              <Label text="Хобі та субкультури">
-                                 <font>
-                                    <Font name="System Bold" size="25.0" />
-                                 </font>
-                              </Label>
-                               <VBox spacing="10.0" styleClass="background-padding" stylesheets="@../../../../../../../styles.css">
-                                   <children>
-                                       <VBox spacing="10.0">
-                                           <children>
-                                               <HBox alignment="CENTER_LEFT" spacing="20.0">
-                                                   <children>
-                                                       <Label text="Субкультури:">
-                                                           <font>
-                                                               <Font size="30.0" />
-                                                           </font>
-                                                       </Label>
-                                                   </children>
-                                               </HBox>
-                                           </children>
-                                           <padding>
-                                               <Insets top="50.0" />
-                                           </padding>
-                                       </VBox>
-                                       <VBox fx:id="subculturesContainer">
+<!--                        <VBox layoutX="10.0" layoutY="10.0" spacing="10.0" styleClass="background" stylesheets="@../../../../../../../styles.css">-->
+<!--                           <children>-->
+<!--                              <Label text="Деталі">-->
+<!--                                 <font>-->
+<!--                                    <Font name="System Bold" size="25.0" />-->
+<!--                                 </font>-->
+<!--                              </Label>-->
+<!--                              <HBox alignment="BOTTOM_LEFT" spacing="20.0">-->
+<!--                                 <children>-->
+<!--                                    <Label text="Наявність реального фото (0-5)">-->
+<!--                                       <font>-->
+<!--                                          <Font size="25.0" />-->
+<!--                                       </font>-->
+<!--                                    </Label>-->
+<!--                                    <Label text="Label" wrapText="true">-->
+<!--                                       <font>-->
+<!--                                          <Font size="20.0" />-->
+<!--                                       </font>-->
+<!--                                    </Label>-->
+<!--                                 </children>-->
+<!--                              </HBox>-->
+<!--                              <HBox alignment="BOTTOM_LEFT" spacing="20.0">-->
+<!--                                 <children>-->
+<!--                                    <Label text="Шкала віку">-->
+<!--                                       <font>-->
+<!--                                          <Font size="25.0" />-->
+<!--                                       </font>-->
+<!--                                    </Label>-->
+<!--                                    <Label text="Label" wrapText="true">-->
+<!--                                       <font>-->
+<!--                                          <Font size="20.0" />-->
+<!--                                       </font>-->
+<!--                                    </Label>-->
+<!--                                 </children>-->
+<!--                              </HBox>-->
+<!--                           </children>-->
+<!--                        </VBox>-->
+<!--                        <VBox layoutX="10.0" layoutY="506.0" spacing="10.0" styleClass="background-white" stylesheets="@../../../../../../../styles.css">-->
+<!--                           <children>-->
+<!--                              <Label text="Хобі та субкультури">-->
+<!--                                 <font>-->
+<!--                                    <Font name="System Bold" size="25.0" />-->
+<!--                                 </font>-->
+<!--                              </Label>-->
+<!--                               <VBox spacing="10.0" styleClass="background-padding" stylesheets="@../../../../../../../styles.css">-->
+<!--                                   <children>-->
+<!--                                       <VBox spacing="10.0">-->
+<!--                                           <children>-->
+<!--                                               <HBox alignment="CENTER_LEFT" spacing="20.0">-->
+<!--                                                   <children>-->
+<!--                                                       <Label text="Субкультури:">-->
+<!--                                                           <font>-->
+<!--                                                               <Font size="30.0" />-->
+<!--                                                           </font>-->
+<!--                                                       </Label>-->
+<!--                                                   </children>-->
+<!--                                               </HBox>-->
+<!--                                           </children>-->
+<!--                                           <padding>-->
+<!--                                               <Insets top="50.0" />-->
+<!--                                           </padding>-->
+<!--                                       </VBox>-->
+<!--                                       <VBox fx:id="subculturesContainer">-->
 
-                                           <padding>
-                                               <Insets left="10.0" />
-                                           </padding>
-                                       </VBox>
-                                       <VBox spacing="10.0">
-                                           <children>
-                                               <HBox alignment="CENTER_LEFT" spacing="20.0">
-                                                   <children>
-                                                       <Label text="Хобі:">
-                                                           <font>
-                                                               <Font size="30.0" />
-                                                           </font>
-                                                       </Label>
-                                                   </children>
-                                               </HBox>
-                                           </children>
-                                           <padding>
-                                               <Insets top="50.0" />
-                                           </padding>
-                                       </VBox>
-                                       <VBox fx:id="hobbiesContainer">
-                                           <padding>
-                                               <Insets left="10.0" />
-                                           </padding>
-                                       </VBox>
-                                   </children>
-                               </VBox>
+<!--                                           <padding>-->
+<!--                                               <Insets left="10.0" />-->
+<!--                                           </padding>-->
+<!--                                       </VBox>-->
+<!--                                       <VBox spacing="10.0">-->
+<!--                                           <children>-->
+<!--                                               <HBox alignment="CENTER_LEFT" spacing="20.0">-->
+<!--                                                   <children>-->
+<!--                                                       <Label text="Хобі:">-->
+<!--                                                           <font>-->
+<!--                                                               <Font size="30.0" />-->
+<!--                                                           </font>-->
+<!--                                                       </Label>-->
+<!--                                                   </children>-->
+<!--                                               </HBox>-->
+<!--                                           </children>-->
+<!--                                           <padding>-->
+<!--                                               <Insets top="50.0" />-->
+<!--                                           </padding>-->
+<!--                                       </VBox>-->
+<!--                                       <VBox fx:id="hobbiesContainer">-->
+<!--                                           <padding>-->
+<!--                                               <Insets left="10.0" />-->
+<!--                                           </padding>-->
+<!--                                       </VBox>-->
+<!--                                   </children>-->
+<!--                               </VBox>-->
 
-                           </children>
-                        </VBox>
-                        <VBox layoutX="10.0" layoutY="506.0" spacing="10.0" styleClass="background-white" stylesheets="@../../../../../../../styles.css">
-                           <children>
-                              <Label text="Романтичні вподобання">
-                                 <font>
-                                    <Font name="System Bold" size="25.0" />
-                                 </font>
-                              </Label>
-                               <VBox spacing="10.0" styleClass="background-padding" stylesheets="@../../../../../../../styles.css">
-                                   <children>
-                                       <VBox spacing="10.0">
-                                           <children>
-                                               <HBox alignment="CENTER_LEFT" spacing="20.0">
-                                                   <children>
-                                                       <Label text="Вподобання">
-                                                           <font>
-                                                               <Font size="30.0" />
-                                                           </font>
-                                                       </Label>
-                                                   </children>
-                                               </HBox>
-                                           </children>
-                                           <padding>
-                                               <Insets top="50.0" />
-                                           </padding>
-                                       </VBox>
-                                       <VBox fx:id="prefContainer">
-                                           <padding>
-                                               <Insets left="10.0" />
-                                           </padding>
-                                       </VBox>
-                                   </children>
-                               </VBox>
+<!--                           </children>-->
+<!--                        </VBox>-->
+<!--                        <VBox layoutX="10.0" layoutY="506.0" spacing="10.0" styleClass="background-white" stylesheets="@../../../../../../../styles.css">-->
+<!--                           <children>-->
+<!--                              <Label text="Романтичні вподобання">-->
+<!--                                 <font>-->
+<!--                                    <Font name="System Bold" size="25.0" />-->
+<!--                                 </font>-->
+<!--                              </Label>-->
+<!--                               <VBox spacing="10.0" styleClass="background-padding" stylesheets="@../../../../../../../styles.css">-->
+<!--                                   <children>-->
+<!--                                       <VBox spacing="10.0">-->
+<!--                                           <children>-->
+<!--                                               <HBox alignment="CENTER_LEFT" spacing="20.0">-->
+<!--                                                   <children>-->
+<!--                                                       <Label text="Вподобання">-->
+<!--                                                           <font>-->
+<!--                                                               <Font size="30.0" />-->
+<!--                                                           </font>-->
+<!--                                                       </Label>-->
+<!--                                                   </children>-->
+<!--                                               </HBox>-->
+<!--                                           </children>-->
+<!--                                           <padding>-->
+<!--                                               <Insets top="50.0" />-->
+<!--                                           </padding>-->
+<!--                                       </VBox>-->
+<!--                                       <VBox fx:id="prefContainer">-->
+<!--                                           <padding>-->
+<!--                                               <Insets left="10.0" />-->
+<!--                                           </padding>-->
+<!--                                       </VBox>-->
+<!--                                   </children>-->
+<!--                               </VBox>-->
 
 
-                           </children>
-                        </VBox>
-                         <VBox spacing="10.0" styleClass="background-white" stylesheets="@../../../../../../../styles.css">
-                             <children>
-                                 <Label text="Громадянські, політичні, релігійні погляди">
-                                     <font>
-                                         <Font name="System Bold" size="25.0" />
-                                     </font>
-                                 </Label>
-                                 <VBox prefWidth="1600.0" spacing="10.0" styleClass="background-padding" stylesheets="@../../../../../../../styles.css">
-                                     <children>
-                                         <VBox spacing="10.0">
-                                             <children>
-                                                 <HBox alignment="CENTER_LEFT" spacing="20.0">
-                                                     <children>
-                                                         <Label text="Релігія">
-                                                             <font>
-                                                                 <Font size="30.0" />
-                                                             </font>
-                                                         </Label>
-                                                     </children>
-                                                 </HBox>
-                                             </children>
-                                             <padding>
-                                                 <Insets top="50.0" />
-                                             </padding>
-                                         </VBox>
-                                         <VBox fx:id="religionsContainer">
-                                             <padding>
-                                                 <Insets left="10.0" />
-                                             </padding>
-                                         </VBox>
-                                         <VBox spacing="10.0">
-                                             <children>
-                                                 <HBox alignment="CENTER_LEFT" spacing="20.0">
-                                                     <children>
-                                                         <Label text="Мова спілкування">
-                                                             <font>
-                                                                 <Font size="30.0" />
-                                                             </font>
-                                                         </Label>
-                                                     </children>
-                                                 </HBox>
-                                             </children>
-                                             <padding>
-                                                 <Insets top="50.0" />
-                                             </padding>
-                                         </VBox>
-                                         <VBox fx:id="languagesContainer">
-                                             <padding>
-                                                 <Insets left="10.0" />
-                                             </padding>
-                                         </VBox>
-                                         <VBox spacing="10.0">
-                                             <children>
-                                                 <HBox alignment="CENTER_LEFT" spacing="20.0">
-                                                     <children>
-                                                         <Label text="Громадянські рухи">
-                                                             <font>
-                                                                 <Font size="30.0" />
-                                                             </font>
-                                                         </Label>
-                                                     </children>
-                                                 </HBox>
-                                             </children>
-                                             <padding>
-                                                 <Insets top="50.0" />
-                                             </padding>
-                                         </VBox>
-                                         <VBox fx:id="movementsContainer">
-                                             <padding>
-                                                 <Insets left="10.0" />
-                                             </padding>
-                                         </VBox>
-                                     </children>
-                                 </VBox>
+<!--                           </children>-->
+<!--                        </VBox>-->
+<!--                         <VBox spacing="10.0" styleClass="background-white" stylesheets="@../../../../../../../styles.css">-->
+<!--                             <children>-->
+<!--                                 <Label text="Громадянські, політичні, релігійні погляди">-->
+<!--                                     <font>-->
+<!--                                         <Font name="System Bold" size="25.0" />-->
+<!--                                     </font>-->
+<!--                                 </Label>-->
+<!--                                 <VBox prefWidth="1600.0" spacing="10.0" styleClass="background-padding" stylesheets="@../../../../../../../styles.css">-->
+<!--                                     <children>-->
+<!--                                         <VBox spacing="10.0">-->
+<!--                                             <children>-->
+<!--                                                 <HBox alignment="CENTER_LEFT" spacing="20.0">-->
+<!--                                                     <children>-->
+<!--                                                         <Label text="Релігія">-->
+<!--                                                             <font>-->
+<!--                                                                 <Font size="30.0" />-->
+<!--                                                             </font>-->
+<!--                                                         </Label>-->
+<!--                                                     </children>-->
+<!--                                                 </HBox>-->
+<!--                                             </children>-->
+<!--                                             <padding>-->
+<!--                                                 <Insets top="50.0" />-->
+<!--                                             </padding>-->
+<!--                                         </VBox>-->
+<!--                                         <VBox fx:id="religionsContainer">-->
+<!--                                             <padding>-->
+<!--                                                 <Insets left="10.0" />-->
+<!--                                             </padding>-->
+<!--                                         </VBox>-->
+<!--                                         <VBox spacing="10.0">-->
+<!--                                             <children>-->
+<!--                                                 <HBox alignment="CENTER_LEFT" spacing="20.0">-->
+<!--                                                     <children>-->
+<!--                                                         <Label text="Мова спілкування">-->
+<!--                                                             <font>-->
+<!--                                                                 <Font size="30.0" />-->
+<!--                                                             </font>-->
+<!--                                                         </Label>-->
+<!--                                                     </children>-->
+<!--                                                 </HBox>-->
+<!--                                             </children>-->
+<!--                                             <padding>-->
+<!--                                                 <Insets top="50.0" />-->
+<!--                                             </padding>-->
+<!--                                         </VBox>-->
+<!--                                         <VBox fx:id="languagesContainer">-->
+<!--                                             <padding>-->
+<!--                                                 <Insets left="10.0" />-->
+<!--                                             </padding>-->
+<!--                                         </VBox>-->
+<!--                                         <VBox spacing="10.0">-->
+<!--                                             <children>-->
+<!--                                                 <HBox alignment="CENTER_LEFT" spacing="20.0">-->
+<!--                                                     <children>-->
+<!--                                                         <Label text="Громадянські рухи">-->
+<!--                                                             <font>-->
+<!--                                                                 <Font size="30.0" />-->
+<!--                                                             </font>-->
+<!--                                                         </Label>-->
+<!--                                                     </children>-->
+<!--                                                 </HBox>-->
+<!--                                             </children>-->
+<!--                                             <padding>-->
+<!--                                                 <Insets top="50.0" />-->
+<!--                                             </padding>-->
+<!--                                         </VBox>-->
+<!--                                         <VBox fx:id="movementsContainer">-->
+<!--                                             <padding>-->
+<!--                                                 <Insets left="10.0" />-->
+<!--                                             </padding>-->
+<!--                                         </VBox>-->
+<!--                                     </children>-->
+<!--                                 </VBox>-->
 
-                             </children>
-                         </VBox>
+<!--                             </children>-->
+<!--                         </VBox>-->
                      </children>
                         </VBox>
                     </content>
@@ -369,12 +369,7 @@
             <children>
                 <HBox alignment="CENTER" prefHeight="100.0" styleClass="label-personality">
                     <children>
-                        <Label styleClass="label-name" text="Нові пропозиції:">
-                            <font>
-                                <Font size="30.0" />
-                            </font>
-                        </Label>
-                        <Label styleClass="delete-button" text="5">
+                        <Label styleClass="label-name" text="Нові пропозиції">
                             <font>
                                 <Font size="30.0" />
                             </font>
@@ -386,7 +381,7 @@
                         <HBox>
                             <children>
                                 <HBox>
-                                    <ImageView fitHeight="550.0" fitWidth="550.0" pickOnBounds="true">
+                                    <ImageView fx:id="personImage" fitHeight="550.0" fitWidth="550.0" pickOnBounds="true">
                                         <HBox.margin>
                                             <Insets left="125.0" />
                                         </HBox.margin></ImageView>
@@ -405,7 +400,7 @@
                             <children>
                                 <HBox spacing="10.0">
                                     <children>
-                                        <Label text="Name">
+                                        <Label fx:id="personName" text="Name">
                                             <font>
                                                 <Font size="20.0" />
                                             </font>
@@ -415,7 +410,7 @@
                                                 <Font name="System Bold" size="20.0" />
                                             </font>
                                         </Label>
-                                        <Label text="Age">
+                                        <Label fx:id="personAge" text="Age">
                                             <font>
                                                 <Font size="20.0" />
                                             </font>
@@ -425,7 +420,7 @@
                                         <Insets left="10.0" />
                                     </padding>
                                 </HBox>
-                                <Label maxWidth="1.7976931348623157E308" text="Description" wrapText="true">
+                                <Label fx:id="personDescription" maxWidth="1.7976931348623157E308" text="Description" wrapText="true">
                                     <font>
                                         <Font size="20.0" />
                                     </font>
@@ -437,7 +432,7 @@
                         </VBox>
                         <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="100.0" spacing="15.0">
                             <children>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
+                                <Button onAction="#prevPerson" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
                                         <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true">
                                             <image>
@@ -446,7 +441,7 @@
                                         </ImageView>
                                     </graphic>
                                 </Button>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
+                                <Button onAction="#likePerson" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
                                         <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true">
                                             <image>
@@ -455,7 +450,7 @@
                                         </ImageView>
                                     </graphic>
                                 </Button>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
+                                <Button onAction="#removePerson" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
                                         <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true">
                                             <image>
@@ -464,7 +459,7 @@
                                         </ImageView>
                                     </graphic>
                                 </Button>
-                                <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
+                                <Button onAction="#nextPerson" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" styleClass="photo-button">
                                     <graphic>
                                         <ImageView fitHeight="125.0" fitWidth="125.0" pickOnBounds="true">
                                             <image>

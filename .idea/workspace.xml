@@ -4,7 +4,91 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0e0dc30-7e3a-4317-829c-2d387ecd65c6" name="Changes" comment="idk" />
+    <list default="true" id="a0e0dc30-7e3a-4317-829c-2d387ecd65c6" name="Changes" comment="test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Search/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/avatar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/blacklist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/17f94a50-b12f-4891-a110-ba98b3bf642f/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/17f94a50-b12f-4891-a110-ba98b3bf642f/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/17f94a50-b12f-4891-a110-ba98b3bf642f/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/17f94a50-b12f-4891-a110-ba98b3bf642f/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/17f94a50-b12f-4891-a110-ba98b3bf642f/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/6aa06959-1321-471f-ba6f-88dd0d194aa2/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/6aa06959-1321-471f-ba6f-88dd0d194aa2/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/6aa06959-1321-471f-ba6f-88dd0d194aa2/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/6aa06959-1321-471f-ba6f-88dd0d194aa2/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/6aa06959-1321-471f-ba6f-88dd0d194aa2/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/6aa06959-1321-471f-ba6f-88dd0d194aa2/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/92937e7e-2819-47b3-9e81-26f07209a217/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/92937e7e-2819-47b3-9e81-26f07209a217/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/92937e7e-2819-47b3-9e81-26f07209a217/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/92937e7e-2819-47b3-9e81-26f07209a217/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/92937e7e-2819-47b3-9e81-26f07209a217/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/92937e7e-2819-47b3-9e81-26f07209a217/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/962db367-3435-4b7f-8d0a-d196dadb850a/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/962db367-3435-4b7f-8d0a-d196dadb850a/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/962db367-3435-4b7f-8d0a-d196dadb850a/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/962db367-3435-4b7f-8d0a-d196dadb850a/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/962db367-3435-4b7f-8d0a-d196dadb850a/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/962db367-3435-4b7f-8d0a-d196dadb850a/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/cf8a0da5-d05a-44f2-8070-d2f11b8169af/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/cf8a0da5-d05a-44f2-8070-d2f11b8169af/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/cf8a0da5-d05a-44f2-8070-d2f11b8169af/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/cf8a0da5-d05a-44f2-8070-d2f11b8169af/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/cf8a0da5-d05a-44f2-8070-d2f11b8169af/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/cf8a0da5-d05a-44f2-8070-d2f11b8169af/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/c48f6119-0b3d-478c-ac58-b20642711977/cf8a0da5-d05a-44f2-8070-d2f11b8169af/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/c48f6119-0b3d-478c-ac58-b20642711977/cf8a0da5-d05a-44f2-8070-d2f11b8169af/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/c48f6119-0b3d-478c-ac58-b20642711977/cf8a0da5-d05a-44f2-8070-d2f11b8169af/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/c48f6119-0b3d-478c-ac58-b20642711977/cf8a0da5-d05a-44f2-8070-d2f11b8169af/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/c48f6119-0b3d-478c-ac58-b20642711977/cf8a0da5-d05a-44f2-8070-d2f11b8169af/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/c48f6119-0b3d-478c-ac58-b20642711977/cf8a0da5-d05a-44f2-8070-d2f11b8169af/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/cf8a0da5-d05a-44f2-8070-d2f11b8169af/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/cf8a0da5-d05a-44f2-8070-d2f11b8169af/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/cf8a0da5-d05a-44f2-8070-d2f11b8169af/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/cf8a0da5-d05a-44f2-8070-d2f11b8169af/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/cf8a0da5-d05a-44f2-8070-d2f11b8169af/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/cf8a0da5-d05a-44f2-8070-d2f11b8169af/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/profile-data/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/profile-data/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/profile-data/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/profile-data/photo_2024-06-13_17-59-28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/profile-data/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/profile-data/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/requests" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/c48f6119-0b3d-478c-ac58-b20642711977/details.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/c48f6119-0b3d-478c-ac58-b20642711977/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/c48f6119-0b3d-478c-ac58-b20642711977/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/c48f6119-0b3d-478c-ac58-b20642711977/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/c48f6119-0b3d-478c-ac58-b20642711977/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/c48f6119-0b3d-478c-ac58-b20642711977/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/e12b2f77-b5b4-4292-aac7-17f40a9524c7/details.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/e12b2f77-b5b4-4292-aac7-17f40a9524c7/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/e12b2f77-b5b4-4292-aac7-17f40a9524c7/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/e12b2f77-b5b4-4292-aac7-17f40a9524c7/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/e12b2f77-b5b4-4292-aac7-17f40a9524c7/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/e12b2f77-b5b4-4292-aac7-17f40a9524c7/views.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Profile/Content/ProfileShowcase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Profile/Content/ProfileShowcase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/NewOffersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/NewOffersController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/TemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/TemplateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/TemplatesListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/TemplatesListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/SearchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/SignUp/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/SignUp/SignInController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Profile/GeneralInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Profile/GeneralInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Search/PersonComparable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Search/PersonComparable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Search/Searcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Search/Searcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Profile/ProfileShowcase.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Profile/ProfileShowcase.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search/Content/NewOffersView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search/Content/NewOffersView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search/Content/ProfileShowcase.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search/Content/Template/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Search/Content/Template/MainView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/7b6a2094-147a-4fa7-b48d-4eb793f89ee3/profile-data/hobbies.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/7b6a2094-147a-4fa7-b48d-4eb793f89ee3/profile-data/personality.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/74553c8f-950f-46b1-82fe-bfda9e955a03/17f94a50-b12f-4891-a110-ba98b3bf642f/personality.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/7b6a2094-147a-4fa7-b48d-4eb793f89ee3/profile-data/views.json" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,40 +141,40 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Application.ApplicationLauncher.executor&quot;: &quot;Run&quot;,
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;qenze&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15136719&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.ApplicationLauncher.executor": "Run",
+    "Application.HelloApplication.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "qenze",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15136719",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\UserX\IdeaProjects\Zustrichalnya\src\main\resources\com\smakab\datingapp\zustrichalnya\Views\Profile" />
@@ -157,6 +241,7 @@
       <workItem from="1718286635239" duration="17869000" />
       <workItem from="1718393691883" duration="1349000" />
       <workItem from="1718432541757" duration="32838000" />
+      <workItem from="1718533384011" duration="24880000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -230,7 +315,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718316860572</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="lots of small fixes">
+      <option name="closed" value="true" />
+      <created>1718536390697</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1718536390697</updated>
+    </task>
+    <task id="LOCAL-00011" summary="test">
+      <option name="closed" value="true" />
+      <created>1718542680504</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1718542680504</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +361,9 @@
     <MESSAGE value="ui fixes + chat view" />
     <MESSAGE value="profile showcase and propositions fxmls" />
     <MESSAGE value="idk" />
-    <option name="LAST_COMMIT_MESSAGE" value="idk" />
+    <MESSAGE value="lots of small fixes" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
