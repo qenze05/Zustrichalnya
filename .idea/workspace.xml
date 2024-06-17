@@ -4,62 +4,159 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0e0dc30-7e3a-4317-829c-2d387ecd65c6" name="Changes" comment="я вже навіть не знаю">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Database/DatabaseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Database/config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/blacklist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/profile-data/hobbies.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/profile-data/main.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/profile-data/personality.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/profile-data/preferences.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/profile-data/views.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/requests" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/3a480153-2754-47e4-9e88-21272388f5eb/blacklist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/3a480153-2754-47e4-9e88-21272388f5eb/profile-data/hobbies.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/3a480153-2754-47e4-9e88-21272388f5eb/profile-data/main.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/3a480153-2754-47e4-9e88-21272388f5eb/profile-data/personality.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/3a480153-2754-47e4-9e88-21272388f5eb/profile-data/preferences.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/3a480153-2754-47e4-9e88-21272388f5eb/profile-data/views.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/3a480153-2754-47e4-9e88-21272388f5eb/requests" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/blacklist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/profile-data/hobbies.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/profile-data/main.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/profile-data/personality.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/profile-data/preferences.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/profile-data/views.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/requests" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/foundPeople/384b7297-d1e8-4ea2-bff4-a9943d595e0b/02861c00-875f-4326-9bbd-dbd98de0c56f/comp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/foundPeople/384b7297-d1e8-4ea2-bff4-a9943d595e0b/02861c00-875f-4326-9bbd-dbd98de0c56f/hobbies.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/foundPeople/384b7297-d1e8-4ea2-bff4-a9943d595e0b/02861c00-875f-4326-9bbd-dbd98de0c56f/main.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/foundPeople/384b7297-d1e8-4ea2-bff4-a9943d595e0b/02861c00-875f-4326-9bbd-dbd98de0c56f/personality.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/foundPeople/384b7297-d1e8-4ea2-bff4-a9943d595e0b/02861c00-875f-4326-9bbd-dbd98de0c56f/preferences.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/foundPeople/384b7297-d1e8-4ea2-bff4-a9943d595e0b/02861c00-875f-4326-9bbd-dbd98de0c56f/views.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/foundPeople/384b7297-d1e8-4ea2-bff4-a9943d595e0b/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/comp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/foundPeople/384b7297-d1e8-4ea2-bff4-a9943d595e0b/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/hobbies.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/foundPeople/384b7297-d1e8-4ea2-bff4-a9943d595e0b/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/main.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/foundPeople/384b7297-d1e8-4ea2-bff4-a9943d595e0b/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/personality.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/foundPeople/384b7297-d1e8-4ea2-bff4-a9943d595e0b/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/preferences.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/foundPeople/384b7297-d1e8-4ea2-bff4-a9943d595e0b/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/views.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/templates/384b7297-d1e8-4ea2-bff4-a9943d595e0b/details.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/templates/384b7297-d1e8-4ea2-bff4-a9943d595e0b/hobbies.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/templates/384b7297-d1e8-4ea2-bff4-a9943d595e0b/main.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/templates/384b7297-d1e8-4ea2-bff4-a9943d595e0b/personality.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/templates/384b7297-d1e8-4ea2-bff4-a9943d595e0b/preferences.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/templates/384b7297-d1e8-4ea2-bff4-a9943d595e0b/views.json" afterDir="false" />
+    <list default="true" id="a0e0dc30-7e3a-4317-829c-2d387ecd65c6" name="Changes" comment="login and idk some changes">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Chat/ContactsView.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/02861c00-875f-4326-9bbd-dbd98de0c56f/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/3a480153-2754-47e4-9e88-21272388f5eb/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/3a480153-2754-47e4-9e88-21272388f5eb/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/3a480153-2754-47e4-9e88-21272388f5eb/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/3a480153-2754-47e4-9e88-21272388f5eb/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/3a480153-2754-47e4-9e88-21272388f5eb/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/3a480153-2754-47e4-9e88-21272388f5eb/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/bd8d8250-6940-4f87-aca9-eda7d458f25a/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/bd8d8250-6940-4f87-aca9-eda7d458f25a/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/bd8d8250-6940-4f87-aca9-eda7d458f25a/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/bd8d8250-6940-4f87-aca9-eda7d458f25a/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/bd8d8250-6940-4f87-aca9-eda7d458f25a/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/bd8d8250-6940-4f87-aca9-eda7d458f25a/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/ef85612a-af60-45d2-8c8e-86e0dbd2451c/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/02861c00-875f-4326-9bbd-dbd98de0c56f/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/02861c00-875f-4326-9bbd-dbd98de0c56f/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/02861c00-875f-4326-9bbd-dbd98de0c56f/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/02861c00-875f-4326-9bbd-dbd98de0c56f/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/02861c00-875f-4326-9bbd-dbd98de0c56f/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/02861c00-875f-4326-9bbd-dbd98de0c56f/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/3a480153-2754-47e4-9e88-21272388f5eb/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/3a480153-2754-47e4-9e88-21272388f5eb/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/3a480153-2754-47e4-9e88-21272388f5eb/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/3a480153-2754-47e4-9e88-21272388f5eb/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/3a480153-2754-47e4-9e88-21272388f5eb/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/3a480153-2754-47e4-9e88-21272388f5eb/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/bd8d8250-6940-4f87-aca9-eda7d458f25a/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/bd8d8250-6940-4f87-aca9-eda7d458f25a/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/bd8d8250-6940-4f87-aca9-eda7d458f25a/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/bd8d8250-6940-4f87-aca9-eda7d458f25a/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/bd8d8250-6940-4f87-aca9-eda7d458f25a/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/bd8d8250-6940-4f87-aca9-eda7d458f25a/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/ef85612a-af60-45d2-8c8e-86e0dbd2451c/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/ef85612a-af60-45d2-8c8e-86e0dbd2451c/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/ef85612a-af60-45d2-8c8e-86e0dbd2451c/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/ef85612a-af60-45d2-8c8e-86e0dbd2451c/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/ef85612a-af60-45d2-8c8e-86e0dbd2451c/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/83e18e2f-2dad-4aa8-9c48-fc0901e507fc/ef85612a-af60-45d2-8c8e-86e0dbd2451c/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/3a480153-2754-47e4-9e88-21272388f5eb/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/3a480153-2754-47e4-9e88-21272388f5eb/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/3a480153-2754-47e4-9e88-21272388f5eb/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/3a480153-2754-47e4-9e88-21272388f5eb/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/3a480153-2754-47e4-9e88-21272388f5eb/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/3a480153-2754-47e4-9e88-21272388f5eb/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/bd8d8250-6940-4f87-aca9-eda7d458f25a/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/bd8d8250-6940-4f87-aca9-eda7d458f25a/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/bd8d8250-6940-4f87-aca9-eda7d458f25a/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/bd8d8250-6940-4f87-aca9-eda7d458f25a/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/bd8d8250-6940-4f87-aca9-eda7d458f25a/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/bd8d8250-6940-4f87-aca9-eda7d458f25a/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/ef85612a-af60-45d2-8c8e-86e0dbd2451c/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/ef85612a-af60-45d2-8c8e-86e0dbd2451c/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/ef85612a-af60-45d2-8c8e-86e0dbd2451c/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/ef85612a-af60-45d2-8c8e-86e0dbd2451c/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/ef85612a-af60-45d2-8c8e-86e0dbd2451c/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/e93690c4-ebd6-41da-ab07-ef99cbb01995/ef85612a-af60-45d2-8c8e-86e0dbd2451c/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/settings/contacts.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/templates/e93690c4-ebd6-41da-ab07-ef99cbb01995/details.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/templates/e93690c4-ebd6-41da-ab07-ef99cbb01995/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/templates/e93690c4-ebd6-41da-ab07-ef99cbb01995/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/templates/e93690c4-ebd6-41da-ab07-ef99cbb01995/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/3a480153-2754-47e4-9e88-21272388f5eb/settings/contacts.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/3a480153-2754-47e4-9e88-21272388f5eb/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/3a480153-2754-47e4-9e88-21272388f5eb/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/3a480153-2754-47e4-9e88-21272388f5eb/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/3a480153-2754-47e4-9e88-21272388f5eb/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/3a480153-2754-47e4-9e88-21272388f5eb/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/3a480153-2754-47e4-9e88-21272388f5eb/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/ef85612a-af60-45d2-8c8e-86e0dbd2451c/comp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/ef85612a-af60-45d2-8c8e-86e0dbd2451c/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/ef85612a-af60-45d2-8c8e-86e0dbd2451c/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/ef85612a-af60-45d2-8c8e-86e0dbd2451c/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/ef85612a-af60-45d2-8c8e-86e0dbd2451c/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/foundPeople/6803532a-87e9-431c-8463-e935dec93169/ef85612a-af60-45d2-8c8e-86e0dbd2451c/views.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/settings/contacts.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/templates/6803532a-87e9-431c-8463-e935dec93169/details.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/templates/6803532a-87e9-431c-8463-e935dec93169/hobbies.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/templates/6803532a-87e9-431c-8463-e935dec93169/main.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/templates/6803532a-87e9-431c-8463-e935dec93169/personality.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/templates/6803532a-87e9-431c-8463-e935dec93169/preferences.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/local-database/bd8d8250-6940-4f87-aca9-eda7d458f25a/templates/6803532a-87e9-431c-8463-e935dec93169/views.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Chat/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Chat/ChatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Chat/DialogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Chat/DialogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/NewOffersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/NewOffersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/TemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Search/Content/TemplateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/SignUp/SignInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/SignUp/SignInController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/SignUp/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/SignUp/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Search/Searcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Models/Search/Searcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Settings/SettingsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/smakab/datingapp/zustrichalnya/Controllers/Settings/SettingsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/SignIn/LoginView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/SignIn/LoginView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/SignIn/RegistrationView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/SignIn/RegistrationView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/blacklist" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/blacklist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Chat/ChatView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/smakab/datingapp/zustrichalnya/Views/Chat/ChatView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/blacklist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/comp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/hobbies.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/hobbies.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/main.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/main.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/personality.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/personality.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/preferences.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/preferences.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/views.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/36212ec0-e5cd-4beb-ba99-ebf9c204b6e0/views.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/ef85612a-af60-45d2-8c8e-86e0dbd2451c/comp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/ef85612a-af60-45d2-8c8e-86e0dbd2451c/hobbies.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/ef85612a-af60-45d2-8c8e-86e0dbd2451c/hobbies.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/ef85612a-af60-45d2-8c8e-86e0dbd2451c/main.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/ef85612a-af60-45d2-8c8e-86e0dbd2451c/main.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/ef85612a-af60-45d2-8c8e-86e0dbd2451c/personality.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/ef85612a-af60-45d2-8c8e-86e0dbd2451c/personality.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/ef85612a-af60-45d2-8c8e-86e0dbd2451c/preferences.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/ef85612a-af60-45d2-8c8e-86e0dbd2451c/preferences.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/foundPeople/e12b2f77-b5b4-4292-aac7-17f40a9524c7/ef85612a-af60-45d2-8c8e-86e0dbd2451c/views.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/ef85612a-af60-45d2-8c8e-86e0dbd2451c/views.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/profile-data/hobbies.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/02861c00-875f-4326-9bbd-dbd98de0c56f/hobbies.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/profile-data/main.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/02861c00-875f-4326-9bbd-dbd98de0c56f/main.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/profile-data/personality.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/02861c00-875f-4326-9bbd-dbd98de0c56f/personality.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/profile-data/photo_2024-06-13_17-59-28.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/profile-data/preferences.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/02861c00-875f-4326-9bbd-dbd98de0c56f/preferences.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/profile-data/views.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/foundPeople/146f1d4e-6b13-4de7-854d-31f80f89a787/02861c00-875f-4326-9bbd-dbd98de0c56f/views.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/requests" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/c48f6119-0b3d-478c-ac58-b20642711977/details.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/c48f6119-0b3d-478c-ac58-b20642711977/hobbies.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/c48f6119-0b3d-478c-ac58-b20642711977/main.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/templates/e93690c4-ebd6-41da-ab07-ef99cbb01995/main.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/c48f6119-0b3d-478c-ac58-b20642711977/personality.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/c48f6119-0b3d-478c-ac58-b20642711977/preferences.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/c48f6119-0b3d-478c-ac58-b20642711977/views.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/e12b2f77-b5b4-4292-aac7-17f40a9524c7/details.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/e12b2f77-b5b4-4292-aac7-17f40a9524c7/hobbies.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/e12b2f77-b5b4-4292-aac7-17f40a9524c7/main.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/e12b2f77-b5b4-4292-aac7-17f40a9524c7/personality.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/templates/e93690c4-ebd6-41da-ab07-ef99cbb01995/personality.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/e12b2f77-b5b4-4292-aac7-17f40a9524c7/preferences.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/02861c00-875f-4326-9bbd-dbd98de0c56f/templates/e12b2f77-b5b4-4292-aac7-17f40a9524c7/views.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/blacklist" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/blacklist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/profile-data/main.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/profile-data/main.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/requests" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/2fbf852c-02c9-4063-aaa4-e7dd32ac43ed/requests" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/3a480153-2754-47e4-9e88-21272388f5eb/profile-data/main.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/3a480153-2754-47e4-9e88-21272388f5eb/profile-data/main.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/3a480153-2754-47e4-9e88-21272388f5eb/requests" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/3a480153-2754-47e4-9e88-21272388f5eb/requests" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/blacklist" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/blacklist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/requests" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/local-database/ef85612a-af60-45d2-8c8e-86e0dbd2451c/requests" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,8 +169,8 @@
         <option value="JavaFXApplication" />
         <option value="Interface" />
         <option value="CSS File" />
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -213,7 +310,7 @@
       <workItem from="1718286635239" duration="17869000" />
       <workItem from="1718393691883" duration="1349000" />
       <workItem from="1718432541757" duration="32838000" />
-      <workItem from="1718533384011" duration="37230000" />
+      <workItem from="1718533384011" duration="42490000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -311,7 +408,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718563931280</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="login and idk some changes">
+      <option name="closed" value="true" />
+      <created>1718577023288</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1718577023288</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,7 +449,8 @@
     <MESSAGE value="lots of small fixes" />
     <MESSAGE value="test" />
     <MESSAGE value="я вже навіть не знаю" />
-    <option name="LAST_COMMIT_MESSAGE" value="я вже навіть не знаю" />
+    <MESSAGE value="login and idk some changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="login and idk some changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -10,6 +10,7 @@ import com.smakab.datingapp.zustrichalnya.Views.Settings.MainView;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 
@@ -25,6 +26,7 @@ public class SettingsController extends BaseController implements Initializable 
     public MainView view;
     public Button saveButton;
     public Button resetButton;
+
 
     @Override
     public void setProfileUUID(UUID uuid) {

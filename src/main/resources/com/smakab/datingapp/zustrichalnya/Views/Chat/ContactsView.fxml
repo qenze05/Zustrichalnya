@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Chat.DialogController" alignment="CENTER" fillWidth="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="980.0" prefWidth="1600.0" spacing="15.0" styleClass="background" stylesheets="@../../../../../../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox prefWidth="250.0" styleClass="label-personality">
+         <children>
+            <Label styleClass="mark" text="Telegram" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="telegram" prefWidth="250.0" styleClass="photo-button" text="\@telegram">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox prefWidth="250.0" styleClass="label-personality">
+         <children>
+            <Label styleClass="mark" text="Instagram" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="instagram" prefWidth="250.0" styleClass="photo-button" text="instagram">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox prefWidth="250.0" styleClass="label-personality">
+         <children>
+            <Label styleClass="mark" text="Зустрічат" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <Label fx:id="zustrichat" prefWidth="250.0" styleClass="photo-button" text="?????">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</VBox>

@@ -250,6 +250,8 @@ public class GeneralInfo {
     }
 
     public String fullName() {
+        if(nameVisibility.isEmpty()) return name.get();
+        
         String[] result = new String[4];
         if (nameVisibility.contains("Імʼя")) {result[0] = name.get();}
         if (nameVisibility.contains("Прізвище")) {result[1] = surname.get();}

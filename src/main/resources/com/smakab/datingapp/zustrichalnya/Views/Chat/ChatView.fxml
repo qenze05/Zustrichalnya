@@ -1,73 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
 <SplitPane dividerPositions="0.3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1920.0" styleClass="background" stylesheets="@../../../../../../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.smakab.datingapp.zustrichalnya.Controllers.Chat.ChatController">
     <items>
-        <VBox fx:id="peopleContainer" prefHeight="200.0" prefWidth="400.0" spacing="10.0" styleClass="left-side" stylesheets="@../../../../../../styles.css">
+        <VBox prefHeight="200.0" prefWidth="400.0" spacing="10.0" styleClass="left-side" stylesheets="@../../../../../../styles.css">
             <children>
-                <TextField prefHeight="50.0" promptText="Пошук...">
-                    <VBox.margin>
-                        <Insets left="10.0" right="10.0" top="10.0" />
-                    </VBox.margin>
-                    <font>
-                        <Font size="25.0" />
-                    </font>
-                </TextField>
                 <ScrollPane hbarPolicy="NEVER" hmax="0.0" maxWidth="1.7976931348623157E308" styleClass="form-style">
-                    <content>
-                        <HBox maxHeight="100.0" prefHeight="100.0" prefWidth="575.0" spacing="10.0" stylesheets="@../../../../../../styles.css" styleClass="chat-person">
-                            <children>
-                                <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
-                                <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
-                                    <children>
-                                        <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-                                            <children>
-                                                <Label prefWidth="400.0" text="Імʼя" HBox.hgrow="ALWAYS">
-                                                    <font>
-                                                        <Font size="25.0" />
-                                                    </font>
-                                                </Label>
-                                                <Label alignment="CENTER_RIGHT" minWidth="70.0" text="00:00">
-                                                    <font>
-                                                        <Font size="20.0" />
-                                                    </font>
-                                                    <HBox.margin>
-                                                        <Insets right="10.0" />
-                                                    </HBox.margin>
-                                                </Label>
-                                            </children>
-                                        </HBox>
-                                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
-                                            <children>
-                                                <Label prefWidth="400.0" text="Повідомлення" HBox.hgrow="ALWAYS">
-                                                    <font>
-                                                        <Font size="20.0" />
-                                                    </font>
-                                                </Label>
-                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
-                                                    <HBox.margin>
-                                                        <Insets />
-                                                    </HBox.margin>
-                                                </ImageView>
-                                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
-                                            </children>
-                                        </HBox>
-                                    </children>
-                                </VBox>
-                            </children>
-                        </HBox>
-                    </content>
-                </ScrollPane>
+               <content>
+                  <VBox fx:id="peopleContainer" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
+               </content></ScrollPane>
             </children>
         </VBox>
 

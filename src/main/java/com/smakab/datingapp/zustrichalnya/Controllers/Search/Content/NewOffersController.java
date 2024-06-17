@@ -1,5 +1,6 @@
 package com.smakab.datingapp.zustrichalnya.Controllers.Search.Content;
 
+import com.smakab.datingapp.zustrichalnya.Database.DatabaseConnection;
 import com.smakab.datingapp.zustrichalnya.Interfaces.TemplateDataDelegate;
 import com.smakab.datingapp.zustrichalnya.JsonUtils.JsonUtil;
 import com.smakab.datingapp.zustrichalnya.Models.Person;
@@ -25,6 +26,9 @@ import javafx.stage.Stage;
 
 import java.io.*;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.*;
 
 import static com.smakab.datingapp.zustrichalnya.Controllers.Search.Content.TemplatesListController.directoryExists;
@@ -290,7 +294,15 @@ public class NewOffersController extends TemplateContentClass {
         nextPerson();
     }
 
-    public void likePerson() {
+    public void likePerson() throws SQLException {
+        Connection connection = new DatabaseConnection().getConnection();
+
+        PreparedStatement statement = connection.prepareStatement("INSERT INTO mutuals(personFrom, personTo) VALUES (?, ?)");
+        statement.setString(1, userUUID.toString());
+        statement.setString(2, people.get(currentPerson).person().uuid.toString());
+
+        statement.executeUpdate();
+        statement.close();
     }
 
     public void prevPerson() {

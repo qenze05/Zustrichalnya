@@ -21,6 +21,7 @@ module com.smakab.datingapp.zustrichalnya {
 
     opens com.smakab.datingapp.zustrichalnya.Models to com.google.gson, javafx.fxml;
     opens com.smakab.datingapp.zustrichalnya.Models.Profile to com.google.gson, javafx.fxml;
+    opens com.smakab.datingapp.zustrichalnya.Models.Settings to com.fasterxml.jackson.databind, javafx.fxml;
 //    opens javafx.scene.image to com.google.gson, javafx.fxml;
 
     opens com.smakab.datingapp.zustrichalnya to javafx.fxml;
@@ -32,7 +33,7 @@ module com.smakab.datingapp.zustrichalnya {
     opens com.smakab.datingapp.zustrichalnya.Controllers.Profile to javafx.fxml;
     exports com.smakab.datingapp.zustrichalnya.Controllers.Profile;
 
-
+    exports com.smakab.datingapp.zustrichalnya.Models.Settings;
 
     opens com.smakab.datingapp.zustrichalnya.Controllers.Settings to javafx.fxml;
     exports com.smakab.datingapp.zustrichalnya.Controllers.Settings;
@@ -73,8 +74,6 @@ module com.smakab.datingapp.zustrichalnya {
     opens com.smakab.datingapp.zustrichalnya.Views.Template to javafx.fxml;
     exports com.smakab.datingapp.zustrichalnya.JsonUtils;
     opens com.smakab.datingapp.zustrichalnya.JsonUtils to javafx.fxml;
-
-    opens com.smakab.datingapp.zustrichalnya.Models.Settings to com.fasterxml.jackson.databind;
 
 
 }
